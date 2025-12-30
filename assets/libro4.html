@@ -15,216 +15,132 @@
 </head>
 <body>
     <header>
-        <h1>Libro 4: Planos</h1>
+        <h1>Libro 4: Vectores</h1>
     </header>
-    
+
     <main>
         <section id="indice">
             <h2>Tabla de contenidos</h2>
                 <ul>
-                    <li>1. <a href="#introduccion">Introducción: dos problemas para comenzar</a></li>
-                    <li>2. <a href="#ecuacion-vectorial-origen">Ecuación vectorial o paramétrica del plano por el origen</a></li>
-                    <li>3. <a href="#ecuacion-vectorial-cualquier-punto">Ecuación vectorial o paramétrica del plano por cualquier punto</a></li>
-                    <li>4. <a href="#visualizaciones">Algunas visualizaciones para comprender</a></li>
-                    <li>5. <a href="#intersecciones">Intersecciones entre plano y recta</a></li>
-                    <li>6. <a href="#ecuacion-general-origen">Ecuación general del plano por el origen</a></li>
-                    <li>7. <a href="#ecuacion-general-cualquier-punto">Ecuación general del plano por un punto cualquiera</a></li>
-                    <li>8. <a href="#tres-puntos">Tres puntos y planos... y una operación "nueva" entre vectores de \( \mathbb{R}^3 \)</a></li>
-                    <li>9. <a href="#posicion-relativa">Posición relativa entre planos, entre recta y plano e intersecciones</a></li>
-                    <li>10. <a href="#practica">Práctica</a></li>
-                    <li>11. <a href="#autoevaluacion">Autoevaluación</a></li>
-                    <li>12. <a href="#archivos">Archivos Completos</a></li>
+                    <li>1. <a href="#introduccion">Introducción</a></li>
+                    <li>2. <a href="#producto-escalar">Producto escalar (o producto punto o producto interno)</a></li>
+                    <li>3. <a href="#angulo-entre-vectores">Ángulo entre vectores</a></li>
+                    <li>4. <a href="#vectores-en-el-espacio">Vectores en el espacio</a></li>
+                    <li>5. <a href="#autoevaluacion">Autoevaluación y entrega</a></li>
+                    <li>6. <a href="#archivos">Archivos Completos</a></li>
                 </ul>
         </section>
-
+        
         <section id="introduccion">
-            <h2>1. Introducción: dos problemas para comenzar</h2>
-            <p>Venimos trabajando con rectas en el plano \( \mathbb{R}^2 \) y en el espacio \( \mathbb{R}^3 \). En este libro le toca el turno a los planos en \( \mathbb{R}^3 \)</p>
-            <p>Para comenzar a movilizar los conocimientos anteriores que nos ayudarán a tener mayor comprensión sobre el tema que nos toca, les pedimos que piensen (y escriban en sus carpetas, y resuelvan, y juegen con <a class="Geo">GeoGebra</a>, y consulten entre ustedes, y consulten en el foro <a class="con">Consultas</a>) los <a href="https://drive.google.com/file/d/1bizA7VZ1BnD2pcnLfpRUANg7Nk2TdPUF/view?usp=sharing" target="_blank">problemas 11 y 12 de la página 36</a> de la Guía de problemas</p>
-            <iframe class="d">1bizA7VZ1BnD2pcnLfpRUANg7Nk2TdPUF</iframe>
-            <p> Luego, si sale o no, avancen al siguiente apartado...</p>
+            <h2>1. Introducción</h2>
+            <p>Durante esta semana trabajaremos con una operación entre vectores llamada producto interno (conocida también como producto punto o producto escalar). Además, construiremos una definición para ángulo entre dos vectores. Y finalmente, retomaremos lo realizado con vectores de \(\mathbb{R}^2\) para trabajar con vectores de \(\mathbb{R}^2\).</p>
+            <p>Los recursos y las actividades que pueden realizar están a lo largo de este libro y pueden acceder a ellos haciendo clic en las frases resaltadas. Al final, en el último apartado, tendrán dos instancias para entregar en el marco de la Evaluación y acreditación.</p>
+            <p>Este libro tiene cuatro apartados que pueden recorrer haciendo clic en las flechitas que aparecen justo arriba y debajo de este texto y,también, haciendo clic en las secciones.</p>
+            <p>Recuerden realizar sus consultas en el foro.</p>
         </section>
-
-        <section id="ecuacion-vectorial-origen">
-            <h2>2. Ecuación vectorial o paramétrica del plano por el origen</h2>
-            <p>Retomamos las ideas que aparecieron al trabajar con los dos problemas que les indicamos en la introducción. Esos problemas traen la noción de combinación lineal de vectores.</p>
-            <p>A partir de esta idea pensaremos en lo que llamaremos ecuación vectorial del plano (a veces, también llamada ecuación paramétrica).</p>
-            <p>Primero comenzamos pensando en los planos que contienen al origen de coordenadas. En el siguiente video, el Profesor Martín Ch. desarrolla esta idea:</p>
+    
+        <section id="producto-escalar">
+            <h2>2. Producto escalar (o producto punto o producto interno)</h2>
+            <p>En primer lugar, para que puedan comenzar a ponerse en contacto con la noción de producto escalar les pedimos lo siguiente:</p>
+            <p>Intenten resolver <a href="https://drive.google.com/file/d/1GU1pD0HJIkNRMGa_lQfbZwXOHNfPaHkI/view?usp%3Ddrive_link&sa=D&source=editors&ust=1730918828259288&usg=AOvVaw1xhye7aId3yxAMSyjcBPy6" target="_blank">el problema 20 de la página 14 de la Guía de problemas</a></p>
+            <iframe class="d">1GU1pD0HJIkNRMGa_lQfbZwXOHNfPaHkI</iframe>
+            <p>Es bueno que intenten resolverlo con lo que puedan. Si surge alguna duda, plantea su duda en el foro Consultas.</p>
+            <p>Una vez que ocuparon algún tiempo en pensar lo anterior, les mostramos una posible <a href="https://drive.google.com/file/d/10Lt962NbWIiaRGAcT3zHO9UaRiceB5J_/view?usp%3Ddrive_link&sa=D&source=editors&ust=1730918828259765&usg=AOvVaw0rlL4Qi0hgdUibzYXw4onk" target="_blank">Resolución del problema 20 de la pág 14 de la Guía de problemas.</a></p>
+            <iframe class="d">10Lt962NbWIiaRGAcT3zHO9UaRiceB5J_</iframe>
+            
+            <p>El objetivo que perseguimos con este problema es que podamos comenzar a entender qué sentido tiene lo que llamaremos producto escalar.</p>
+            <p>Noten que al final de la resolución presentamos una propiedad importante relacionada con los vectores ortogonales (perpendiculares). Esa propiedad, involucra a las componentes de los dos vectores en cuestión.</p>
+            <p>En el siguiente video, se muestra cómo calcular el producto interno entre dos vectores de \( \mathbb{R}^2 \) y de \( \mathbb{R}^3 \).</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=redZ8Yan50E" target="_blank">Video sobre ecuación vectorial del plano que pasa por el origen</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=redZ8Yan50E</video>
+                <li><a href="https://www.youtube.com/watch?v=N5f7pYTNcFM" target="_blank">Video sobre producto escalar de dos vectores</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=N5f7pYTNcFM</video>
             </ul>
-            <img src="../assets/Plano.gif" alt="Ecuación vectorial del plano" class="redu">
-            <p> En el siguiente apartado veremos la ecuación vectorial del plano que pasa por cualquier punto...</p>
+            <p>El producto escalar es una operación entre vectores que toma dos vectores y le asigna un número real (escalar) que resulta de hacer la suma entre las multiplicaciones componente a componente. ¿Para qué sirve? ¿Dice algo de los vectores? En el siguiente apartado podemos encontrar alguna respuesta a estas preguntas.</p>
         </section>
-
-        <section id="ecuacion-vectorial-cualquier-punto">
-            <h2>3. Ecuación vectorial o paramétrica del plano por cualquier punto</h2>
-            <p> ¿Cómo sería la ecuación vectorial de un plano que no pasa por el origen? ¿Se animan a pensarlo a partir de lo que vimos en el apartado anterior?</p>
-            <p> En el siguiente video del Profesor Martín Ch. vemos cómo:</p>
+    
+        <section id="angulo-entre-vectores">
+            <h2>3. Ángulo entre vectores</h2>
+            <p>Les pedimos que lean el complemento teórico que comienza en la <a href="https://drive.google.com/file/d/1eidCja5G7bpqlvrxPe_povpXNf-4SWcX/view?usp=sharing" target="_blank">página 29 de la Guía de problemas y se llama Ángulo entre vectores a partir del teorema del coseno y termina en la página 30</a>; o verlo en el siguiente video:</p>
+            <iframe class="d">1eidCja5G7bpqlvrxPe_povpXNf-4SWcX</iframe>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=dxldhLtemqw" target="_blank">Video sobre ecuación vectorial del plano que pasa por un punto cualquiera</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=dxldhLtemqw</video>
+                <li><a href="https://www.youtube.com/watch?v=nGXd2rlRniM" target="_blank">Video sobre el ángulo entre dos vectores</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=nGXd2rlRniM</video>
             </ul>
-            <p>Como resumen de las ideas de este apartado y el anterior les dejamos a disposición el siguiente recorte del texto <a href="https://drive.google.com/file/d/10dLC6ZfrO3SpFlrmVBo4lE7CLnkY8puN/view?usp=sharing" target="_blank">Maestripieri, Pavón y Resmesar (2017) Notas de Álgebra Lineal. Cap. 1. Pág 32 a 34</a>.</p>
-            <iframe class="d">10dLC6ZfrO3SpFlrmVBo4lE7CLnkY8puN</iframe>
-            <p>Pueden ir trabajando con los ejercicios y problemas que les indicamos en la <a href="https://drive.google.com/file/d/1EKdiMA_9tsuPZKy4UFftopIgqmY5uOIV/view?usp=sharing" target="_blank">Guía de ejercitación sobre planos 1</a>.</p>
-            <iframe class="d">1EKdiMA_9tsuPZKy4UFftopIgqmY5uOIV</iframe>
-            <img src="../assets/Plano_2.gif" alt="Ecuacion vectorial que pasa por cualquier punto" class="redu">
+            <p>¿Cúal es la definición de ángulo entre vectores que se da? ¿Cómo se muestra que tiene sentido? ¿Qué otras definiciones se retoman? ¿Qué propiedades aparecen?</p>
+            <img src="../assets/ang_entre_vectopres.gif" alt="Ángulo entre vectores" class="redu">
+            <p>Para consolidar estas nociones practiquen con los siguientes problemas y ejercicio:</p>
+            <p>De la Guía de problemas:</p>
+            <ul>
+                <li>Los <a href="https://drive.google.com/file/d/1Xg_awDQFYsxHUvvc1gBipa_RGTgp63g_/view?usp=sharing" target="_blank">problemas 26, 27, 28, 31, 33, 34, 36, 38 y 39. Comienzan en la página 15</a>.</li>
+                <iframe class="d">1Xg_awDQFYsxHUvvc1gBipa_RGTgp63g_</iframe>
+                <li>Los <a href="https://drive.google.com/file/d/13UdlwxRtGYma9N4iH6Q7uV-Ih4qg4Hp6/view?usp=sharing" target="_blank">ejercicios para practicar más (4), (5), (7), (8), (16). Comienzan en la página 18</a></li>
+                <iframe class="d">13UdlwxRtGYma9N4iH6Q7uV-Ih4qg4Hp6</iframe>
+            </ul>
+            <p>Además, les acercamos el siguiente <a href="https://www.youtube.com/watch?v=pVu0trZXAdk" target="_blank">Video con una resolución del problema 33 de la Guía</a> de Problemas.</p>
+            <video class="yt">https://www.youtube.com/watch?v=pVu0trZXAdk</video>
+            <p>Finalmente, a partir de la definición de ángulo entre vectores, es posible obtener el producto escalar de dos vectores de otra forma. Para enterarse, pueden ver el siguiente <a href="https://www.youtube.com/watch?v=ekMpAiA0gGk" target="_blank">Video sobre otra forma de obtener el producto escalar de dos vectores</a>.</p>
+            <video class="yt">https://www.youtube.com/watch?v=ekMpAiA0gGk</video>
         </section>
-
-        <section id="visualizaciones">
-            <h2>4. Algunas visualizaciones para comprender</h2>
-            <p> Promovemos fuertemente que utilicen algún software, como por ejemplo <a class="Geo">GeoGebra</a>, para poder visualizar y aportar a la imagen conceptual de los temas que estamos tratando.</p>
-            <p> En esta ocasión, queremos ver qué sucede con los vectores directores de un plano en relación con este plano. ¿Forman parte de él o no?
-                En el siguiente video el Profesor Gastón nos muestra algunas ideas sobre esto.</p>
+    
+        <section id="vectores-en-el-espacio">
+            <h2>4. Vectores en el espacio</h2>
+            <img src="../assets/sdf.gif" alt="sdf" class="redu">
+            <p>Mucho de lo trabajado con los vectores de \( \mathbb{R}^2 \) es extrapolable a los vectores de \( \mathbb{R}^3 \). Te proponemos el <a href="https://drive.google.com/file/d/1TNuUa412ASdfcdwaRm0DZoyRuFUU9AQj/view?usp=sharing" target="_blank">texto de Grossman y Flores (2012) Álgebra lineal. Cap. 3. Pág 244 a 253</a> para revisar estos conceptos.</p>
+            <iframe class="d">1TNuUa412ASdfcdwaRm0DZoyRuFUU9AQj</iframe>
+            <p>¿Qué conceptos importantes se introducen en el texto? ¿Pueden hacerse un resumen? Presten atención a las formas en que el texto resalta las definiciones, los teoremas, las observaciones, las fórmulas, etc. Leer un texto de Matemática es todo un trabajo. Entre otras cosas, leer un texto de Matemática requiere paciencia, papel y lápiz, revisar, retroceder, releer, reconocer la notación, consultar con otras fuentes, etc.</p>
+            <p>Para práctica tienen los <a href="https://drive.google.com/file/d/1jY9YqXz-W3lLyriZGEldeSEMcplyB30F/view?usp=sharing" target="_blank">ejercicios de las páginas 252 y 253 del libro de Grossman y Flores</a></p>
+            <iframe class="d">1jY9YqXz-W3lLyriZGEldeSEMcplyB30F</iframe>
+            <p>Además, ponemos a dispoción dos textos con la resolución de dos problemas que involucran la noción de combinación lineal de \( \mathbb{R}^3 \):</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=josHYjsmi6M" target="_blank">Video sobre los vectores directores de un plano</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=josHYjsmi6M</video>
+                <li><a href="https://drive.google.com/file/d/17f5QcmgBvsIf2Aw7hBCFrJfa6nO70gdR/view?usp=sharing" target="_blank">Texto 1 con la resolución de un problema sobre combinación lineal de vectores en el espacio.</a></li>
+                <iframe class="d">17f5QcmgBvsIf2Aw7hBCFrJfa6nO70gdR</iframe>
+                <li><a href="https://drive.google.com/file/d/1WiWkYwFmjEdmRi7yRSQuwZrl1jiUC59p/view?usp=sharing" target="_blank">Texto 2 con la resolución de un problema sobre combinación lineal de vectores en el espacio.</a></li>
+                <iframe class="d">1WiWkYwFmjEdmRi7yRSQuwZrl1jiUC59p</iframe>
             </ul>
-            <p>También les acercamos el siguiente video en el que el profesor nos muestra una visualización de cómo los vectores directores generan un plano</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=VdvvzhAEWMU" target="_blank">Video con vectores directores generando un plano con la herramienta rastro de GGB</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=VdvvzhAEWMU</video>
-            </ul>
-        </section>
-
-        <section id="intersecciones">
-            <h2>5. Intersecciones entre plano y recta</h2>
-            <p>Pensemos en una recta y un plano en el espacio. ¿Cuántas posibilidades hay si pensamos en los puntos en común entre ellos? ¿Qué ejemplos se les ocurren? ¿Cómo puede hallarse esa intersección a partir de sus ecuaciones vectoriales?</p>
-            <img src="../assets/planorecta.gif" alt="Intersección entre recta y plano" class="redu">
-            <p> En el siguiente video la Profesora Perla nos muestra algunos ejemplos que puede ayudarnos con las preguntas anteriores:</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=61QYwuuz7eI" target="_blank">Video con ejemplos de intersección recta plano (ec. vectorial)</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=61QYwuuz7eI</video>
-            </ul>
-            <p>Recuerden que tienen para practicar los <a href="https://drive.google.com/file/d/1EKdiMA_9tsuPZKy4UFftopIgqmY5uOIV/view?usp=sharing" target="_blank">ejercicios y problemas indicados en la Guía de ejercitación sobre planos 1</a>.</p>
-            <iframe class="d">1EKdiMA_9tsuPZKy4UFftopIgqmY5uOIV</iframe>
-            <p>Aquí PDF con (<a href="https://drive.google.com/file/d/1x-oLBY2U8scrgemkVj_y704N5hH0CflB/view?usp=sharing" target="_blank">Ejercicios mencionados de la Guía de Problemas</a>) y que pueden plantear sus <a class="con">Consultas</a> en el foro además de participar de cualquiera de los encuentros presenciales</p>
-            <iframe class="d">1x-oLBY2U8scrgemkVj_y704N5hH0CflB</iframe>
-        </section>
-
-        <section id="ecuacion-general-origen">
-            <h2>6. Ecuación general del plano por el origen</h2>
-            <p>Antes de meternos con la definición, es importante que primero ustedes piensen un poco sobre lo que queremos trabajar. Por eso, les pedimos que realicen el <a href="https://drive.google.com/file/d/12vIHy2nvoHpcpW_x8TKIa1cD42xegJJc/view?usp=sharing" target="_blank">problema 15 de la página 37</a> de la Guía de problemas. Intenten pensarlo y si tienen algún bloqueo, por favor, indíquenlo en el foro <a class="con">Consultas</a>. Lo ideal sería que cuenten alguna idea que están teniendo y dónde se estancan. Esperamos que primero compañeros y compañeras respondan las preguntas que surjan.</p>
-            <iframe class="d">12vIHy2nvoHpcpW_x8TKIa1cD42xegJJc</iframe>
-            <p>Pueden ver una resolución de este problema por el profesor Marcelo en el Video con una resolución del problema 15 de la página 37 de la Guía:</p>
-                <ul>
-                    <li><a href="https://www.youtube.com/watch?v=mFBkowM8wKE" target="_blank">Video con una resolución del problema 15 de la página 37 de la Guía</a></li>
-                    <video class="yt">https://www.youtube.com/watch?v=mFBkowM8wKE</video>
-                </ul>
-            <p>En la resolución anterior terminamos escribiendo en forma genérica a la ecuación normal del plano. Esta ecuación es también llamada ecuación implícita del plano o ecuación general del plano. Volvamos a pensar en este tipo de ecuación en el siguiente video del profesor Martín Ch. Encontrarán una visualización de la idea en <a class="Geo">GeoGebra</a> y la definición:</p>
-                <ul>
-                    <li><a href="https://www.youtube.com/watch?v=3Pmm2Xb4qig" target="_blank">Video sobre ecuación general, implícita o normal del plano en \( \mathbb{R}^3 \)</a>.</li>
-                    <video class="yt">https://www.youtube.com/watch?v=3Pmm2Xb4qig</video>
-                </ul>
-            <p>En el siguiente video el profesor Marcelo muestra cómo encuentra la ecuación implícita del plano que pasa por el origen de coordenadas conocido un vector normal. Aprovechen, y ni bien se digan los datos del problema, pongan el video en pausa e intenten resolverlo ustedes. Luego, pueden seguir con el video para comparar.</p>
-                <ul>
-                    <li><a href="https://www.youtube.com/watch?v=bk232Zab0vE" target="_blank">Video en el que hallamos una ecuación implícita de un plano por el origen conocido un vector normal.</a></li>
-                    <video class="yt">https://www.youtube.com/watch?v=bk232Zab0vE</video>
-                </ul>
-            <p>Les dejamos unas preguntas: Dado un plano por el origen, ¿existe una única ecuación implícita que lo representa? ¿Cuántas hay? ¿Cómo pueden justificarlo? Si les parece, pueden abrir un hilo en el foro <a class="con">Consultas</a> y debatirlo.</p>
-            <img src="../assets/plano_the_beginning.gif" alt="Ecuación implícita del plano" class="redu">
-        </section>
-
-        <section id="ecuacion-general-cualquier-punto">
-            <h2>7. Ecuación general del plano por un punto cualquiera</h2>
-            <p>En el apartado anterior vimos cómo expresar la ecuación general de cualquier plano por el origen de coordenadas. Solo necesitamos un vector normal a él y listo. La ecuación general nos muestra una relación entre las tres coordenadas de cada punto del espacio que forman parte del plano en cuestión. Más allá de lo mecánico, nos interesa que comprendan por qué la cosa funciona. Es importante para esto comprender qué sucede con el producto escalar del vector normal y cada vector que termina en el plano y tiene origen en el origen de coordenadas</p>
-            <p>Veamos ahora cómo podemos pensar la ecuación general de cualquier plano que pasa por cualquier punto (no solo por el origen). En el siguiente video, el profesor Martín Ch. nos lo cuenta:</p>
-                <ul>
-                    <li><a href="https://www.youtube.com/watch?v=RwKSD2ttKb0" target="_blank">Video sobre la ecuación implícita del plano por cualquier punto</a>.</li>
-                    <video class="yt">https://www.youtube.com/watch?v=RwKSD2ttKb0</video>
-                </ul>
-            <img src="../assets/plano1.gif" alt="Ecuación implícita del plano por cualquier punto" class="redu">
-            <p>En el siguiente video, el profesor Marcelo, nos cuenta una resolución posible para dar la ecuación general de un plano dado su vector normal y un punto por el que pasa:</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=VouJSxyKaPE" target="_blank">Video con ejemplo de ecuación implícita de un plano dado su vector normal y un punto de paso</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=VouJSxyKaPE</video>
-            </ul>
-            <p>¿Hay alguna particularidad entre las ecuaciones de los planos que pasan por el origen de coordenadas? ¿cuál? ¿cómo lo pueden justificar?. Si les parece, debatan sobre esto en el foro <a class="con">Consultas</a></p>
-        </section>
-
-        <section id="tres-puntos">
-            <h2>8. Tres puntos y planos... y una operación "nueva" entre vectores de \( \mathbb{R}^3 \)</h2>
-            <p>Si tenemos tres puntos en el espacio \( \mathbb{R}^3 \), ¿hay un plano que los contenga? ¿cuántos hay? ¿depende de algo? ¿bajo qué condiciones ocurre? ¿cómo lo explican? ¿qué sucede en el caso de que fueran cuatro puntos? ¿y si fueran dos? ¿y si fuera uno solo?</p>
-            <p>En el Video sobre la ecuación general de un plano por tres puntos el profesor Martín Ch nos cuenta un camino para encontrar justamente, una ecuación implícita de un plano que pasa por tres puntos.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=NYl7cf1f_qg" target="_blank">Video sobre la ecuación general de un plano por tres puntos</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=NYl7cf1f_qg</video>
-            </ul>
-            <p>En el video, se planteó hallar un vector normal (perpendicular) a otros dos. ¿Cómo se hizo? Revisen el video y adviertan que se hallaron infinitos vectores perpendiculares, todos ellos de igual dirección, es decir, paralelos, es decir, múltiplos escalar entre sí. ¿Cómo tienen que ser dos vectores \( \vec{u} \) y \( \vec{v} \) para poder hallar infinitos vectores perpendiculares a ellos todos de igual dirección? ¿Es posible que dados dos vectores \( \vec{u} \) y \( \vec{v} \) existan infinitos vectores perpendiculares a ambos y que no todos tengan igual dirección? ¿Cómo explican la respuesta?</p>
-            <p>Hablando de vectores perpendiculares a dos vectores dados, en el siguiente video, el profesor Martín T nos cuenta por qué no le gusta tanto el producto vectorial para hallar un vector perpendicular a otros dos. No le gusta, pero igual nos cuenta en qué consiste el producto vectorial de dos vectores de \( \mathbb{R}^3 \)  Las físicas e ingenieras le encuentran mucha utilidad, dicen que los físicos e ingenieros también. Justo por la propiedad de las normas que cuenta también el profesor:</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=NkbmRj0rZJU" target="_blank">Video sobre producto vectorial de vectores de \( \mathbb{R}^3 \) y vectores perpendiculares a otros dos</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=NkbmRj0rZJU</video>
-            </ul>
-            <p>Y ¿por qué no gusta a unos y unas? y ¿por qué sí gusta a otras y otros? No estaría de más opinar sobre esto en un hilo del foro <a class="con">Consultas</a>.</p>
-        </section>
-
-        <section id="posicion-relativa">
-            <h2>9. Posición relativa entre planos, entre recta y plano e intersecciones</h2>
-            <p> Dados dos planos en el espacio \( \mathbb{R}^3 \), ¿cómo pueden estar posicionados uno en relación con el otro? ¿Cuáles son las diferentes opciones? Y si tenemos una recta y un plano, ¿qué sucede?.</p>
-            <p>Dos de las posibilidades, entre otras, son que haya paralelismo o que haya perpendicularidad. Sobre esto trata el Video sobre paralelismo y perpendicularidad entre planos y entre rectas y planos de la profesora Perla.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=hL_qeOvJ36k" target="_blank">Video sobre paralelismo y perpendicularidad entre planos y entre rectas y planos</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=hL_qeOvJ36k</video>
-            </ul>
-            <img src="../assets/planosparalelos_y_perpendig.gif" alt="Posición relativa Plano y Recta: Paralelismo y perpendicularidad" class="redu">
-            <p>¿Es posible proponer una recta y un plano que no tengan puntos en común? ¿y uno solo? ¿y dos? ¿y más? ¿infinitos? En el siguiente video, el profesor Martín Ch nos muestra algunos ejemplos de intersección entre una recta y un plano, dada una ecuación vectorial de la recta y una ecuación implícita del plano.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=zX-jdVQiRfM" target="_blank">Video sobre intersección entre recta (ec. vectorial) y plano (ec. implícita)</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=zX-jdVQiRfM</video>
-            </ul>
-            <p> ¿Y qué sucede con la intersección de dos o más planos dadas sus ecuaciones implícitas? Ahondaremos sobre esta cuestión durante la próxima semana de trabajo.</p>
-        </section>
-
-        <section id="practica">
-            <h2>10. Práctica</h2>
-            <img src="../assets/practica.jpg" alt="practica" class="redu">
-            <p> En el siguiente archivo, les proponemos algunos ejercicios y les indicamos qué problemas de la <a href="https://drive.google.com/file/d/1k51WjXlCzNcLu8P5Q7Jv4bEhxKwBZEKP/view?usp=sharing" target="_blank">Guía de problemas(PDF con dichos Ejercicios)</a> hacer.</p>
-            <iframe class="d">1k51WjXlCzNcLu8P5Q7Jv4bEhxKwBZEKP</iframe>
-            <ul>
-                <li><a href="https://drive.google.com/file/d/19FbIalffve8j4crT4uHtxRlqbH-Hx5q7/view?usp=sharing" target="_blank">Guía de ejercitación sobre ecuación implícita del plano y algo más</a>.</li>
-            </ul>
-            <iframe class="d">19FbIalffve8j4crT4uHtxRlqbH-Hx5q7</iframe>
-            <p> También les acercamos los siguientes videos de Perla y de Marcelo con problemas resueltos. Aprovechen, y piénsenlos primero ustedes.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=xPxb4r2n1yk" target="_blank">Video con una resolución del problema 30 de la pág 40 de la Guía</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=xPxb4r2n1yk</video>
-                <li><a href="https://www.youtube.com/watch?v=XwWn1GPczio" target="_blank">Video con una resolución del problema 32 de la pág 41 de la Guía</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=XwWn1GPczio</video>
-            </ul>
-        </section>
-
+        </section>-->
+    
         <section id="autoevaluacion">
-            <h2>11. Autoevaluación</h2>
-            <p>Como parte de la evaluación continua les proponemos las siguientes autoevaluaciones:</p>
+            <h2>5. Autoevaluación 3</h2>
+            <p>Como parte de la evaluación continua <a href="https://drive.google.com/file/d/1OjLunEFZ8VwrUmWhlOEmdlTYVoPUjepR/view?usp=sharing" target="_blank">(ver las condiciones en Condiciones de trabajo, de evaluación y de acreditación)</a> les proponemos la:</p>
             <ul>
-                <li><a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366121" target="_blank"><strong>Autoevaluación sobre ecuación vectorial del plano e intersección recta plano</a>.</strong></li>
-                <li><a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366113" target="_blank"><strong>Autoevaluación sobre ecuación implícita del plano y algo más</a>.</strong></li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1Z786ubqapyIVa5U9FkSelk3EKRtsLXtq/view?usp%3Ddrive_link&sa=D&source=editors&ust=1730918828266329&usg=AOvVaw0dGPY8-JmkUfBOsnYiYChw" target="_blank"><strong>Autoevaluación sobre vectores 2</strong></a>
+                </li>-->
             </ul>
-            <p>Ingresen a los cuestionarios para ver la fecha de apertura y la de cierre.<br>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.<br>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos</p>
+            <p>Ingresen al cuestionario para ver la fecha de apertura y la de cierre.El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta. Esperamos que para cuando sea el momento de realizar las autoevaluaciones hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
+            <p>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.</p>
+            <p>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
             
-            <iframe class="d">162yEuqDLQcKA56lKKKFOFMVppQEgo54u</iframe>
-            
-            <iframe class="d">1321NhOUTSUjyDySFCt-dUu1R1NO3frm_</iframe>
-        </section>
+            <iframe class="d">1Z786ubqapyIVa5U9FkSelk3EKRtsLXtq</iframe>
 
+            <p>Y además, les proponemos que realicen la resolución de este <a href="https://drive.google.com/file/d/12zhcw1A0-FgFVZJ53hZnWMMhBwe7y885/view?usp%3Ddrive_link&sa=D&source=editors&ust=1730918828266667&usg=AOvVaw1DkMCzXSC9SWUEwd7urTq9" target="_blank"> Problema para entregar - U1</a></p>
+            <iframe class="d">12zhcw1A0-FgFVZJ53hZnWMMhBwe7y885</iframe>
+
+            <p>Para la fecha y modalidad de entrega sigan las indicaciones de sus profesores que serán dadas en los encuentros presenciales y en el foro Novedades.</p>
+            <p>En el siguiente enlace van a encontrar la <a href="https://drive.google.com/file/d/10Lt962NbWIiaRGAcT3zHO9UaRiceB5J_/view?usp%3Ddrive_link&sa=D&source=editors&ust=1730918828266987&usg=AOvVaw3bm3f28tzBm2u9b5pdpGhX" target="_blank">Resolución Entrega U1</a></p>
+            
+            <iframe class="d">10Lt962NbWIiaRGAcT3zHO9UaRiceB5J_</iframe>
+
+        </section>
         <section id="archivos">
             <h2>Archivos Completos</h2>
             <ul>
-                <li><a href="https://drive.google.com/file/d/1yNSWO9Q1WITE-cOXc_p3-nDFHwzkkmk9/view?usp=sharing" target="_blank">Unidad 2</a></li>
-                <li><a href="https://drive.google.com/file/d/10dLC6ZfrO3SpFlrmVBo4lE7CLnkY8puN/view?usp=sharing" target="_blank">Maestripieri, Pavón y Resmesar (2017) Notas de Álgebra Lineal. Cap. 1. Pág 32 a 34.</a></li>
-                <li><a href="https://drive.google.com/file/d/1EKdiMA_9tsuPZKy4UFftopIgqmY5uOIV/view?usp=sharing" target="_blank">Guía de ejercitación sobre planos 1.</a></li>
-                <li><a href="https://drive.google.com/file/d/19FbIalffve8j4crT4uHtxRlqbH-Hx5q7/view?usp=sharing" target="_blank">Guía de ejercitación sobre ecuación implícita del plano y algo más.</a></li>
+                <li><a href="https://drive.google.com/file/d/1a1Bmrf0tWvjz4UQ9Z2RiL1cPnKFJ0jvL/view?usp=sharing" target="_blank">Unidad 1</a></li>
+                <li><a href="https://drive.google.com/file/d/1D4ydxMq04LIYmN2x4FbrLtcUL0rtpbkW/view?usp=sharing" target="_blank">Grossman y Flores (2012) Álgebra lineal. Cap. 3. Pág 220 a 230</a></li>
+                <li><a href="https://drive.google.com/file/d/1tHT2Y8ZdxznrbVYvTBJAtjMDwyfJg7Ww/view?usp=sharing" target="_blank">Práctica Adicional Vectores Parte 1</a></li>
+                <li><a href="https://drive.google.com/file/d/137FldX8vne0Nb8v1BgbJxXdO9aKuOFmv/view?usp=sharing" target="_blank">Resolución del ejercicio (13) de la página 20 de la Guía de Problemas</a></li>
+                <li><a href="https://drive.google.com/file/d/19JnyJQERuIJKjRWhgx52jtboFstVlMhu/view?usp=sharing" target="-blank">Resolución del problema 39 de la página 229 del libro de Grossman y Flores.</a></li>
+                <li><a href="https://drive.google.com/file/d/1v7cN0GxsS1JRbpOVrYHAlzR3i7AJ8aL0/view?usp=sharing" target="_blank">Resolución del ejercicio (19) de la página 20 de la Guía de Problemas.</a></li>
+                <li><a href="https://drive.google.com/file/d/1TNuUa412ASdfcdwaRm0DZoyRuFUU9AQj/view?usp=sharing" target="_blank">Grossman y Flores (2012) Álgebra lineal. Cap. 3. Pág 244 a 253</a></li>
+                <li><a href="https://drive.google.com/file/d/17f5QcmgBvsIf2Aw7hBCFrJfa6nO70gdR/view?usp=sharing" target="_blank">Texto 1 con la resolución de un problema sobre combinación lineal de vectores en el espacio.</a></li>
+                <li><a href="https://drive.google.com/file/d/1WiWkYwFmjEdmRi7yRSQuwZrl1jiUC59p/view?usp=sharing" target="_blank">Texto 2 con la resolución de un problema sobre combinación lineal de vectores en el espacio.</a></li>
             </ul>
         </section>
-
     </main>
     <script src="../js/script.js"></script>
 </body>
 <footer class="footer">
-    <a href="../assets/libro3.html" class="arrow arrow-left" aria-label="Libro 3">
+    <a href="../assets/libro1.html" class="arrow arrow-left" aria-label="Libro 1">
       <div class="line one">
           <div class="round"></div>
           <div class="round"></div>
@@ -276,7 +192,7 @@
       </div> 
     </a>
   
-    <a href="../assets/libro5.html" class="arrow arrow-right" aria-label="Libro 5">
+    <a href="../assets/libro3.html" class="arrow arrow-right" aria-label="Libro 3">
       <div class="line one">
           <div class="round"></div>
           <div class="round"></div>

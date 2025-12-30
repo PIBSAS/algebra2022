@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-        <h1>Libro 6: Matrices</h1>
+        <h1>Libro 6: Rectas</h1>
     </header>
 
     <main>
@@ -23,212 +23,101 @@
             <h2>Tabla de contenidos</h2>
                 <ul>
                     <li>1. <a href="#introduccion">Introducción</a></li>
-                    <li>2. <a href="#matrices-especiales">Matrices especiales</a></li>
-                    <li>3. <a href="#operaciones-con-matrices">Operaciones con matrices</a></li>
-                    <li>4. <a href="#formas-de-representar-sistemas">Diferentes formas de representar un sistema de ecuaciones lineales</a></li>
-                    <li>5. <a href="#propiedades-de-operaciones">Propiedades de las operaciones con matrices</a></li>
-                    <li>6. <a href="#guia-actividades">Guía de actividades y texto teórico</a></li>
-                    <li>7. <a href="#inversa-de-matriz">Inversa de una matriz</a></li>
-                    <li>8. <a href="#material-teorico">Material teórico y actividades sobre inversa</a></li>
-                    <li>9. <a href="#autoevaluacion">Autoevaluación</a></li>
-                    <li>10. <a href="#archivos">Archivos Completos</a></li>
+                    <li>2. <a href="#expresion-recta-espacio">¿Cómo expresamos una recta en el espacio?</a></li>
+                    <li>3. <a href="#paralelismo-perpendicularidad">Paralelismo, perpendicularidad y... ¿qué más?</a></li>
+                    <li>4. <a href="#interseccion-espacio">Intersección de rectas en el espacio</a></li>
+                    <li>5. <a href="#autoevaluacion">Autoevaluación</a></li>
+                    <li>6. <a href="#archivos">Archivos Completos</a></li>
                 </ul>
         </section>
 
         <section id="introduccion">
             <h2>1. Introducción</h2>
-            <p>En este libro estaremos trabajando con matrices. Como siempre, les recomendamos que distribuyan bien el tiempo y que realicen las actividades propuestas antes de los encuentros presenciales para que puedan aprovecharlos mejor</p>
-            <p>Las matrices y los determinantes son herramientas del Álgebra que facilitan el ordenamiento de datos y su tratamiento.</p>
-            <p>Nosotros ya tuvimos un primer encuentro con las matrices al momento de reescribir un sistema de ecuaciones para trabajar con el método de resolución de Gauss. Por ejemplo, en el apartado 6. ¿Cómo hallar el conjunto solución de un sistema de ecuaciones lineales? del libro anterior, hay un <a href="https://www.youtube.com/watch?v=IW90DfygZC4" target="_blank">Video con un ejemplo de resolución mediante el método de eliminación de Gauss</a> en el que se presenta una resolución del sistema:</p>
-            <p>
-                \[
-                \begin{cases}
-                x-y+3z = 1 \\
-                2x+y-2z = 1 \\
-                -3x+y-z = -1
-                \end{cases}
-                \]
-            </p>
-            <video class="yt">https://www.youtube.com/watch?v=IW90DfygZC4</video>
-            <p>Para ello, el profesor del video escribe la matriz ampliada asociada al sistema:</p>
-            <p>
-                \[
-                \left(
-                \begin{array}{ccc|c}
-                1 & -1 & 3 & 1 \\
-                2 & 1 & -1 & 1 \\
-                -3 & 1 & -1 & -1
-                \end{array}
-                \right)
-                \]
-            </p>
-            <p>Durante esta semana presentaremos algunas matrices especiales, definiremos la suma de matrices, la multiplicación de un número por una matriz y la multiplicación de matrices.</p>
-            <p>Al realizar los ejercicios y problemas que les proponemos surgirán algunas cuestiones particulares que se dan con estos objetos y las operaciones entre ellos. Recuerden que tienen el foro <a class="con">Consultas</a></p>
-            <p>En el siguiente video se explica qué es una matriz, qué es la dimensión y cómo se identifican sus elementos. Recuerden que siempre que podamos vamos a estar ofreciendo el mismo video en dos plataformas diferentes por si alguna se cae.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=HKC4I_PtJsE" target="_blank">Video con una introducción a matrices</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=HKC4I_PtJsE</video>
-            </ul>
+            <p>Durante la semana pasada estuvimos trabajando con rectas en \( \mathbb{R}^2 \). Vimos distintas formas de representar una recta en forma algebraica: ecuación vectorial (o paramétrica) y ecuación cartesiana (o explícita o general). Es importante que distingamos qué rol cumple cada parámetro de la ecuación, cómo se relaciona con la recta. También es importante que sepamos cómo usar cada expresión para dar un punto de la recta, para saber si un punto pertenece o no a una recta. También surgieron nociones como rectas perpendiculares y paralelas. Estas nociones se centran en la dirección de las rectas. Resolvimos algunos problemas que implican hallar la intersección entre dos rectas.</p>
+            <p>Durante esta semana trabajaremos con ideas análogas a las que mencionamos en el párrafo anterior, pero para rectas en \( \mathbb{R}^3 \). Es una buena oportunidad para reforzar las ideas trabajadas. Así que les recomendamos que comparen con lo realizado.</p>
         </section>
-
-        <section id="matrices-especiales">
-            <h2>2. Matrices especiales</h2>
-            <img src="../assets/matrices_especiales.gif" alt="Matrices especiales" class="redu">
-            <p>En el siguiente video se muestran distintos tipos de matrices especiales: matriz fila, matriz columna, matriz nula, matriz cuadrada.</p>
+    
+        <section id="expresion-recta-espacio">
+            <h2>2. ¿Cómo expresamos una recta en el espacio?</h2>
+            <p>Vamos a pensar cómo definir rectas en \(\mathbb{R}^3\).</p>
+            <p>Primero, les proponemos que piensen ustedes el <a href="https://drive.google.com/file/d/1XrKyvw49vDmtHhvur-Og6zxFdw52gJfs/view?usp=sharing" target="_blank">problema 4 de la unidad 2 de la Guía de problemas que está en las páginas 33 y 34</a>.</p>
+            <iframe class="d">1XrKyvw49vDmtHhvur-Og6zxFdw52gJfs</iframe>
+            <img src="../assets/Habitación.gif" alt="Proyección" class="redu">
+            <p>En el siguiente video del profesor Daniel, les compartimos una posible solución a ese problema, el 4. También, en el mismo video, definimos una forma algebraica de representar rectas en \(\mathbb{R}^3\)</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=UO1svGa8_Zo" target="_blank">Video con matrices especiales</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=UO1svGa8_Zo</video>
+                <li><a href="https://www.youtube.com/watch?v=34_npE-6CsM" target="_blank">Video con una introducción a rectas en el espacio</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=34_npE-6CsM</video>
             </ul>
-            <p>En el siguiente video se muestran distintos tipos de matrices cuadradas especiales y algunos de sus elementos: diagonal principal, traza, matriz triangular superior, matriz triangular inferior, matriz diagonal, matriz identidad, matriz escalar.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=_GjcQrrnSpA" target="_blank">Video con matrices cuadradas especiales</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=_GjcQrrnSpA</video>
-            </ul>
-            <p>En el siguiente video presentamos a la matriz traspuesta:</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=WKIWSh_r9s0" target="_blank">Video sobre matriz traspuesta</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=WKIWSh_r9s0</video>
-            </ul>
+            <p>¿cómo hallar la ecuación vectorial de una recta conocidos dos puntos por el que pasa?</p>
+            <p>Para practicar sobre esto tienen el <a href="https://drive.google.com/file/d/1PZHOU8_2vzkBKt88kSKWXSQ6YLt5tcKv/view?usp=sharing" target="_blank">ejercicio 1 de la Guía de ejercicios sobre rectas en el espacio</a>.</p>
+            <iframe class="d">1PZHOU8_2vzkBKt88kSKWXSQ6YLt5tcKv</iframe>
+            <p>También pueden leer y hacer el <a href="https://drive.google.com/file/d/1XMyysXoN7Jpwb_B7o7r7R3Y0DULQXzsb/view?usp=sharing" target="_blank">problema 5 de la página 34 de la Guía de problemas</a>.</p>
+            <iframe class="d">1XMyysXoN7Jpwb_B7o7r7R3Y0DULQXzsb</iframe>
         </section>
-
-        <section id="operaciones-con-matrices">
-            <h2>3. Operaciones con matrices</h2>
-            <p>En el siguiente video se explica la suma de matrices.</p>
+    
+        <section id="paralelismo-perpendicularidad">
+            <h2>3. Paralelismo, perpendicularidad y... ¿qué más?</h2>
+            <p>Cuando trabajamos en el plano \(\mathbb{R}^2\) vimos que dos rectas distintas son paralelas si tienen la misma dirección, es decir, si sus vectores directores son paralelos. O sea, si sus vectores directores son múltiplo uno del otro.</p>
+            <p>En el plano, dos rectas distintas que son paralelas, no tienen ningún punto en común. Por la definición, toda recta es paralela a sí misma, y, en ese caso, ambas tienen todos sus puntos en común.</p>
+            <p>Además, vimos también la noción de perpendicularidad. En el plano, dos rectas son perpendiculares si sus vectores directores son perpendiculares, es decir, si el producto escalar entre los vectores directores es 0.</p>
+            <p>En el espacio, ¿pasa lo mismo? ¿Existen otras posiciones relativas entre dos rectas?</p>
+            <p>En el <a href="https://drive.google.com/file/d/1CowwCfAHO166mL-cYpC4LGzM2Xz-Csf7/view?usp=sharing" target="_blank">Apunte sobre rectas en el espacio</a> podrán leer sobre esta cuestión.</p>
+            <iframe class="d">1CowwCfAHO166mL-cYpC4LGzM2Xz-Csf7</iframe>
+            <p>¿Cuán similares y cuán diferentes son las nociones de paralelismo y perpendicularidad en el plano y en el espacio?</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=L8sESe3c2Rc" target="_blank">Video sobre suma de matrices</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=L8sESe3c2Rc</video>
+                <li>En el plano (euclídeo), dada una recta y un punto, existe una única recta paralela a la dada que pasa por el punto. En el espacio, ¿sucede lo mismo?</li>
+                <li>En el plano (euclídeo), dada una recta y un punto, existe una única recta perpendicular a la dada y que pasa por ese punto. En el espacio, ¿sucede lo mismo?</li>
+                <li>En el plano, las rectas perpendiculares siempre se cortan. ¿Qué sucede en el espacio?</li>
             </ul>
-            <p>En el siguiente video se explica la resta de matrices.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=gVMhkw_Mr-c" target="_blank">Video sobre resta de matrices</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=gVMhkw_Mr-c</video>
-            </ul>
-            <img src="../assets/suma_resta.gif" alt="Operaciones con Matrices" class="redu">
-            <p>En el siguiente video se explica cómo multiplicar una matriz por un escalar.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=QNkTiIFPQoA" target="_blank">Video sobre multiplicación de un escalar por una matriz</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=QNkTiIFPQoA</video>
-            </ul>
-            <img src="../assets/multiplicacion_entre_matrices.gif" alt="Multiplicación entre Matrices" class="redu">
-            <p>En los siguientes videos se explica el producto de matrices.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=89RqSVcNaFg" target="_blank">Video sobre multiplicación de matrices</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=89RqSVcNaFg</video>
-                <li><a href="https://www.youtube.com/watch?v=XPoudy41law" target="_blank">Video con un ejemplo de multiplicación de matrices de \( 2 \times 2 \)</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=XPoudy41law</video>
-                <li><a href="https://www.youtube.com/watch?v=Rl9HJkFEx3A" target="_blank">Video con un ejemplo de multiplicación de matrices de \( 3 \times 3 \)</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=Rl9HJkFEx3A</video>
-            </ul>
+            <p>Sobre intersección de rectas hablaremos en el siguiente apartado. Mientras tanto, los <a href="https://drive.google.com/file/d/1lONHz9aUOQzX7LYnLs5kBzi-VagzXIhv/view?usp=sharing" target="_blank">ejercicios 2, 3 y 4 de la Guía de ejercicios sobre rectas en el espacio</a> tratan sobre los temas de este apartado.</p>
+            <iframe class="d">1lONHz9aUOQzX7LYnLs5kBzi-VagzXIhv</iframe>
+            <p>Ah... casi nos olvidamos de pasarles este <a href="https://www.youtube.com/watch?v=E42GxGAzW58" target="_blank">Video con la resolución de un problema en el que hay aque hallar la ecuación de una recta paralela a otra que pasa por un punto dado</a> del profesor Marcelo.</p>
+            <video class="yt">https://www.youtube.com/watch?v=E42GxGAzW58</video>
+            <img src="../assets/rectasposicionrelativa.gif" alt="Rectas Posición Relativa" class="redu">
         </section>
-
-        <section id="formas-de-representar-sistemas">
-            <h2>4. Diferentes formas de representar un sistema de ecuaciones lineales</h2>
-            <img src="../assets/sistemas.gif" alt="Sistemas de ecuaciones lineales" class="redu">
-            <p>Dado un sistema de ecuaciones lineales podemos representarlo con matrices. En el siguiente video, el profesor Gastón nos cuenta cómo pensarlo:</p>
+    
+        <section id="interseccion-espacio">
+            <h2>4. Intersección de rectas en el espacio</h2>
+            <p>¿Cómo sabemos, desde el punto de vista algebraico, si dos rectas del espacio se cortan?</p>
+            <p>Intenten pensarlo ustedes resolviendo el <a href="https://drive.google.com/file/d/1fInI0zqjjFe_T93TohrGpvoKdWg7hy6D/view?usp=sharing" target="_blank">problema 8b de la página 35</a> de la Guía de Problemas.</p>
+            <iframe class="d">1fInI0zqjjFe_T93TohrGpvoKdWg7hy6D</iframe>
+            <p>A continuación les presentamos un texto y un video en el que se busca la intersección de dos rectas de \(\mathbb{R}^3\) . Se trata del mismo ejemplo en ambos casos, así que ustedes eligen si leen el texto, si miran el video de la profesora Perla... o si eligen ambos:</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=dqmhnR84NfU" target="_blank">Video con la representación matricial de un sistema de ecuaciones lineales</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=dqmhnR84NfU</video>
+                <li><a href="https://drive.google.com/file/d/1iDHFq74j1fpievEHa8VRvjrrp5Xf_fax/view?usp=sharing" target="_blank">Texto con la resolución de un problema de intersección de rectas en el espacio</a></li>
+                <iframe class="d">1iDHFq74j1fpievEHa8VRvjrrp5Xf_fax</iframe>
+                <li><a href="https://www.youtube.com/watch?v=XoUXtCusygc" target="_blank">Video con la resolución de un problema de intersección de rectas en el espacio</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=XoUXtCusygc</video>
             </ul>
-            <p>Les proponemos que piensen el <a href="https://drive.google.com/file/d/1KEceT7_Y-FKmMm7Pvykpwj5ChP_BnPy_/view?usp=sharing" target="_blank">problema 20 de la página 58 de la Guía de problemas</a>. Luego, pueden ver el siguiente video en el que el profesor Martín Ch nos muestra parte de la resolución del primer ítem.</p>
-            <iframe class="d">1KEceT7_Y-FKmMm7Pvykpwj5ChP_BnPy_</iframe>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=7jQK7NqQyAM" target="_blank">Video con resolución del problema 20 de la pág 58 de la Guía</a>.</li>
-                <video class="yt">https://www.youtube.com/watch?v=7jQK7NqQyAM</video>
-            </ul>
+            <p>Para practicar con ejercicios que integran los contenidos de esta semana y la semana pasada tienen el resto de los <a href="https://drive.google.com/file/d/1BP5LGMNoLmvZk0HztGqGNdEeV0v7LbVo/view?usp=sharing" target="_blank">ejercicios de la Guía de ejercicios sobre rectas en el espacio</a></p>
+            <iframe class="d">1BP5LGMNoLmvZk0HztGqGNdEeV0v7LbVo</iframe>
+            <p>Y los <a href="https://drive.google.com/file/d/12-vSeBumbB5mBDwae4vjuOqJbUeV5AvX/view?usp=sharing" target="_blank">ejercicios (1), (2), (3), (4), (5) y (12) de las páginas 44, 45 y 46</a> de la Guía de problemas.</p>
+            <iframe class="d">12-vSeBumbB5mBDwae4vjuOqJbUeV5AvX</iframe>
+            <p>No se olviden de plantear sus preguntas en el foro de <a class="con">Consultas</a>. Muchos compañeros y muchas compañeras lo están aprovechando con las preguntas, y también hay muy buenos aportes. No dejen de pasar por allí.</p>
         </section>
-
-        <section id="propiedades-de-operaciones">
-            <h2>5. Propiedades de las operaciones con matrices</h2>
-            <p>¿Qué propiedades cumple la suma y la resta de matrices? ¿Y el producto de un escalar por el de una matriz?.</p>
-            <p>En el siguiente video, el profesor Daniel, nos cuenta qué sucede con la (no) conmutatividad de la multiplicación de matrices:</p>
-            <ul>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=vkHm6oWE7Uo" target="_blank">Video sobre la no conmutatividad de la multiplicación de matrices</a>
-                </li>
-            </ul>
-            <video class="yt">https://www.youtube.com/watch?v=vkHm6oWE7Uo</video>
-            <p>¿Se cumple la propiedad distributiva de la multiplicación de matrices con respecto a la suma?</p>
-            <p> En el siguiente recorte del libro Howard, A. (1994). Introducción al Álgebra Lineal se presentan algunas propiedades:</p>
-            <ul>
-                <li><a href="https://drive.google.com/file/d/1s0NliS0PdrkY2nHZ_Ujn9GMjcDEBqMSp/view?usp=sharing" target="_blank">Texto con las propiedades de las operaciones con matrices</a></li>
-                <iframe class="d">1s0NliS0PdrkY2nHZ_Ujn9GMjcDEBqMSp</iframe>
-            </ul>
-        </section>
-
-        <section id="guia-actividades">
-            <h2>6. Guía de actividades y texto teórico</h2>
-            <p>A continuación, pueden realizar los ejercicios de la <a href="https://drive.google.com/file/d/10GnB9mA3OJ6cPbtbDCow_V0Z2t34twur/view?usp=sharing" target="_blank">Guía de actividades sobre operaciones con matrices</a>.</p>
-            <iframe class="d">10GnB9mA3OJ6cPbtbDCow_V0Z2t34twur</iframe>
-            <p>Si lo desean, pueden consultar teoría sobre este tema en <a href="https://drive.google.com/file/d/1gkdONPM9RwyugrP761oN7aE4D_-suyni/view?usp=sharing" target="_blank">Altman, Comparatore y Kurzrok (2001). Matemática 7: matrices. Pág 11 a 78</a>.</p>
-            <iframe class="d">1gkdONPM9RwyugrP761oN7aE4D_-suyni</iframe>
-            <p> Tengan en cuenta que pesa poco menos que 34 MB y que puede tardar un poco en bajar.</p>
-        </section>
-
-        <section id="inversa-de-matriz">
-            <h2>7. Inversa de una matriz</h2>
-            <p>El conjunto de los números reales junto con la suma y la multiplicación y los neutros de cada operación tiene una estructura muy particular, conforman lo que se llama cuerpo. Por ejemplo, sabemos que el \( 0 \) es el neutro de la suma, es decir, cualquier número real sumado a \( 0 \) da el mismo número real del principio. Sabemos que para cada número real \( a \) existe un número que sumado al primero me da el \( 0 \), ese número recibe el nombre de opuesto del número \( a \) y lo notamos \( -a \). Es decir, que \( a+(-a) = 0 \). La multiplicación tiene a \( 1 \) como neutro: \( a \cdot 1 = a \). La multiplicación cumple con la propiedad conmutativa (al igual que la suma), es decir, para cualesquiera dos números reales \( a \) y \( b \) vale que \( a \cdot b = b \cdot a\).</p>
-            <p>¿Qué sucede con las matrices? Bueno, en principio tanto para sumar matrices como para multiplicarlas, el tamaño debe ser el que corresponda en cada caso. ¿Cómo deben ser dos matrices para que puedan sumarse? ¿Cuál es el tamaño que deben tener dos matrices para que puedan multiplicarse? En el <a href="https://drive.google.com/file/d/1s0NliS0PdrkY2nHZ_Ujn9GMjcDEBqMSp/view?usp=sharing" target="_blank">Texto con las propiedades de las operaciones con matrices del libro Howard, A. (1994). Introducción al Álgebra Lineal</a> tienen un resumen de propiedades de las operaciones entre matrices, y de un escalar por una matriz.</p>
-            <iframe class="d">1s0NliS0PdrkY2nHZ_Ujn9GMjcDEBqMSp</iframe>
-            <img src="../assets/matrizasociada.jpg" alt="Matriz Asociada" class="redu">
-            <p>Una cuestión que planteamos en los apartados anteriores es si ocurre o no que la multiplicación de matrices no cumple con la propiedad conmutativa (pueden revisar el <a href="https://www.youtube.com/watch?v=vkHm6oWE7Uo" target="_blank">Video sobre la no conmutatividad de la multiplicación de matrices</a>). Bueno, en general no se cumple, hay algunos ejemplos en los que sí, pero no en todos los casos.</p>
-            <video class="yt">https://www.youtube.com/watch?v=vkHm6oWE7Uo</video>
-            <p>Otra cuestión tiene que ver con la idea relacionada con procesos reversibles. Por ejemplo, pensemos esto primero en el conjunto de los números reales. Si tenemos la multiplicación \( a \cdot b\) eso da un número real \( c \), en algunos casos es posible, teniendo \( c \) y \( b \) volver a obtener \( a \). Lo hacemos dividiendo \( c \) por \( b \). Pero si no quisiéramos acudir a una operación distinta, si quisiéramos quedarnos con la multiplicación, también podemos “desandar” el camino si a \( c \) lo multiplicamos por el inverso de \( b \), es decir si hacemos la cuenta \( c \cdot \frac{1}{b} \). Recordemos \( 0 \) no tiene inverso, pero el resto de los números reales sí.</p>
-            <p>En particular, si tenemos una ecuación en el conjunto de los números reales \( a \cdot x = b \) y \( a \) es distinto de \( 0 \), podemos multiplicar ambos miembros por el inverso multiplicativo de \( a \) y logramos despejar la incógnita \( x \). De esta manera queda \(x = \frac{b}{a}\).</p>
-            <p> ¿Qué sucederá en el caso de que tengamos una ecuación con matrices?</p>
-            <p>\[
-                A \cdot x = b 
-                \]
-            </p>
-            <p> En el siguiente video el profesor Martín Ch retoma algunas de las cuestiones que venimos mencionando en la introducción de este libro:</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=mQP_lFMOeGU" target="_blank">Video con una introducción a inversa de una matriz</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=mQP_lFMOeGU</video>
-            </ul>
-            <p>En el siguiente video el profesor Martín T calcula la matriz inversa de una matriz de usando el método de Gauss-Jordan.Aprovechamos también para pensar un significado de la matriz inversa al momento de hacer cuentas.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=6pfH_VyDzIY" target="_blank">Video en el que calculamos la matriz inversa de una matriz de \( 2 \times 2 \)</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=6pfH_VyDzIY</video>
-            </ul>
-            <img src="../assets/inversa2.gif" alt="Como hallar la matriz inversa de una matriz 2 \times 2" class="redu">
-            <p> ¿Todas las matrices son inversibles? En el siguiente video tratamos de encontrar una matriz inversa de una matriz de \( 3 \times 3 \) en una de ellas nos encontramos con un inconveniente, ¿qué significa? ¿lo podemos pensar geométricamente?.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=dOEz3W5nrds" target="_blank">Video sobre inversa de una matriz de \( 3 \times 3 \)</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=dOEz3W5nrds</video>
-            </ul>
-        </section>
-
-        <section id="material-teorico">
-            <h2>8. Material teórico y actividades sobre inversa</h2>
-            <p>Les proponemos que realicen las actividades del siguiente <a href="https://drive.google.com/file/d/1_vwrG6yHJeL7zTlOPM4tV1UBQ5iHap5Z/view?usp=sharing" target="_blank">Listado de ejercicios y problemas sobre matriz inversa</a>.</p>
-            <iframe class="d">1_vwrG6yHJeL7zTlOPM4tV1UBQ5iHap5Z</iframe>
-            <p>Si lo creen necesario pueden acudir a la sección de matriz inversa del libro de <a href="https://drive.google.com/file/d/1mfY5LmQp5Cy6dNFLwEiT_A4YCh_YxpR1/view?usp=sharing" target="_blank">Maestripieri, Pavón y Resmesar (2017) Notas de Álgebra Lineal. Cap. 2. Pág 101 a 108</a>.</p>
-            <iframe class="d">1mfY5LmQp5Cy6dNFLwEiT_A4YCh_YxpR1</iframe>
-            <p><strong>Extra: Pajaritos, Teoría Producto Matricial, Matriz de Lefkotvitch, Ejercicios</strong></p>
-            <iframe class="d">1AlXCy_fse8-OM0XscZPrcRN12zrixvDN</iframe>
-            <p><strong>Ejercicio extra: Pajaritos</strong></p>
-            <iframe class="d">1HuqlCM9TURHgo-roQE5Ofy0obf4MlEp5</iframe>
-        </section>
-
+    --> 
         <section id="autoevaluacion">
-            <h2>9. Autoevaluación</h2>
-            <p>Como parte de la evaluación continua les proponemos la <a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366148" target="_blank"><strong>Autoevaluación sobre matrices</strong></a>. Ingresen al cuestionario para ver la fecha de apertura y la de cierre. Esta autoevaluación involucra temas de este libro y del anterior.</p>
+            <h2>5. Autoevaluación</h2>
+            <p>A esta altura ya saben las condiciones de Evaluación y acreditación, ¿no?.</p>
+            <p>Como parte de la evaluación continua <a class="Req">(ver las condiciones en Condiciones de trabajo, de evaluación y de acreditación)</a> les proponemos la:</p>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1wajX4tpQBi2S2BuMYBFdc5y5a86KP7sc/view?usp%3Ddrive_link&sa=D&source=editors&ust=1730918828295876&usg=AOvVaw0TOlCu8vsAZiz7EnqTFI5s" target="_blank"><strong>Autoevaluación sobre rectas en \(\mathbb{R}^3\)</strong></a></li>
+            </ul>
+            <p>Ingresen a los cuestionarios para ver la fecha de apertura y la de cierre.</p>
             <p>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.</p>
-            <p>Los que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
+            <p>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
             
-            <iframe class="d">17o03EPQ96dFqQVN4dN6Oi8zZV2gQCwBP</iframe>
+            <iframe class="d">1wajX4tpQBi2S2BuMYBFdc5y5a86KP7sc</iframe>
         </section>
 
         <section id="archivos">
             <h2>Archivos Completos</h2>
             <ul>
-                <li><a href="https://drive.google.com/file/d/1pHr50PY1KpU2wljpU1ZSehAuPJaJ77eR/view?usp=sharing" target="_blank">Unidad 3</a></li>
-                <li><a href="https://drive.google.com/file/d/1s0NliS0PdrkY2nHZ_Ujn9GMjcDEBqMSp/view?usp=sharing" target="_blank">Propiedades de las operaciones con matrices.</a></li>
-                <li><a href="https://drive.google.com/file/d/10GnB9mA3OJ6cPbtbDCow_V0Z2t34twur/view?usp=sharing" target="_blank">Guía de actividades sobre operaciones con matrices.</a></li>
-                <li><a href="https://drive.google.com/file/d/1gkdONPM9RwyugrP761oN7aE4D_-suyni/view?usp=sharing" target="_blank">Matemática 7: matrices. Pág 11 a 78.</a></li>
-                <li><a href="https://drive.google.com/file/d/1_vwrG6yHJeL7zTlOPM4tV1UBQ5iHap5Z/view?usp=sharing" target="_blank">Listado de ejercicios y problemas sobre matriz inversa.</a></li>
-                <li><a href="https://drive.google.com/file/d/1mfY5LmQp5Cy6dNFLwEiT_A4YCh_YxpR1/view?usp=sharing" target="_blank">Maestripieri, Pavón y Resmesar (2017) Notas de Álgebra Lineal. Cap. 2. Pág 101 a 108.</a></li>
-                <li><a href="https://drive.google.com/file/d/1HuqlCM9TURHgo-roQE5Ofy0obf4MlEp5/view?usp=sharing" target="_blank">Ejercicio extra: Pajaritos</li>
-                <li><a href="https://drive.google.com/file/d/1AlXCy_fse8-OM0XscZPrcRN12zrixvDN/view?usp=sharing" target="_blank">Ejercicios extra: Pajaritos, Matriz de Lefkovitch, Teoría</a></li>
+                <li><a href="https://drive.google.com/file/d/1yNSWO9Q1WITE-cOXc_p3-nDFHwzkkmk9/view?usp=sharing" target="_blank">Unidad 2</a></li>
+                <li><a href="https://drive.google.com/file/d/17zepPS9M4bg58H95jUkR5D6oseK8ENwh/view?usp=sharing" target="_blank">Apunte Rectas en \(\mathbb{R}^2\)</a></li>
+                <li><a href="https://drive.google.com/file/d/1CowwCfAHO166mL-cYpC4LGzM2Xz-Csf7/view?usp=sharing" target="_blank">Apunte Rectas en \(\mathbb{R}^3\)</a></li>
+                <li><a href="https://drive.google.com/file/d/10kXFALYHr3rLFuXZWC17Zgv4PFcq-M30/view?usp=sharing" target="_blank">Actividades de Práctica sobre Rectas en \(\mathbb{R}^2\)</a></li>
+                <li><a href="https://drive.google.com/file/d/1-EqFIDO_57Ze-r8TJ5hMzGBQSEmhkAGp/view?usp=sharing" target="_blank">Actividades de Práctica sobre Rectas en \(\mathbb{R}^3\)</a></li>
+                <li><a href="https://drive.google.com/file/d/1iDHFq74j1fpievEHa8VRvjrrp5Xf_fax/view?usp=sharing" target="_blank">Resolución de un Problema de Intersecciónm de Rectas en \(\mathbb{R}^3\)</a></li>
             </ul>
         </section>
 
@@ -236,7 +125,7 @@
     <script src="../js/script.js"></script>
 </body>
 <footer class="footer">
-    <a href="../assets/libro5.html" class="arrow arrow-left" aria-label="Libro 5">
+    <a href="../assets/libro2.html" class="arrow arrow-left" aria-label="Libro 2">
       <div class="line one">
           <div class="round"></div>
           <div class="round"></div>
@@ -288,7 +177,7 @@
       </div> 
     </a>
   
-    <a href="../assets/libro7.html" class="arrow arrow-right" aria-label="Libro 7">
+    <a href="../assets/libro4.html" class="arrow arrow-right" aria-label="Libro 4">
       <div class="line one">
           <div class="round"></div>
           <div class="round"></div>

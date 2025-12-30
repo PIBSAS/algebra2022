@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-        <h1>Libro 2: Vectores</h1>
+        <h1>Libro 2 - Trigonometría</h1>
     </header>
 
     <main>
@@ -23,321 +23,217 @@
             <h2>Tabla de contenidos</h2>
                 <ul>
                     <li>1. <a href="#introduccion">Introducción</a></li>
-                    <li>2. <a href="#que-es-un-vector">¿Qué es un vector?</a>
-                        <ul>
-                            <li>2.1 <a href="#norma-y-angulo">Norma y ángulo</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        3. <a href="#operaciones-con-vectores">Operaciones que involucran a vectores</a>
-                        <ul>
-                            <li>3.1 <a href="#suma-de-vectores">Suma de vectores</a></li>
-                            <li>3.2 <a href="#multiplicacion-por-un-escalar">Multiplicación por un escalar</a></li>
-                            <li>3.3 <a href="#para-practicar">Para practicar estas operaciones</a></li>
-                        </ul>
-                    </li>
-                    <li>4. <a href="#combinacion-lineal">Combinación lineal de vectores</a></li>
-                    <li>5. <a href="#producto-escalar">Producto escalar (o producto punto o producto interno)</a></li>
-                    <li>6. <a href="#angulo-entre-vectores">Ángulo entre vectores</a></li>
-                    <li>7. <a href="#vectores-en-el-espacio">Vectores en el espacio</a></li>
-                    <li>8. <a href="#autoevaluacion">Autoevaluación</a></li>
-                    <li>9. <a href="#archivos">Archivos Completos</a></li>
+                    <li>2. <a href="#trigonométricas">Funciones trigonómetricas</a></li>
+                    <li>3. <a href="#coseno">Teorema del coseno</a></li>
+                    <li>4. <a href="#autoevaluacion">Autoevaluación</a></li>
+                    <li>5. <a href="#archivos">Archivos Completos</a></li>
                 </ul>
         </section>
         
         <section id="introduccion">
             <h2>1. Introducción</h2>
-            <p>Para estudiar ciertos fenómenos, en muchos casos alcanza con definir variables que involucren únicamente números (y a lo sumo alguna unidad de medida) como, por ejemplo, situaciones en las que intervienen el tiempo, o la temperatura, o la masa de los objetos.</p>
-            <p>En cambio, existen otras situaciones en las que es necesario considerar otras características, como por ejemplo la dirección o el sentido en el que una cierta magnitud acciona. Entre estas variables tenemos las fuerzas, los desplazamientos, la posición, la velocidad, etc.</p>
-            <p>En este libro nos introduciremos en los primeros pasos del tema vectores. Vamos a proponerles un texto, algunos videos y algunas actividades. Y al final de la semana la autoevaluación. Como siempre, tienen el foro <a class="con">Consultas</a> y los encuentros presenciales para poder plantear sus dudas.</p>
-            <p>Recuerden que para navegar en este libro tienen la tabla de contenidos (que despliegan con la flechita oscura de la derecha) o las flechas de siguiente y anterior que están por encima de este texto.</p>
-        </section>
-    
-        <section id="que-es-un-vector">
-            <h2>2. ¿Qué es un vector?</h2>
-            <p>Vamos a comenzar pensando en los vectores flecha. Para ello comenzaremos con la idea geométrica de vector con el siguiente video:</p>
+            <p>Recuerden que pueden hacer clic en las frases resaltadas para acceder a materiales y recursos.</p>
+            <p>La semana pasada comenzamos trabajando con cuadriláteros y en especial paralelogramos. Continuamos trabajando con triángulos rectángulos. Vimos el teorema de Pitágoras que relaciona los tres lados de cualquier triángulo rectángulo e introdujimos las razones trigonométricas entre los lados de los triángulos rectángulos asociado a alguno de sus ángulos agudos.</p>
+            <p><strong>En esta semana</strong>vamos a querer trabajar con un teorema que relaciona los tres lados y uno de los ángulos de cualquier triángulo. Este teorema es conocido como teorema del coseno. Como podrán imaginarse, este teorema, trabaja con el coseno de alguno de los ángulos del triángulo. Y como sabemos, la suma de los ángulos de cualquier triángulo es igual a dos rectos, es decir, es igual a 180°. Eso significa, que existen triángulos que pueden tener ángulos mayores a 90°. ¿Y qué sería calcular el coseno de un ángulo de, por ejemplo, 150°?.</p>
+            <img src="../assets/image93.jpg" alt="Introducción">
+            <p>Antes de meternos con el teorema en cuestión, vamos a dar una nueva definición de las funciones trigonométricas. Esto va a conservar lo que ya teníamos (posibilidad de trabajar con el seno, coseno y tangente de ángulos agudos) y agregar la posibilidad de trabajar con otros ángulos.</p>
+            <p>Podríamos pensar el trabajo de esta semana en dos partes:</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=HyCUD_7lfAo" target="_blank">Episodio I: Introducción, ¿qué es un vector flecha?</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=HyCUD_7lfAo</video>
+                <li>Las definiciones de <strong>las funciones trigonométricas</strong> a partir de la circunferencia unitaria.</li>
+                <li>El<strong>teorema del Coseno</strong>.</li>
             </ul>
-            <img src="../assets/star_war_gif.gif" alt="Episodio I: Introducción, ¿qué es un vector flecha?" class="redu">
-            <p>Es posible caracterizar&dagger; un vector a partir de lo que llamamos sus componentes. ¿Qué son las componentes de un vector? Pueden verlo en el siguiente video:</p>
+            <p> Este libro tiene 4 apartados. Pueden acceder a cada uno de ellos haciendo clic en la tabla de contenidos. Búsquenla en alguna parte de la pantalla. Es posible que esté en el margen derecho y superior.</p>
+            <p>También pueden ir hacia adelante y hacia atrás haciendo clic en la flecha que apunta a la derecha o a la izquierda, respectivamente. Están ubicadas debajo y encima de este texto.</p>
+        </section>
+
+        <section id="trigonométricas">
+            <h2>2. Funciones trigonométricas</h2>
+            <p> Como adelantamos en la introducción, vamos a trabajar con funciones trigonométricas. Esta nueva definición va a ser equivalente con las razones trigonométricas ya definidas la semana pasada para el caso de ángulos mayores que 0° y menores que 90° y ampliarán la posibilidad de trabajar con otras cantidades.</p>
+            <p>En primer lugar, antes de entrar a lo que mencionamos en el párrafo anterior les proponemos que miren los siguientes videos en el que explicamos
+                algunas cuestiones sobre la medición de ángulos y sobre la posibilidad de pensar la orientación:</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=BMMY4Ojtu6s" target="_blank">Video componentes de un vector a partir de los puntos inicial y final</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=BMMY4Ojtu6s</video>
+                <li><a href="https://www.youtube.com/watch?v=hv1Tssqi-44" target="_blank">Video sobre Sistemas de medición de ángulos</a></li><br>
+                <video class="yt">https://www.youtube.com/watch?v=hv1Tssqi-44</video>
+                <li><a href="https://www.youtube.com/watch?v=MrYo6BbnI6M" target="_blank">Video sobre Ángulos orientados en una circunferencia</a></li><br>
+                <video class="yt">https://www.youtube.com/watch?v=MrYo6BbnI6M</video>
             </ul>
-            <p><small>&dagger;Caracterizar significa dar condiciones necesarias y suficientes (generalmente, las mínimas posibles) de los objetos matemáticos de modo que los objetos que cumplen las características son los mismos que los objetos definidos. Por ejemplo, definimos paralelogramo como cualquier cuadrilátero que tiene dos pares de lados paralelos. Una caracterización sería: cuadrilátero que tiene dos pares de ángulos opuestos congruentes. Otra caracterización sería: cuadrilátero que tiene dos diagonales que se cortan por su respectivo punto medio. Las tres (la definición y las dos caracterizaciones) involucran propiedades de los objetos en cuestión que son equivalentes, es decir, definen al mismo objeto. O sea, únicamente los cuadriláteros que tienen dos pares de lados paralelos también tienen los ángulos opuestos iguales y todos ellos lo cumplen. De igual modo sucede con el cruce de las diagonales por sus respectivos puntos medios.</small></p>
-        </section>
-    
-        <section id="norma-y-angulo">
-            <h3>2.1. Norma y ángulo</h3>
-            <p>También es posible caracterizar a un vector a partir de dos valores: la norma (o magnitud, o longitud) y el ángulo (o dirección).</p>
-            <p>En esta sección les proponemos que realicen la siguiente actividad:</p>
-            <p>Accedan a las <a href="https://drive.google.com/file/d/1sBoGloY50Gs1iO14oP4B9Srax5xY9nJq/view?usp=sharing" target="_blank">páginas 220 a 223 del texto Grossman y Flores (2012) Álgebra lineal. Cap. 3. Pág 220 a 230</a> para ver las explicaciones y definiciones por escrito. Tomen nota de las definiciones de norma y dirección de un vector que allí se establecen.</p>
-            <iframe class="d">1sBoGloY50Gs1iO14oP4B9Srax5xY9nJq</iframe>
-            <p>Resuelvan algunos de los ejercicios  del <a href="https://drive.google.com/file/d/1lv-zF2XF3RTYEZhw_ifcJNsHZG7JNq39/view?usp=sharing" target="_blank">1 al 16 de la página 229 del libro de Grossman y Flores</a></p>
-            <iframe class="d">1lv-zF2XF3RTYEZhw_ifcJNsHZG7JNq39</iframe>
-            <p>Y el <a href="https://drive.google.com/file/d/1Wj8Wk8SOiwKLJPfprTNj56iSkLJ46eiY/view?usp=sharing" target="_blank">ejercicio 1 de la Práctica adicional sobre vectores - parte 1.</a></p>
-            <iframe class="d">1Wj8Wk8SOiwKLJPfprTNj56iSkLJ46eiY</iframe>
-            <p>Además, tienen una <a href="https://drive.google.com/file/d/137FldX8vne0Nb8v1BgbJxXdO9aKuOFmv/view?usp=sharing" target="_blank">Resolución del ejercicio (13) de la página 20 de la Guía de Problemas</a>. que involucra la noción de paralelismo de vectores.</p>
-            <iframe class="d">137FldX8vne0Nb8v1BgbJxXdO9aKuOFmv</iframe>
-        </section>
-    
-        <section id="operaciones-con-vectores">
-            <h2>3. Operaciones que involucran a vectores</h2>
-            <p>Todo muy lindo, pero… se puede hacer cuentas con vectores. Es decir, ¿qué sería tener dos vectores y sumarlos? ¿Y restarlos? Es posible que, a partir de dos vectores, obtengamos el vector suma.</p>
-            <img src="../assets/cuentas.png" alt="Operaciones que involucran a vectores" class="redu">
-            <p>En las dos secciones siguientes veremos la suma y resta de vectores y la multiplicación por un escalar. En la última sección indicamos las actividades de práctica.</p>
-        </section>
-    
-        <section id="suma-de-vectores">
-            <h3>3.1. Suma de vectores</h3>
-            <img src="../assets/suma_de_vectores.gif" alt="Suma de vectores" class="redu">
-            <p>A continuación, presentamos el episodio II que intenta develar los misterios de la suma y la resta de vectores:</p>
+            <br>
+            <img src="../assets/radian.gif" alt="1 Radián" class="redu">
+            <p>Ahora sí, les proponemos el siguiente video en el que definimos las funciones trigonométricas sobre la circunferencia unitaria:</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=KsPREs_KsUw" target="_blank">Episodio II: Suma y resta gráfica</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=KsPREs_KsUw</video>
+                <li><a href="https://www.youtube.com/watch?v=JjWSsYS-OWQ" target="_blank">Video sobre Trigonometría en la circunferencia unitaria</a></li><br>
+                <video class="yt">https://www.youtube.com/watch?v=JjWSsYS-OWQ</video>
             </ul>
-            <p>Además, pueden ver en el siguiente video cómo efectuar la suma a partir de las componentes.</p>
+            <p>Para afianzar algunas ideas, les proponemos que realicen las actividades 1 a 8 de la <a href="https://drive.google.com/file/d/1AuPYVG1-Ae0xvvvuhyNbn0We8ch6k1-S/view?usp=sharing" target="_blank">Práctica sobre trigonometría en la circunferencia y teorema del coseno</a>.</p>
+            <iframe class="d">1AuPYVG1-Ae0xvvvuhyNbn0We8ch6k1-S</iframe>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=kDWzadQhWQ0" target="_blank">Video sobre suma de vectores a partir de las componentes</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=kDWzadQhWQ0</video>
+                <li><p>Además, les facilitamos un <a href="https://www.geogebra.org/m/bqtqxjcu" target="_blank">Applet con la circunferencia trigonométrica</a>. Con él pueden pensar las definiciones del seno y del coseno en la circunferencia unitaria. También pueden usarlo para hallar los valores de seno y coseno de distintos ángulos.</p></li>
+                <li><p><a href="https://www.geogebra.org/classic/bqtqxjcu" target="_blank">Abrir Applet en GeoGebra online</a></p></li>
+                <li><p><a href="https://drive.google.com/file/d/1O9ZX8I0GNTrenMnHFzGo-xgpRypaGXps/view?usp=sharing" target="_blank">Descargar Applet para usar en PC o celular</a></p></li>
             </ul>
+            <p>Recuerden que nos encuentran cuando realizan sus preguntas y plantean sus dudas en el foro <a class="con">Consultas</a> y en los encuentros presenciales.</p>
         </section>
-    
-        <section id="multiplicacion-por-un-escalar">
-            <h3>3.2. Multiplicación por un escalar</h3>
-            <p>Las dos operaciones del apartado anterior están definidas a partir de dos vectores y el resultado es un vector. Veamos el siguiente caso en el que tomamos un vector y un número real (un escalar) y al operar, asignamos al resultado un vector. En el primer video tendrán la idea gráfica y en el segundo, cómo proceder a partir de las componentes del vector. Además, en uno de ellos encontrarán cómo hacer para encontrar el punto medio de dos puntos.</p>
-            <img src="../assets/star_war_gif.gif" alt="Producto escalar" class="redu">
+
+        <section id="coseno">
+            <h2>3. Teorema del coseno</h2>
+            <p>Como mencionamos, este teorema relaciona los tres lados de un triángulo cualquiera con uno de sus ángulos. Si quieren conocer ya el enunciado del teorema, lo encuentran en el <a href="https://drive.google.com/file/d/149zDZc02a0p3LqTKEp47hjQY-vP5Qlaa/view?usp=sharing" target="_blank">problema 10 de la página 11</a> de la Guía de Problemas.</p>
+            <iframe class="d">149zDZc02a0p3LqTKEp47hjQY-vP5Qlaa</iframe>
+            <p>En Matemática, como en otras áreas del conocimiento, la justificación de las afirmaciones cobra especial importancia. Partimos de algunas verdades que consideramos evidentes, o que nos resulta conveniente aceptar como verdaderas, y a partir de ellas justificamos las afirmaciones que le siguen. Esperamos que a lo largo del curso ustedes puedan justificar sus razonamientos y resoluciones. En el siguiente video, verán el enunciado del teorema del coseno y una justificación</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=B4MEP6cweXM" target="_blank">Episodio III: Multiplicación por un escalar</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=B4MEP6cweXM</video>
-                <li><a href="https://www.youtube.com/watch?v=jCDfGFvFL10" target="_blank">Video sobre la multiplicación por un escalar a partir de las componentes del vector</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=jCDfGFvFL10</video>
+                <li><a href="https://www.youtube.com/watch?v=WAYqoXBBxG0" target="_blank">Video con una Demostración del teorema del coseno.</a></li><br>
+                <video class="yt">https://www.youtube.com/watch?v=WAYqoXBBxG0</video>
             </ul>
-        </section>
-    
-        <section id="para-practicar">
-            <h3>3.3. Para practicar estas operaciones</h3>
-            <p> Para practicar sobre estos temas pueden realizar los <a href="https://drive.google.com/file/d/1yEV_6PxbBfTowzegiA5JjZtmjc9qR2Zw/view?usp=sharing" target="_blank">ejercicios 17 a 19 de la página 229 del libro de Grossman y Flores</a></p>
-            <iframe class="d">1yEV_6PxbBfTowzegiA5JjZtmjc9qR2Zw</iframe>   
-            <img src="../assets/practica.jpg" alt="practica" class="redu">
-            <p>y los <a href="https://drive.google.com/file/d/18b6F0VR1JeWB6IzB-SqyCbCLrzWflkBA/view?usp=sharing" target="_blank">ejercicios 2, 3 y 4 de la Práctica adicional sobre vectores - parte 1</a>.</p>
-            <iframe class="d">18b6F0VR1JeWB6IzB-SqyCbCLrzWflkBA</iframe>
-            
-        </section>
-    
-        <section id="combinacion-lineal">
-            <h2>4. Combinación lineal de vectores</h2>
-            <p>Para entrar en este tema, les pedimos primero que trabajen con los <a href="https://drive.google.com/file/d/1CAYcYCc5lbgz6UW8lhUeHP0phBKwjKl5/view?usp=sharing" target="_blank">problemas 16 y 17 de la página 12 de la Guía de problemas</a>.</p>
-            <iframe class="d">1CAYcYCc5lbgz6UW8lhUeHP0phBKwjKl5</iframe>
-            <p>Para trabajar con ese problema necesitarán el siguiente <a href="https://drive.google.com/file/d/1kgOsbFg0N_wVCH7V1weh-_vN2wkk5BnQ/view?usp=sharing" target="_blank">Archivo GGB tiro al blanco</a>.</p>
-            <p>Una vez que intentaron pensar esos problemas, les pedimos que vean el siguiente video:</p>
+            <p>Para poder practicar con este concepto, les recomendamos que realicen el <a href="https://drive.google.com/file/d/149zDZc02a0p3LqTKEp47hjQY-vP5Qlaa/view?usp=sharing" target="_blank">problema 10 de la página 11</a> de la Guía de Problemas.</p>
+            <iframe class="d">149zDZc02a0p3LqTKEp47hjQY-vP5Qlaa</iframe>
+            <p>Y las actividades 9 en adelante de la <a href="https://drive.google.com/file/d/1AoBjTy42lO14aXhi16gnmtBcG3KFKpJ9/view?usp=sharing" target="_blank">Práctica sobre trigonometría en la circunferencia y teorema del coseno</a>.</p>
+            <iframe class="d">1AoBjTy42lO14aXhi16gnmtBcG3KFKpJ9</iframe>
+            <p>A continuación, les acercamos unos ejemplos de resoluciones de algunos problemas. Les recomendamos que una vez comprendido el problema, paren el video e intenten resolverlo primero ustedes.</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=r4l1CeO6Imw" target="_blank">Episodio IV: Combinación lineal de vectores</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=r4l1CeO6Imw</video>
+                <li><a href="https://www.youtube.com/watch?v=SMOu7O7vTAo" target="_blank">Video con un ejemplo encontrar un ángulo de un triángulo.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=SMOu7O7vTAo</video>
+                <li><a href="https://www.youtube.com/watch?v=QUoBji5DROg" target="_blank"> Video con un ejemplo encontrar la longitud de un lado de un triángulo.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=QUoBji5DROg</video>
             </ul>
-            <p>En la <a href="https://drive.google.com/file/d/1QwNjklhMPWCkYQdVoAfH6RYQGjr1xPd3/view?usp=sharing" target="_blank">página 226 del libro de Grossman y Flores</a> explican cómo expresar a cualquier vector de \( \mathbb{R}^2 \) como combinación lineal de los vectores unitarios \( \vec{i} \) y \( \vec{j} \). ¿Quiénes son estos vectores? Les recomendamos que lean las explicaciones hasta la página 227.</p>
-            <iframe class="d">1QwNjklhMPWCkYQdVoAfH6RYQGjr1xPd3</iframe>
-            <p>Pueden realizar el resto de los problemas de <a href="https://drive.google.com/file/d/1VDGiF2W3YG3L9GhSt2RDYneijvOscyfX/view?usp=sharing" target="_blank">Grossman y Flores (2012) Álgebra lineal. Cap. 3. Pág 229 a 230</a></p>
-            <iframe class="d">1VDGiF2W3YG3L9GhSt2RDYneijvOscyfX</iframe>
-            <p>Y de la <a href="https://drive.google.com/file/d/1C75Dy-a18vTQOyd62TQD5fzgG8mkklAx/view?usp=sharing" target="_blank">Práctica adicional sobre vectores - parte 1</a>.</p>
-            <iframe class="d">1C75Dy-a18vTQOyd62TQD5fzgG8mkklAx</iframe>
-            <p>Les acercamos una <a href="https://drive.google.com/file/d/19JnyJQERuIJKjRWhgx52jtboFstVlMhu/view?usp=sharing" target="_blank">Resolución del problema 39 de la página 229 del libro de Grossman y Flores</a> en el que se buscan vectores unitarios con la misma dirección de otros vectores dados.</p>
-            <iframe class="d">19JnyJQERuIJKjRWhgx52jtboFstVlMhu</iframe>
-            <p>Y finalmente, les facilitamos una <a href="https://drive.google.com/file/d/1v7cN0GxsS1JRbpOVrYHAlzR3i7AJ8aL0/view?usp=sharing" target="_blank">Resolución del ejercicio (19) de la página 20 de la Guía de Problemas</a>. En ella verán una forma de saber si un vector es o no combinación lineal de otros dos.</p>
-            <iframe class="d">19JnyJQERuIJKjRWhgx52jtboFstVlMhu</iframe>
-        </section>
-    
-        <section id="producto-escalar">
-            <h2>5. Producto escalar (o producto punto o producto interno)</h2>
-            <p>Para el caso de la suma entre vectores, partimos de dos vectores, y obtenemos como resultado de esa suma a un vector. En el caso del producto por un escalar, tenemos un número y un vector y obtenemos como resultado un vector. En este apartado trabajaremos con el producto escalar o producto interno entre vectores. En este caso tomamos dos vectores y obtenemos un número real.</p>
-            <p>En el siguiente video, se muestra cómo calcular el producto interno entre dos vectores de \( \mathbb{R}^2 \) y de \( \mathbb{R}^3 \).</p>
+            <p>Los materiales que siguen se refieren al mismo problema. El primero, es un video que aborda una resolución gráfica geométrica y el segundo es un texto en el que se desarrolla una resolución algebraica.</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=N5f7pYTNcFM" target="_blank">Video sobre producto escalar de dos vectores</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=N5f7pYTNcFM</video>
-            </ul>
-            <p>Como dijimos, el producto escalar es una operación entre vectores que toma dos vectores y le asigna un número real (escalar) que resulta de hacer la suma entre las multiplicaciones componente a componente. ¿Para qué sirve? ¿Dice algo de los vectores? En el siguiente apartado podemos encontrar alguna respuesta a estas preguntas.</p>
+                <li><a href="https://www.youtube.com/watch?v=cu4C8rhmj5k" target="_blank"> Video con resolución en GGB de un ejemplo hallar todos los lados de los triángulos a partir de dos lados y un ángulo no comprendido.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=cu4C8rhmj5k</video>
+                <li><a href="https://drive.google.com/file/d/1FCXtzmwunidckF3jO6rHIiOba7fh5OVx/view?usp=sharing" target="_blank"> Texto con resolución de un ejercicio sobre como hallar todos los lados de los triángulos a partir de dos lados y un ángulo no comprendido.</a></li>
+                <iframe class="d">1FCXtzmwunidckF3jO6rHIiOba7fh5OVx</iframe>
+            </ul>                
         </section>
-    
-        <section id="angulo-entre-vectores">
-            <h2>6. Ángulo entre vectores</h2>
-            <p>¿Cómo podemos pensar el ángulo que forman dos vectores?</p>
-            <p>Pueden leerlo del complemento teórico que comienza en la <a href="https://drive.google.com/file/d/1eidCja5G7bpqlvrxPe_povpXNf-4SWcX/view?usp=sharing" target="_blank">página 29 de la Guía de problemas y se llama Ángulo entre vectores a partir del teorema del coseno y termina en la página 30</a>; o verlo en el siguiente video:</p>
-            <iframe class="d">1eidCja5G7bpqlvrxPe_povpXNf-4SWcX</iframe>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=nGXd2rlRniM" target="_blank">Video sobre el ángulo entre dos vectores</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=nGXd2rlRniM</video>
-            </ul>
-            <p>¿Cúal es la definición de ángulo entre vectores que se da? ¿Cómo se muestra que tiene sentido? ¿Qué otras definiciones se retoman? ¿Qué propiedades aparecen?</p>
-            <img src="../assets/ang_entre_vectopres.gif" alt="Ángulo entre vectores" class="redu">
-            <p>Para consolidar estas nociones practiquen con los siguientes problemas y ejercicio:</p>
-            <p>De la Guía de problemas:</p>
-            <ul>
-                <li>Los <a href="https://drive.google.com/file/d/1Xg_awDQFYsxHUvvc1gBipa_RGTgp63g_/view?usp=sharing" target="_blank">problemas 26, 27, 28, 31, 33, 34, 36, 38 y 39. Comienzan en la página 15</a>.</li>
-                <iframe class="d">1Xg_awDQFYsxHUvvc1gBipa_RGTgp63g_</iframe>
-                <li>Los <a href="https://drive.google.com/file/d/13UdlwxRtGYma9N4iH6Q7uV-Ih4qg4Hp6/view?usp=sharing" target="_blank">ejercicios para practicar más (4), (5), (7), (8), (16). Comienzan en la página 18</a></li>
-                <iframe class="d">13UdlwxRtGYma9N4iH6Q7uV-Ih4qg4Hp6</iframe>
-            </ul>
-            <p>Además, les acercamos el siguiente <a href="https://www.youtube.com/watch?v=pVu0trZXAdk" target="_blank">Video con una resolución del problema 33 de la Guía</a> de Problemas.</p>
-            <video class="yt">https://www.youtube.com/watch?v=pVu0trZXAdk</video>
-            <p>Finalmente, a partir de la definición de ángulo entre vectores, es posible obtener el producto escalar de dos vectores de otra forma. Para enterarse, pueden ver el siguiente <a href="https://www.youtube.com/watch?v=ekMpAiA0gGk" target="_blank">Video sobre otra forma de obtener el producto escalar de dos vectores</a>.</p>
-            <video class="yt">https://www.youtube.com/watch?v=ekMpAiA0gGk</video>
-        </section>
-    
-        <section id="vectores-en-el-espacio">
-            <h2>7. Vectores en el espacio</h2>
-            <img src="../assets/sdf.gif" alt="sdf" class="redu">
-            <p>Mucho de lo trabajado con los vectores de \( \mathbb{R}^2 \) es extrapolable a los vectores de \( \mathbb{R}^3 \). Te proponemos el <a href="https://drive.google.com/file/d/1TNuUa412ASdfcdwaRm0DZoyRuFUU9AQj/view?usp=sharing" target="_blank">texto de Grossman y Flores (2012) Álgebra lineal. Cap. 3. Pág 244 a 253</a> para revisar estos conceptos.</p>
-            <iframe class="d">1TNuUa412ASdfcdwaRm0DZoyRuFUU9AQj</iframe>
-            <p>¿Qué conceptos importantes se introducen en el texto? ¿Pueden hacerse un resumen? Presten atención a las formas en que el texto resalta las definiciones, los teoremas, las observaciones, las fórmulas, etc. Leer un texto de Matemática es todo un trabajo. Entre otras cosas, leer un texto de Matemática requiere paciencia, papel y lápiz, revisar, retroceder, releer, reconocer la notación, consultar con otras fuentes, etc.</p>
-            <p>Para práctica tienen los <a href="https://drive.google.com/file/d/1jY9YqXz-W3lLyriZGEldeSEMcplyB30F/view?usp=sharing" target="_blank">ejercicios de las páginas 252 y 253 del libro de Grossman y Flores</a></p>
-            <iframe class="d">1jY9YqXz-W3lLyriZGEldeSEMcplyB30F</iframe>
-            <p>Además, ponemos a dispoción dos textos con la resolución de dos problemas que involucran la noción de combinación lineal de \( \mathbb{R}^3 \):</p>
-            <ul>
-                <li><a href="https://drive.google.com/file/d/17f5QcmgBvsIf2Aw7hBCFrJfa6nO70gdR/view?usp=sharing" target="_blank">Texto 1 con la resolución de un problema sobre combinación lineal de vectores en el espacio.</a></li>
-                <iframe class="d">17f5QcmgBvsIf2Aw7hBCFrJfa6nO70gdR</iframe>
-                <li><a href="https://drive.google.com/file/d/1WiWkYwFmjEdmRi7yRSQuwZrl1jiUC59p/view?usp=sharing" target="_blank">Texto 2 con la resolución de un problema sobre combinación lineal de vectores en el espacio.</a></li>
-                <iframe class="d">1WiWkYwFmjEdmRi7yRSQuwZrl1jiUC59p</iframe>
-            </ul>
-        </section>
-    
+
         <section id="autoevaluacion">
-            <h2>8. Autoevaluación</h2>
-            <p>Como parte de la evaluación continua <a href="https://drive.google.com/file/d/1OjLunEFZ8VwrUmWhlOEmdlTYVoPUjepR/view?usp=sharing" target="_blank">(ver las condiciones en Condiciones de trabajo, de evaluación y de acreditación)</a> les proponemos las siguientes autoevaluaciones:</p>
+            <h2>4. Autoevaluación</h2>
+            <p>Como parte de la evaluación continua (ver las condiciones en <strong>Condiciones de trabajo, de evaluación y de acreditación</strong>) les proponemos la:</p>
             <ul>
-                <li>
-                    <a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366081" target="_blank"><strong>Autoevaluación sobre vectores 1</strong></a>
-                </li>
-                <li>
-                    <a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366059" target="_blank"><strong>Autoevaluación sobre vectores 2</strong></a>
-                </li>
+                <li><a href="https://drive.google.com/file/d/1VXGQDQeCTS4IwH75YioC-Npkw6CUQYlG/view?usp%3Ddrive_link&sa=D&source=editors&ust=1730918828238896&usg=AOvVaw1swpD1MkCpozw2RX0GVoic" target="_blank"><strong>Autoevaluación sobre trigonometría en la circunferencia y teorema del coseno</strong></a></li>-->
             </ul>
-            <p>Ingresen al cuestionario para ver la fecha de apertura y la de cierre.El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta. Esperamos que para cuando sea el momento de realizar las autoevaluaciones hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
+            <p>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.</p>
+            <p> Revisen cuáles son las fechas y horarios en los que estará habilitada ingresando a la Autoevaluación</p>
+            <p>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
             
-            <iframe class="d">1P9YMau1CMQjC9qknRaAr0VAqQVcWgOCg</iframe>
-            
-            <iframe class="d">1kv90rA9YDolcVqj6QQdW0KXxJCMU67Mi</iframe>
+            <iframe class="d">1VXGQDQeCTS4IwH75YioC-Npkw6CUQYlG</iframe>
         </section>
+
         <section id="archivos">
             <h2>Archivos Completos</h2>
             <ul>
                 <li><a href="https://drive.google.com/file/d/1a1Bmrf0tWvjz4UQ9Z2RiL1cPnKFJ0jvL/view?usp=sharing" target="_blank">Unidad 1</a></li>
-                <li><a href="https://drive.google.com/file/d/1D4ydxMq04LIYmN2x4FbrLtcUL0rtpbkW/view?usp=sharing" target="_blank">Grossman y Flores (2012) Álgebra lineal. Cap. 3. Pág 220 a 230</a></li>
-                <li><a href="https://drive.google.com/file/d/1tHT2Y8ZdxznrbVYvTBJAtjMDwyfJg7Ww/view?usp=sharing" target="_blank">Práctica Adicional Vectores Parte 1</a></li>
-                <li><a href="https://drive.google.com/file/d/137FldX8vne0Nb8v1BgbJxXdO9aKuOFmv/view?usp=sharing" target="_blank">Resolución del ejercicio (13) de la página 20 de la Guía de Problemas</a></li>
-                <li><a href="https://drive.google.com/file/d/19JnyJQERuIJKjRWhgx52jtboFstVlMhu/view?usp=sharing" target="-blank">Resolución del problema 39 de la página 229 del libro de Grossman y Flores.</a></li>
-                <li><a href="https://drive.google.com/file/d/1v7cN0GxsS1JRbpOVrYHAlzR3i7AJ8aL0/view?usp=sharing" target="_blank">Resolución del ejercicio (19) de la página 20 de la Guía de Problemas.</a></li>
-                <li><a href="https://drive.google.com/file/d/1TNuUa412ASdfcdwaRm0DZoyRuFUU9AQj/view?usp=sharing" target="_blank">Grossman y Flores (2012) Álgebra lineal. Cap. 3. Pág 244 a 253</a></li>
-                <li><a href="https://drive.google.com/file/d/17f5QcmgBvsIf2Aw7hBCFrJfa6nO70gdR/view?usp=sharing" target="_blank">Texto 1 con la resolución de un problema sobre combinación lineal de vectores en el espacio.</a></li>
-                <li><a href="https://drive.google.com/file/d/1WiWkYwFmjEdmRi7yRSQuwZrl1jiUC59p/view?usp=sharing" target="_blank">Texto 2 con la resolución de un problema sobre combinación lineal de vectores en el espacio.</a></li>
+                <li><a href="https://drive.google.com/file/d/1YyYlCigK_pYf1QryahBiwiVuz_4BFMBx/view?usp=sharing" target="_blank">Práctica sobre Trigonometría</a></li>
+                <li><a href="https://drive.google.com/file/d/1am6gmhFv2NQNwUGW3md6xOQ7in3LI2Mw/view?usp=sharing" target="_blank">Práctica sobre trigonometría en la circunferencia y teorema del coseno.</a></li>
+                <li><a href="https://drive.google.com/file/d/1qxcW0HEpL1DuNWfYZkyXRSQS6UHfMwhy/view?usp=sharing" target="_blank">Actividades sobre Paralelogramos</a></li>
+                <li><a href="https://drive.google.com/file/d/16QUI7SLBkr4baEA8IJ1NHJ9Xg440gn2u/view?usp=sharing" target="_blank">Resolución de actividades sobre Paralelogramos</a></li>
+                <li><a href="https://drive.google.com/file/d/1nh5kukLPCAmjvWuVE3FVj6ZLvpWlvHU5/view?usp=sharing" target="_blank">Texto sobre Cuadriláteros</a></li>
+                <li><a href="https://drive.google.com/file/d/1FCXtzmwunidckF3jO6rHIiOba7fh5OVx/view?usp=sharing" target="_blank">Texto con resolución de un ejercicio sobre como hallar todos los lados de los triángulos a partir de dos lados y un ángulo no comprendido.</a></li>
             </ul>
         </section>
-    </main>
+
+        </main>
     <script src="../js/script.js"></script>
 </body>
 <footer class="footer">
-    <a href="../assets/libro1.html" class="arrow arrow-left" aria-label="Libro 1">
-      <div class="line one">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
+  <a href="../index.html" class="arrow arrow-left" aria-label="Página principal">
+    <div class="line one">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    
+    <div class="line two">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
       
-      <div class="line two">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
-        
-      <div class="line three">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
+    <div class="line three">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    
+    <div class="line four">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
       
-      <div class="line four">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
-        
-      <div class="line five">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
+    <div class="line five">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    
+    <div class="line six">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    
+    <div class="line seven">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    
+    </div> 
+  </a>
+
+  <a href="../assets/libro2.html" class="arrow arrow-right" aria-label="Libro 2">
+    <div class="line one">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+
+    <div class="line two">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
       
-      <div class="line six">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
-      
-      <div class="line seven">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      
-      </div> 
-    </a>
-  
-    <a href="../assets/libro3.html" class="arrow arrow-right" aria-label="Libro 3">
-      <div class="line one">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
-  
-      <div class="line two">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
-        
-      <div class="line three">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
-      
-      <div class="line four">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
-      
-      <div class="line five">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
-      
-      <div class="line six">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
-      
-      <div class="line seven">
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-          <div class="round"></div>
-      </div>
-    </a>
-  </footer>
+    <div class="line three">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    
+    <div class="line four">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    
+    <div class="line five">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    
+    <div class="line six">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    
+    <div class="line seven">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+  </a>
+</footer>
 </html>
