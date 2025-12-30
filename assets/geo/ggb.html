@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra en Álgebra</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="../../assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="../../assets/site.webmanifest">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/prism.css">
+</head>
+<body>
+    <header>
+        <h1>GeoGebra en Álgebra</h1>
+    </header>
+    
+    <main>
+        <section id="indice">
+        <h2>Tabla de contenidos</h2>
+            <ul>
+                <li>1. <a href="#introduccion">Introducción</a></li>
+                <li>2. <a href="#deslizador">Variables: Los deslizadores.</a></li>
+                <li>3. <a href="#punto">El Punto.</a></li>
+                <li>4. <a href="#vector">El Vector</a></li>
+                <li>5. <a href="#recta">La Recta</a></li>
+                <li>6. <a href="#plano">El Plano</a></li>
+                <li>7. <a href="#matriz">La Matriz</a></li>
+                <li>8. <a href="#comandos">Comandos útiles</a></li>
+            </ul>
+        </section>
+    
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p> En este anexo se explicara el uso básico necesario para poder interpretar la materia, se indicarán cuales son los comandos que se necesitarán utilizar a lo largo de la materia. En principio, cabe destacar que se requiere el uso de una PC en la cuál ejecutar el programa, ante la ausencia de dicho requerimiento se puede usar Smartphone o Tablet, en estos últimos podremos encontrar restricciones que en PC no existen, como alternativa y es a lo que se dirige el proyecto, se puede usar la versión web de GeoGebra.</p>
+            <p>La descarga se realiza a través del sitio oficial de <a class="downgeo">GeoGebra</a>. A continuación se presentan las diferentes opciones siendo las primeras opciones de cada plataforma las recomendadas para usar en la materia.</p>
+            <ul><p><strong>Calculadoras:</strong></p>
+                <p><strong>Windows</strong></p>
+                <li><a href="https://download.geogebra.org/package/win" target="_blank">GeoGebra Classic 5</a></li>
+                <li><a href="https://download.geogebra.org/package/win-autoupdate" target="_blank">GeoGebra Classic 6</a></li>
+                <li><a href="https://download.geogebra.org/package/win-port" target="_blank">GeoGebra 5 Portable</a></li>
+                <li><a href="https://download.geogebra.org/package/win-port6" target="_blank">GeoGebra 6 Portable</a></li>
+                <li><a href="https://download.geogebra.org/package/win-autoupdate" target="_blank">GeoGebra Calculator Suite 6</a></li>
+                <li><a href="https://download.geogebra.org/package/win-suite" target="_blank">GeoGebra Calculator Suite</a></li>
+                
+                
+                <p><strong>Android</strong></p>
+                <li><a href="https://play.google.com/store/apps/details?id=org.geogebra.android.calculator.suite" target="_blank">GeoGebra Calculator Suite</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=org.geogebra.android.g3d" target="_blank">GeoGebra Calculadora 3D</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=org.geogebra.android" target="_blank">GeoGebra Calculadora Gráfica</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=org.geogebra.android.scicalc" target="_blank">Extra: GeoGebra Calculadora Científica</a></li>
+
+                <p><strong>Mac</strong></p>
+                <li><a href="https://apps.apple.com/us/app/geogebra-classic-6/id1182481622?mt=12" target="_blank">GeoGebra Classic 6</a></li>
+                <li><a href="https://download.geogebra.org/package/mac-port" target="_blank">GeoGebra 6 Portable</a></li>
+                
+                <p><strong>Ipad/Iphone</strong></p>
+                <li><a href="https://apps.apple.com/us/app/geogebra-calculator-suite/id1504416652" target="_blank">GeoGebra Calculator Suite</a></li>
+                <li><a href="https://apps.apple.com/gb/app/geogebra-classic/id687678494" target="_blank">GeoGebra Classic</a></li>
+                <li><a href="https://apps.apple.com/us/app/geogebra-3d-calculator/id1445871976" target="_blank">GeoGebra 3D Calculator</a></li>
+                <li><a href="https://apps.apple.com/us/app/geogebra-scientific-calculator/id1412748754" target="_blank">Extra: GeoGebra Calculadora Científica para Iphone/Ipad</a></li>
+
+                <p><strong>Linux 64bit</strong></p>
+                <li><a href="https://download.geogebra.org/package/linux-port" target="_blank">GeoGebra Classic 5 Portable</a></li>
+
+                <p><strong>Desde el Navegador</strong></p>
+                <li><a class="Geo">GeoGebra Classic 5</a></li>
+                <li><a class="trid">GeoGebra 3D</a></li>
+
+                <p><strong>Manual de usuario</strong></p>
+                <li><a href="https://geogebra.github.io/docs/manual/es/" target="_blank">Manual en Español</a></li>
+            </ul>
+        </section>
+
+        <section id="deslizador">
+            <h2>Cómo Crear Variables</h2>
+            <p>Una variable es un dato que puede cambiar, en GeoGebra estos se materializan mediante los deslizadores/slider. Más allá que existe el comando, tenemos una forma muy simple de crearlos, madiante la barra de entrada:</p>
+            <p>Ingresamos <b><code class="language-birb">a </code></b> pulsamos <b><code class="language-birb"> Enter</code></b> y nos preguntará si deseamos crearlo en Geo 5, en Geo 6 lo crea directamente, indicamos que si, luego podemos hacer clic derecho \( \rightarrow \) Propiedades y Ajustarlo a nuestras necesidades. Debemos tener en cuenta que existen ciertas palabras reservadas que no podemos utilizar:</p>
+            <ul>
+                <li><b><code class="language-birb"> e </code></b> El número de Euler.</li>
+                <li><b><code class="language-birb"> i </code></b> La Unidad Imaginaria.</li>
+                <li><b><code class="language-birb"> t </code></b> Es tomada como una variable alternativa a \(x\).</li>
+                <li><b><code class="language-birb"> x, y, z </code></b> Los ejes.</li>
+            </ul>
+            <p>Debemos tener en cuenta que se pueden usar mayúsculas, subíndices, ciertas letras griegas y que en la vista 3D los deslizadores no se muestran, siempre estarán en la vista gráfica, aunque los usemos en 3D.</p>
+            <video class="yt">https://youtu.be/n0yfwIXE4vU</video>
+            <p  style="text-align: center;"><a href="https://geogebra.github.io/docs/manual/en/commands/Slider/" target="_blank">Comando Slider/Deslizador</a></p>
+        </section>
+
+        <section id="punto">
+            <h2>Cómo Crear Puntos</h2>
+            <p>Los puntos están conformados por componentes según su dimensión, pero en GeoGebra usamos \(\mathbb{R}^2\) y \(\mathbb{R}^3\). Los puntos se crean fácilmente encerrando entre parentesís las componentes y opcionalmente podemos asignarle un nombre que será con una letra en Mayúscula:</p>
+
+            <ul>
+                <p><strong>Forma simple:</strong></p>
+                <li><b><code class="language-birb"> (x, y) </code></b> en \(\mathbb{R}^2\)</li>
+                <li><b><code class="language-birb"> (x, y, z) </code></b> en \(\mathbb{R}^3\)</li>
+
+                <p><strong>Asignando nombre al punto:</strong></p>
+                <li><b><code class="language-birb"> P=(x, y) </code></b> en \(\mathbb{R}^2\)</li>
+                <li><b><code class="language-birb"> B=(x, y, z) </code></b> en \(\mathbb{R}^3\)</li>
+
+                <p><strong>Mediante comando <code class="language-birb"> Punto(&lt;Objeto&gt;) </code> o <code class="language-birb"> Point(&lt;Object&gt;) </code></strong></p>
+                <li><b><code class="language-birb"> Punto(x, y) </code></b> en \(\mathbb{R}^2\)</li>
+                <li><b><code class="language-birb"> Point(x, y, z) </code></b> en \(\mathbb{R}^3\)</li>
+
+                <p>Tener en cuenta que también podemos asignar un nombre usando el comando, pero también que el punto no se podrá mover como si lo hace el método sencillo. El Objeto que estamos indicando es una Lista</p>
+                <video class="yt">https://youtu.be/UHCb1O_kKss</video>
+                <p  style="text-align: center;"><a href="https://geogebra.github.io/docs/manual/en/commands/Point/" target="_blank">Comando Punto</a></p>
+            </ul>
+        </section>
+
+        <section id="vector">
+            <h2>Cómo Crear Vectores</h2>
+            <p>Los vectores a diferencia de los puntos, se les debe asignar un nombre pero con minúsculas.</p>
+            <ul>
+                <p><strong>Forma simple:</strong></p>
+                <li><b><code class="language-birb"> u=(x, y) </code></b> en \(\mathbb{R}^2\)</li>
+                <li><b><code class="language-birb"> v=(x, y, z) </code></b> en \(\mathbb{R}^3\)</li>
+
+                <p><strong>Mediante comando <code class="language-birb"> Vector(&lt;Punto&gt;) </code>:</strong></p>
+                <li><b><code class="language-birb"> Vector((x, y)) </code></b> en \(\mathbb{R}^2\)</li>
+                <li><b><code class="language-birb"> Vector((x, y, z)) </code></b> en \(\mathbb{R}^3\)</li>
+                <p>Notar que el Punto se ingresa entre parentesis y se está omitiendo el punto de inicio del vector que es el Origen que se puede indicar con la Mayúscula \( O \) o \( (0,0)\) ya que un vector es conformado mediante la resta de 2 puntos. Además también podemos asignarle un nombre especifico con una letra minúscula.</p>
+
+                <p><strong>Mediante comando <code class="language-birb"> Vector(&lt;Punto inicial&gt;, &lt;Punto final&gt;) </code> cuando el vector no comienza en el origen:</strong></p>
+                <li><b><code class="language-birb"> Vector((a, b), (x, y)) </code></b> en \(\mathbb{R}^2\)</li>
+                <li><b><code class="language-birb"> Vector((a, b, c), (x, y, z)) </code></b> en \(\mathbb{R}^3\)</li>
+                
+                <video class="yt">https://youtu.be/9rz59CQIwVc</video>
+                
+                <p  style="text-align: center;"><a href="https://geogebra.github.io/docs/manual/es/commands/Vector/" target="_blank">Comando Vector</a></p>
+            </ul>
+        </section>
+
+        <section id="recta">
+            <h2>Cómo Crear Rectas</h2>
+            <p>Cómo sabemos de la teoría, para crear una recta necesitamos un vector director y un punto de paso, por lo tanto, podemos generarla declarando ambos, y usando el comando <b><code class="language-birb"> Line(&lt;Point&gt;, &lt;Vector&gt;) </code></b> o <b><code class="language-birb"> Recta(&lt;Punto&gt;, &lt;Vector&gt;) </code></b></p>
+
+            <ul>
+                <p><strong>Forma simple</strong></p>
+                <li>Generamos el punto: <b><code class="language-birb"> (1, 3) </code></b></li>
+                <li>Generamos el vector: <b><code class="language-birb"> u=(2, 7) </code></b></li>
+                <li>Generamos la Recta: <b><code class="language-birb"> Recta(A, u) </code></b></li>
+
+                
+                <p><strong>Forma compacta pero no veremos ni el punto, ni el vector</strong></p>
+                <li>Generamos la Recta: <b><code class="language-birb"> Recta((1, 3), Vector((2, 7))) </code></b></li>
+
+                
+                <p><strong>Forma Alternativa</strong></p>
+                <li>Generamos el punto: <b><code class="language-birb"> A=(1, 3) </code></b></li>
+                <li>Generamos el vector: <b><code class="language-birb"> u=(2, 7) </code></b></li>
+                <li>Generamos la Recta: <b><code class="language-birb"> L(&#945;) = A + &#945; &sdot; u </code></b></li>
+            </ul>
+            <p>Tener en cuenta que es igual en \( \mathbb{R}^3 \)</p>
+        </section>
+
+        <section id="plano">
+            <h2>Cómo Crear Planos</h2>
+            <p>Cómo sabemos de la teoría, para crear un plano en su Forma paramétrica necesitamos dos vectores directores y un punto de paso, por lo tanto, podemos generarla declarando ambos, y usando el comando <b><code class="language-birb">Plane(&lt;Point&gt;,&lt;Vector&gt;,&lt;Vector&gt;)</code></b> o <b><code class="language-birb">Plano(&lt;Punto&gt;,&lt;Vector&gt;,&lt;Vector&gt;)</code></b></p>
+            <p>En forma General o implícita <b><code class="language-birb">ax + by + cz = d</code></b></p>
+            <ul>
+                <p><strong>Forma Paramétrica</strong></p>
+                <li>Generamos el punto: <b><code class="language-birb"> (1, 3, 1) </code></b></li>
+                <li>Generamos el vector : <b><code class="language-birb"> u=(2, 7, 1) </code></b></li>
+                <li>Generamos el vector : <b><code class="language-birb"> v=(3, 2, 0) </code></b></li>
+                <li>Generamos el Plano: <b><code class="language-birb"> Plano(A, u, v) </code></b></li>
+        
+                <p><strong>Forma compacta pero no veremos ni el punto ni los vectores</strong></p>
+                <li>Generamos el Plano: <b><code class="language-birb"> Plano((1, 3, 1), Vector((2, 7, 1)), Vector((3, 2, 0))) </code></b></li>
+
+                <p><strong>Forma Implícita</strong></p>
+                <li>Generamos el Plano: <b><code class="language-birb"> 2x + 3y + 4z = 5 </code></b></li>
+            </ul>
+        </section>
+
+        <section id="matriz">
+            <h2>Cómo Crear Matrices</h2>
+            <p>En este caso se explicara solo la forma simple, en la que creamos una matriz a traves de una lista de listas.Si asignamos nombre podemos elegir mayúsculas, sino Geogebra las nombra \(mn\), en minúscula. </p>
+            <ul>
+                <p><strong>Forma simple</strong></p>
+                <li>Generamos la matriz: <b><code class="language-birb"> {{2, 3}, {1, 1}} </code></b></li>
+                <li>Generamos la matriz asignandole un nombre:<b><code class="language-birb"> A = {{1,2,3,4,5}, {5,4,3,2,1}, {4,4,3,3,2}} </code></b></li>
+            </ul></p>
+        </section>
+
+        <section id="comandos">
+            <h2>Comandos Útiles</h2>
+            <p><strong>Algunos comandos interesantes:</strong></p>
+            <ul>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/VectorNormal/" target="_blank">Vector Normal</a><b><code class="language-birb"> VectorNormal( &lt;Recta&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/VectorUnitario/" target="_blank">Vector Unitario</a><b><code class="language-birb"> VectorUnitario( &lt;Vector&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/VectorNormalUnitario/" target="_blank">Vector Normal Unitario</a><b><code class="language-birb"> VectorNormalUnitario( &lt;Recta&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/Traspone/" target="_blank">Matriz Traspuesta </a><b><code class="language-birb"> Traspone( &lt;Matriz&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/RangoMatriz/" target="_blank">Rango de una Matriz </a><b><code class="language-birb"> RangoMatriz( &lt;Matriz&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/Identidad/" target="_blank">Matriz Identidad </a><b><code class="language-birb"> Identidad( &lt;Número&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/Inversa/" target="_blank">Matriz Inversa</a><b><code class="language-birb"> Inversa( &lt;Matriz&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/VectoresPropios/" target="_blank">Eigen Vector</a><b><code class="language-birb"> VectoresPropios( &lt;Matriz&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/ValoresPropios/" target="_blank">Eigen Valor</a><b><code class="language-birb"> ValoresPropios( &lt;Matriz&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/Diagonalizaci%C3%B3nJordan/" target="_blank">Diagonalización por Jordan</a><b><code class="language-birb"> DiagonalizaciónJordan( &lt;Matriz&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/Determinante/" target="_blank">Determinante</a><b><code class="language-birb"> Determinante( &lt;Matriz&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/ProductoVectorial/" target="_blank">Producto Vectorial/Cruz</a><b><code class="language-birb"> ProductoVectorial( &lt;Vector&gt; , &lt;Vector&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/ProductoEscalar/" target="_blank">Producto Punto/Escalar</a><b><code class="language-birb"> ProductoEscalar( &lt;Vector&gt;, &lt;Vector&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/Interseca/" target="_blank">Intersección</a><b><code class="language-birb"> Interseca( &lt;Objeto&gt;, &lt;Objeto&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/PlanoPerpendicular/" target="_blank">Plano Perpendicular</a><b><code class="language-birb"> PlanoPerpendicular( &lt;Punto&gt;, &lt;Objeto&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/%C3%81ngulo/" target="_blank">Angulo entre Vectores</a><b><code class="language-birb"> Ángulo( &lt;Vector&gt;, &lt;Vector&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/%C3%81ngulo/" target="_blank">Angulo entre Rectas</a><b><code class="language-birb"> Ángulo( &lt;Recta&gt;, &lt;Recta&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/%C3%81ngulo/" target="_blank">Angulo entre Recta y Plano</a><b><code class="language-birb"> Ángulo( &lt;Recta&gt;, &lt;Plano&gt; ) </code></b></li>
+                <li><a href="https://geogebra.github.io/docs/manual/es/commands/%C3%81ngulo/" target="_blank">Angulo entre Planos</a><b><code class="language-birb"> Ángulo( &lt;Plano&gt;, &lt;Plano&gt; ) </code></b></li>
+            </ul></p>
+        </section>
+
+    </main>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/prism.js"></script>
+
+</body>
+<footer class="footer">
+    <a href="../../assets/seg/libro6.html" class="arrow arrow-left" aria-label="Libro 6">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      
+      </div> 
+    </a>
+  
+    <a href="../../assets/libro1.html" class="arrow arrow-right" aria-label="Libro 1 Primer Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+  
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+    </a>
+  </footer>
+</html>

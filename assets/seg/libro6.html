@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro 6 - Segundo Cuatrimestre</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="../../assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="../../assets/site.webmanifest">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube/dist/Youtube.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Libro 6: Números Complejos</h1>
+    </header>
+
+    <main>
+        <section id="indice">
+            <h2>Tabla de contenidos</h2>
+                <ul>
+                    <li>1. <a href="#introduccion">Introducción</a></li>
+                    <li>2. <a href="#forma-binomica">Forma binómica de un número complejo</a></li>
+                    <li>3. <a href="#representacion-grafica">Representación gráfica. Argumento principal y módulo</a></li>
+                    <li>4. <a href="#forma-trigonometrica">Forma trigonométrica</a></li>
+                    <li>5. <a href="#propiedad-multiplicacion">Propiedad de la multiplicación de los números complejos</a></li>
+                    <li>6. <a href="#actividades">Actividades y texto teórico</a></li>
+                    <li>7. <a href="#autoevaluacion">Autoevaluación</a></li>
+                    <li>8. <a href="#Parciales_2">Parciales 2</a></li>
+                    <li>9. <a href="#archivos">Archivos Completos</a></li>
+                </ul>
+        </section>
+
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p>Para comenzar esta unidad, les proponemos que primero piensen y resuelvan el siguiente problema:</p>
+            <p>Consideren la transformación lineal \( T:\mathbb{R}^2\to\mathbb{R}^2; T\begin{pmatrix} x \\ y \end{pmatrix}=\begin{pmatrix} 0 & -1\\ 1 & 0 \end{pmatrix}\cdot\begin{pmatrix} x \\ y \end{pmatrix} \).</p>
+            <p>En caso de ser posible, busquen los autovectores y autovalores de \( T \). Den argumentos geométricos y algebraicos.</p>
+            <p>Recuerden que si tienen alguna duda pueden plantearla en el foro <a class="con">Consultas</a>.</p>
+            <p>Ahora, el profesor Gastón nos propone una resolución del problema anterior en el siguiente video. Primero hace una mirada gráfica y luego una resolución analítica. Finalmente, dará introducción al tema central de esta unidad.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=7QWnlq4x_uU" target="_blank">Ejemplo introductorio con autovalores no reales</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=7QWnlq4x_uU</video>
+            </ul>
+        </section>
+    
+        <section id="forma-binomica">
+            <h2>2. Forma binómica de un número complejo</h2>
+            <p>En el video de la introducción surgió la necesidad de inventar un número que elevado al cuadrado da \( -1 \).</p>
+            <p>A partir de esto, es que trabajamos con un nuevo conjunto numérico que en algún sentido incluirá al conjunto numérico anterior (\( \mathbb{R} \)) y que sea una extensión de éste.</p>
+            <p>En el siguiente video, el profesor Marcelo define la forma binómica de un complejo y las operaciones suma, resta y multiplicación entre ellos.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=PH0cCGWp1kE" target="_blank">Video con explicación sobre Forma binómica de un complejo, suma, resta y multiplicación</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=PH0cCGWp1kE</video>
+            </ul>
+            <p>En el siguiente video, el profesor Marcelo define el inverso de un complejo y la división entre números complejos.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=Q0Xuy4f0BEU" target="_blank">Video con explicación sobre el Inverso de un complejo y división</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=Q0Xuy4f0BEU</video>
+            </ul>
+            <br>
+            <img src="../../assets/6_1_Numeros-complejos.png" alt="Nummeros Complejos" class="bor">
+            <br>
+        </section>
+    
+        <section id="representacion-grafica">
+            <h2>3. Representación gráfica. Argumento principal y módulo</h2>
+            <p>Ahora vamos a pensar en una forma gráfica de representar a los números complejos. Para representar gráficamente a los números reales usamos una recta, y asociamos a cada punto de la recta un número real. ¿Cómo será el caso de los complejos? ¿Alcanza una recta?</p>
+            <p>En el siguiente video, el profesor Martín T. nos explica cómo representamos gráficamente un número complejo. Además, nos presenta una forma de caracterizarlos: el módulo y el argumento principal.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=MprMgE15x1w" target="_blank">Representación gráfica de un complejo, módulo y argumento</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=MprMgE15x1w</video>
+            </ul>
+            <img src="../../assets/6_2.png" alt="Repersentación gráfica de un número complejo" class="redu">
+        </section>
+    
+        <section id="forma-trigonometrica">
+            <h2>4. Forma trigonométrica</h2>
+            <img src="../../assets/6_3_forma_trigonométrica.jpg" alt="Forma trigonométrica de un número complejo" class="redu">
+            <p>En el video de la sección anterior hablamos de Argumento principal y módulo de un complejo. Vimos cuál relación tienen estas características con la representación gráfica. ¿Qué relación hay entre el argumento principal y el módulo de un número complejo y la forma binómica?.</p>
+            <p>En los siguientes dos videos, el profesor Martín Ch. explora esta cuestión. En el primero se presenta la forma trigonométrica de un complejo, y en el segundo, se muestra un ejemplo de pasaje de una forma de representación a la otra.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=kXIkcFtw3-U" target="_blank">Forma trigonométrica de un complejo</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=kXIkcFtw3-U</video>
+                <li><a href="https://www.youtube.com/watch?v=QTC8QGKjtXQ" target="_blank">Pasaje de forma binómica a trigonométrica</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=QTC8QGKjtXQ</video>
+            </ul>
+        </section>
+    
+        <section id="propiedad-multiplicacion">
+            <h2>5. Propiedad de la multiplicación de los números complejos</h2>
+            <p>En el siguiente video, el profesor Daniel nos muestra una forma gráfica de visualizar la multiplicación de los números complejos. Luego, justificamos una propiedad de la multiplicación.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=SXPYPFlLQuU" target="_blank">Propiedad de la multiplicación de complejos</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=SXPYPFlLQuU</video>
+            </ul>
+            <br>
+            <img src="../../assets/6_4_multiplicación_de_complejos_grafico.gif" alt="Multiplicación de números complejos" class="bor">
+            <br>
+        </section>
+    
+        <section id="actividades">
+            <h2>6. Actividades y texto teórico</h2>
+            <p>Les proponemos que realicen los siguientes ejercicios y problemas.</p>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1VkoejkdRZMBMAMWza9FFIsYBS6ekm2cH/view?usp=sharing" target="_blank">Listado de ejercicios y problemas para trabajar con números complejos</a>. PDF con los Ejercicios citados de la <a href="https://drive.google.com/file/d/1kdZYj0p3sWDLhSCpidtmUxiNFoEbSGQO/view?usp=sharing" target="_blank">Guía de Problemas</a></li>
+            </ul>
+            <iframe class="d">1kdZYj0p3sWDLhSCpidtmUxiNFoEbSGQO</iframe>
+            <p>Además, compartimos con ustedes un texto con explicaciones sobre números complejos.</p>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1jvICWsG343sKuj-90bcvYq6lKKw3aIa0/view?usp=sharing" target="_blank">Grossman y Flores (2012) Álgebra lineal. Apéndice B. Pág 655 a 663</a></li>
+            </ul>
+            <iframe class="d">1jvICWsG343sKuj-90bcvYq6lKKw3aIa0</iframe>
+        </section>
+    
+        <section id="autoevaluacion">
+            <h2>7. Autoevaluación</h2>
+            <p>Durante la segunda de estas dos semanas tendrán habilitada la <a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366283" target="_blank"><strong>Autoevaluación sobre números complejos</strong></a>, que forma parte de la evaluación continua.</p>
+        </section>
+
+        <section id="Parciales_2">
+            <h2>8. Parciales 2</h2>
+            <p>En esta <a href="https://drive.google.com/drive/folders/1qxidlULm8D0s64_oomdoVM9V_iuqL_xE?usp=sharing">carpeta incluimos parciales viejos.</a> Los parciales 2 hasta 2019 además de esos temas, incluían sistemas, matrices y determinantes. A partir del 2022 tomamos todos esos temas en el primer parcial.</p>
+            <p>Más Parciales y Finales en <a href="https://sites.google.com/view/proyectocampusunm/repoprimero/algebraygeometriaanalitica">Proyecto Campus</a></p>
+        </section>
+
+        <section id="archivos">
+            <h2>Archivos Completos</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1sDVQ2-yruX9DMujoV-8MVwNysuJCKzMO/view?usp=sharing" target="_blank">Unidad 7</a></li>
+                <li><a href="https://drive.google.com/file/d/1VkoejkdRZMBMAMWza9FFIsYBS6ekm2cH/view?usp=sharing" target="_blank">Listado de ejercicios y problemas para trabajar con números complejos</a></li>
+                <li><a href="https://drive.google.com/file/d/1jvICWsG343sKuj-90bcvYq6lKKw3aIa0/view?usp=sharing" target="_blank">Grossman y Flores (2012) Álgebra lineal. Apéndice B. Pág 655 a 663</a></li>
+            </ul>
+        </section>
+    </main>
+    <script src="../../js/script.js"></script>
+</body>
+<footer class="footer">
+    <a href="../../assets/seg/libro5.html" class="arrow arrow-left" aria-label="Libro 5 Segundo Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      
+      </div> 
+    </a>
+  
+    <a href="../../index.html" class="arrow arrow-right" aria-label="Página principal">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+  
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+    </a>
+  </footer>
+</html>

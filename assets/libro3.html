@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro 3</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="../assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="../assets/site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube/dist/Youtube.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Libro 3: Rectas</h1>
+    </header>
+
+    <main>
+        <section id="indice">
+            <h2>Tabla de contenidos</h2>
+                <ul>
+                    <li>1. <a href="#introduccion">Introducción</a></li>
+                    <li>
+                        2. <a href="#primer-acercamiento">Primer acercamiento</a>
+                        <ul>
+                            <li>2.1 <a href="#ecuacion-cartesiana">Ecuación explícita o cartesiana de la recta</a></li>
+                            <li>2.2 <a href="#ecuacion-vectorial">Ecuación vectorial o paramétrica de la recta</a></li>
+                            <li>2.3 <a href="#puntos-pertenecen">Puntos que pertenecen o que no pertenecen a una recta determinada</a></li>
+                        </ul>
+                    </li>
+                    <li>3. <a href="#interseccion">Intersección entre rectas de \(\mathbb{R}^2\)</a></li>
+                    <li>4. <a href="#ecuacion-dos-puntos">Ecuación de la recta dados dos puntos</a></li>
+                    <li>5. <a href="#rectas-paralelas-perpendiculares">Rectas paralelas y rectas perpendiculares</a></li>
+                    <li>6. <a href="#actividades">Actividades de práctica hasta aquí</a></li>
+                    <li>7. <a href="#expresion-recta-espacio">¿Cómo expresamos una recta en el espacio?</a></li>
+                    <li>8. <a href="#paralelismo-perpendicularidad">Paralelismo, perpendicularidad y... ¿qué más?</a></li>
+                    <li>9. <a href="#interseccion-espacio">Intersección de rectas en el espacio</a></li>
+                    <li>10. <a href="#autoevaluacion">Autoevaluación</a></li>
+                    <li>11. <a href="#archivos">Archivos Completos</a></li>
+                </ul>
+        </section>
+
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p>En la unidad anterior trabajamos con vectores flecha. Ahora, comenzamos a explorar <a href="https://drive.google.com/file/d/1P2vS6YgvIAGKFOjyZabHi61HJK5XuFDf/view?usp=sharing" target="_blank">la unidad 2</a> en la que veremos, desde lo algebraico, cómo nos sirven los vectores para pensar las rectas y los planos, y, cómo éstos, nos permiten resolver algunas situaciones. Desde ya, la mirada geométrica será de gran aporte.</p>
+            <iframe class="d">1P2vS6YgvIAGKFOjyZabHi61HJK5XuFDf</iframe>
+            <p>Podemos pensar las rectas tanto en el plano \( \mathbb{R}^2 \) como en el espacio \( \mathbb{R}^3 \). Pensaremos a los planos en el espacio \( \mathbb{R}^3 \). También es posible pensar cómo serían estos objetos en espacios como \( \mathbb{R}^4 \), \( \mathbb{R}^5 \) o cualquier \( \mathbb{R}^n \) siendo \(n\) cualquier número natural.</p>
+            <p>En esta unidad nos concentraremos en \( \mathbb{R}^2 \) y \( \mathbb{R}^3 \), y en este libro, trabajaremos exclusivamente rectas en \( \mathbb{R}^2 \) y \( \mathbb{R}^3 \)</p>
+            <p>Buena suerte... y como ya saben, pueden realizar sus preguntas y plantear sus dudas en el foro <a class="con">Consultas</a>.</p>
+        </section>
+    
+        <section id="primer-acercamiento">
+            <h2>2. Primer acercamiento</h2>
+            <p>Para comenzar, les proponemos que se animen a jugar con <a class="Geo">GeoGebra</a>. Para eso, les pedimos que realicen el <a href="https://drive.google.com/file/d/1a1nfPAgICZwcIiURuoDhTpn8BDe4sT6k/view?usp=sharing" target="_blank">problema 1 de la unidad 2 que comienza en la página 31</a> de la Guía de Problemas.</p>
+            <iframe class="d">1a1nfPAgICZwcIiURuoDhTpn8BDe4sT6k</iframe>
+            <img src="../assets/Project_1.gif" alt="Rectas" class="redu">
+            <p>Piénsenlo, equivóquense, metan mano y si algo no sale, o si no se entiende lo que se pregunta, planteen su duda en el foro <a class="con">Consultas</a>. Tal vez, alguien ya hizo allí la pregunta por ustedes… y si no, pueden animarse a ser la primera persona.</p>
+        </section>
+    
+        <section id="ecuacion-cartesiana">
+            <h3>2.1. Ecuación explícita o cartesiana de la recta</h3>
+            <img src="../assets/ter.gif" alt="Ecuación explícita de la recta" class="redu">
+            <p>En el siguiente video, el prof. Martín Tornay, nos recuerda la forma de expresar a las rectas como las ven en Análisis Matemático 1, que también, quizás hayan trabajado en el Taller de Resolución de Problemas del COPRUN y que, además, posiblemente hayan visto en la escuela secundaria. Les proponemos que lo vean:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=IM_lwv9eJjU" target="_blank">Video sobre ecuación explícita o cartesiana de la recta en \(\mathbb{R}^2\)</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=IM_lwv9eJjU</video>
+            </ul>
+        </section>
+    
+        <section id="ecuacion-vectorial">
+            <h3>2.2. Ecuación vectorial o paramétrica de la recta</h3>
+            <p>¿Encuentran alguna relación entre lo que  hacieron al resolver el <a href="https://drive.google.com/file/d/1a1nfPAgICZwcIiURuoDhTpn8BDe4sT6k/view?usp=sharing" target="_blank">problema 1 de la unidad 2</a> con lo visto en el  video del apartado anterior?</p>
+            <iframe class="d">1a1nfPAgICZwcIiURuoDhTpn8BDe4sT6k</iframe>
+            <p>Miren el siguiente video sobre otra forma de representar a las rectas y no olviden tener a mano lo trabajado anteriormente. Esta forma podrá ser útil sobre todo para escribir las ecuaciones de las rectas en \(\mathbb{R}^3\) y en \(\mathbb{R}^n\).</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=472gxkKN4UI" target="_blank">Video sobre ecuación vectorial o paramétrica de la recta en \(\mathbb{R}^2\)</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=472gxkKN4UI</video>
+            </ul>
+            <img src="../assets/vectorpunto.gif" alt="Vector Punto" class="redu">
+        </section>
+    
+        <section id="puntos-pertenecen">
+            <h3>2.3. Puntos que pertenecen o que no pertenecen a una recta determinada</h3>
+            <p>¿Cómo sabemos si un punto pertenece o no a una cierta recta ? ¿Cómo podemos usar "una" ecuación de una recta para saber si un punto P pertenece o no a su gráfica? ¿Qué diferencia hay si la ecuación de la recta está escrita en forma vectorial o en forma explícita?</p>
+            <p>En el siguiente video respondemos estas preguntas para el caso en que la recta esté dada a partir de una ecuación vectorial.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=gqszQC3OrnU" target="_blank">Video sobre cómo determinar si un punto pertenece o no a una recta dada su ecuación vectorial.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=gqszQC3OrnU</video>
+            </ul>
+            <p>¿Cómo responden estas preguntas en el caso de que la ecuación de la recta esté escrita en forma cartesiana o explícita? Piensen en esto y si no sale, ya saben dónde hacer sus <a class="con">Consultas</a>.</p>
+        </section>
+    
+        <section id="interseccion">
+            <h2>3. Intersección entre rectas de \(\mathbb{R}^2\)</h2>
+            <img src="../assets/inter.gif" alt="Intersección entre rectas de R2" class="redu">
+            <p>¿Cómo encontramos los puntos que tienen en común dos o más rectas? ¿De qué depende la estrategia?</p>
+            <p>Les proponemos que piensen cómo hallar los puntos de intersección (puntos en común) de las rectas del <a href="https://drive.google.com/file/d/14_WjYrzIdVonOCuSQ_uSE8ZPV8apCuii/view?usp=sharing" target="_blank">problema 8a de la unidad 2 en la página 35</a> de la Guía de Problemas.</p>
+            <iframe class="d">14_WjYrzIdVonOCuSQ_uSE8ZPV8apCuii</iframe>
+            <p>En el siguiente video mostramos una posible resolución, piensen una forma de encontrar la intersección entre rectas antes de verlo.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=2kXwOUn0ejo" target="_blank">Video sobre intersección entre rectas (ec. vectorial) de \(\mathbb{R}^2\) - problema 8a</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=2kXwOUn0ejo</video>
+            </ul>
+            <p>¿Cómo podríamos encontrar la intersección si las ecuaciones de las rectas están escritas en forma explícita?</p>
+        </section>
+    
+        <section id="ecuacion-dos-puntos">
+            <h2>4. Ecuación de la recta dados dos puntos</h2>
+            <p>¿Cómo encontramos una ecuación de una recta que pasa por dos puntos dados \( A \) y \( B \)? ¿Qué estrategias podemos utilizar?</p>
+            <img src="../assets/Project_1.gif" alt="Recta por dos puntos" class="redu">
+            <p>Para  contestar, podemos hacernos algunas preguntas previamente, por ejemplo: ¿qué necesitamos encontrar?  ¿ qué información tenemos? ¿ cómo conseguimos lo que necesitamos a partir de lo que tenemos?</p>
+            <p>Teniendo en cuenta las preguntas que nos hicimos, encuentren una ecuación vectorial de la recta que pasa por lo puntos \(A=(2,3)\) y \(B=(1,4)\). Luego, miren la resolución que se presenta en el <a href="https://drive.google.com/file/d/1tJG0uSYJItwuan9TPTt-m25MlTAdQ9ES/view?usp=sharing" target="_blank">ejemplo 8 de la página 6 del Apunte sobre rectas de \(\mathbb{R}^2\)</a> (no hagan trampa, comience solo por el ejemplo... jajaja) y compárenla con lo que hicieron. ¿Llegaron a la misma ecuación? ¿usaron la misma estrategia?</p>
+            <iframe class="d">1tJG0uSYJItwuan9TPTt-m25MlTAdQ9ES</iframe>
+            <p>Lean el resto del <a href="https://drive.google.com/file/d/17zepPS9M4bg58H95jUkR5D6oseK8ENwh/view?usp=sharing" target="_blank">Apunte sobre rectas de \(\mathbb{R}^2\)</a> para reforzar algunas de las cuestiones que estuvimos trabajando, en él van a encontrar definiciones, propiedades, ejemplos resueltos, etc.</p>
+            <iframe class="d">17zepPS9M4bg58H95jUkR5D6oseK8ENwh</iframe>
+        </section>
+    
+        <section id="rectas-paralelas-perpendiculares">
+            <h2>5. Rectas paralelas y rectas perpendiculares</h2>
+            <img src="../assets/par.jpg" alt="Rectas Paralelas" class="redu">
+            <p>Lean sobre paralelismo y perpendicularidad de rectas en la <a href="https://drive.google.com/file/d/1L1p8lCj3bnKnDJ3vNBcFC9Ce0O_reNRf/view?usp=sharing" target="_blank">página 7 del Apunte sobre rectas de \(\mathbb{R}^2\)</a>).</p>
+            <iframe class="d">1L1p8lCj3bnKnDJ3vNBcFC9Ce0O_reNRf</iframe>
+            <p>Habrán notado que analizar si dos rectas son paralelas o son perpendiculares se reduce a mirar sus vectores directores. Estos temas (vectores perpendiculares y vectores paralelos) fueron trabajados en el libro anterior.</p>
+            <p>Según la definición de rectas paralelas dada en el apunte, ¿una recta, es paralela a sí misma? ¿Por qué?</p>
+        </section>
+    
+        <section id="actividades">
+            <h2>6. Actividades de práctica hasta aquí</h2>
+            <p>Les dejamos las siguientes <a href="https://drive.google.com/file/d/10kXFALYHr3rLFuXZWC17Zgv4PFcq-M30/view?usp=sharing" target="_blank">Actividades de práctica sobre rectas en \(\mathbb{R}^2\)</a>. Recuerden plantear sus dudas en el foro <a class="con">Consultas</a>.</p>
+            <img src="../assets/practica.jpg" alt="practica" class="redu">
+            <iframe class="d">10kXFALYHr3rLFuXZWC17Zgv4PFcq-M30</iframe>
+        </section>
+    
+        <section id="expresion-recta-espacio">
+            <h2>7. ¿Cómo expresamos una recta en el espacio?</h2>
+            <p>Vamos a pensar cómo definir rectas en \(\mathbb{R}^3\).</p>
+            <p>Primero, les proponemos que piensen ustedes el <a href="https://drive.google.com/file/d/1XrKyvw49vDmtHhvur-Og6zxFdw52gJfs/view?usp=sharing" target="_blank">problema 4 de la unidad 2 de la Guía de problemas que está en las páginas 33 y 34</a>.</p>
+            <iframe class="d">1XrKyvw49vDmtHhvur-Og6zxFdw52gJfs</iframe>
+            <p>Si les resulta muy complejo, podrían empezar por los <a href="https://drive.google.com/file/d/1veS4IlB2LmaTcRQS1cc9Cmd8u9bZF2SG/view?usp=sharing" target="_blank">problemas 2 y 3.</a></p>
+            <iframe  class="d">1veS4IlB2LmaTcRQS1cc9Cmd8u9bZF2SG</iframe>
+            <img src="../assets/Habitación.gif" alt="Proyección" class="redu">
+            <p>En el siguiente video del profesor Daniel, les compartimos una posible solución a ese problema, el 4. También, en el mismo video, definimos una forma algebraica de representar rectas en \(\mathbb{R}^3\)</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=34_npE-6CsM" target="_blank">Video con una introducción a rectas en el espacio</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=34_npE-6CsM</video>
+            </ul>
+            <p>A partir de lo que vieron en el video, piensen, ¿cómo hallan la ecuación vectorial de una recta conocidos dos puntos por el que pasa?</p>
+            <p>Para practicar sobre esto tienen el <a href="https://drive.google.com/file/d/1PZHOU8_2vzkBKt88kSKWXSQ6YLt5tcKv/view?usp=sharing" target="_blank">ejercicio 1 de la Guía de ejercicios sobre rectas en el espacio</a>.</p>
+            <iframe class="d">1PZHOU8_2vzkBKt88kSKWXSQ6YLt5tcKv</iframe>
+            <p>También pueden leer y hacer el <a href="https://drive.google.com/file/d/1XMyysXoN7Jpwb_B7o7r7R3Y0DULQXzsb/view?usp=sharing" target="_blank">problema 5 de la página 34 de la Guía de problemas</a>.</p>
+            <iframe class="d">1XMyysXoN7Jpwb_B7o7r7R3Y0DULQXzsb</iframe>
+        </section>
+    
+        <section id="paralelismo-perpendicularidad">
+            <h2>8. Paralelismo, perpendicularidad y... ¿qué más?</h2>
+            <p>Cuando trabajamos en el plano \(\mathbb{R}^2\) vimos que dos rectas distintas son paralelas si tienen la misma dirección, es decir, si sus vectores directores son paralelos. O sea, si sus vectores directores son múltiplo uno del otro.</p>
+            <p>En el plano, dos rectas distintas que son paralelas, no tienen ningún punto en común. Por la definición, toda recta es paralela a sí misma, y, en ese caso, ambas tienen todos sus puntos en común.</p>
+            <p>Además, vimos también la noción de perpendicularidad. En el plano, dos rectas son perpendiculares si sus vectores directores son perpendiculares, es decir, si el producto escalar entre los vectores directores es 0.</p>
+            <p>En el espacio, ¿pasa lo mismo? ¿Existen otras posiciones relativas entre dos rectas?</p>
+            <p>En el <a href="https://drive.google.com/file/d/1CowwCfAHO166mL-cYpC4LGzM2Xz-Csf7/view?usp=sharing" target="_blank">Apunte sobre rectas en el espacio</a> podrán leer sobre esta cuestión.</p>
+            <iframe class="d">1CowwCfAHO166mL-cYpC4LGzM2Xz-Csf7</iframe>
+            <p>¿Cuán similares y cuán diferentes son las nociones de paralelismo y perpendicularidad en el plano y en el espacio?</p>
+            <ul>
+                <li>En el plano (euclídeo), dada una recta y un punto, existe una única recta paralela a la dada que pasa por el punto. En el espacio, ¿sucede lo mismo?</li>
+                <li>En el plano (euclídeo), dada una recta y un punto, existe una única recta perpendicular a la dada y que pasa por ese punto. En el espacio, ¿sucede lo mismo?</li>
+                <li>En el plano, las rectas perpendiculares siempre se cortan. ¿Qué sucede en el espacio?</li>
+            </ul>
+            <p>Sobre intersección de rectas hablaremos en el siguiente apartado. Mientras tanto, los <a href="https://drive.google.com/file/d/1lONHz9aUOQzX7LYnLs5kBzi-VagzXIhv/view?usp=sharing" target="_blank">ejercicios 2, 3 y 4 de la Guía de ejercicios sobre rectas en el espacio</a> tratan sobre los temas de este apartado.</p>
+            <iframe class="d">1lONHz9aUOQzX7LYnLs5kBzi-VagzXIhv</iframe>
+            <p>Ah... casi nos olvidamos de pasarles este <a href="https://www.youtube.com/watch?v=E42GxGAzW58" target="_blank">Video con la resolución de un problema en el que hay aque hallar la ecuación de una recta paralela a otra que pasa por un punto dado</a> del profesor Marcelo.</p>
+            <video class="yt">https://www.youtube.com/watch?v=E42GxGAzW58</video>
+            <img src="../assets/rectasposicionrelativa.gif" alt="Rectas Posición Relativa" class="redu">
+        </section>
+    
+        <section id="interseccion-espacio">
+            <h2>9. Intersección de rectas en el espacio</h2>
+            <p>¿Cómo sabemos, desde el punto de vista algebraico, si dos rectas del espacio se cortan?</p>
+            <p>Intenten pensarlo ustedes resolviendo el <a href="https://drive.google.com/file/d/1fInI0zqjjFe_T93TohrGpvoKdWg7hy6D/view?usp=sharing" target="_blank">problema 8b de la página 35</a> de la Guía de Problemas.</p>
+            <iframe class="d">1fInI0zqjjFe_T93TohrGpvoKdWg7hy6D</iframe>
+            <p>A continuación les presentamos un texto y un video en el que se busca la intersección de dos rectas de \(\mathbb{R}^3\) . Se trata del mismo ejemplo en ambos casos, así que ustedes eligen si leen el texto, si miran el video de la profesora Perla... o si eligen ambos:</p>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1iDHFq74j1fpievEHa8VRvjrrp5Xf_fax/view?usp=sharing" target="_blank">Texto con la resolución de un problema de intersección de rectas en el espacio</a></li>
+                <iframe class="d">1iDHFq74j1fpievEHa8VRvjrrp5Xf_fax</iframe>
+                <li><a href="https://www.youtube.com/watch?v=XoUXtCusygc" target="_blank">Video con la resolución de un problema de intersección de rectas en el espacio</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=XoUXtCusygc</video>
+            </ul>
+            <p>Para practicar con ejercicios que integran los contenidos de esta semana y la semana pasada tienen el resto de los <a href="https://drive.google.com/file/d/1BP5LGMNoLmvZk0HztGqGNdEeV0v7LbVo/view?usp=sharing" target="_blank">ejercicios de la Guía de ejercicios sobre rectas en el espacio</a></p>
+            <iframe class="d">1BP5LGMNoLmvZk0HztGqGNdEeV0v7LbVo</iframe>
+            <p>Y los <a href="https://drive.google.com/file/d/12-vSeBumbB5mBDwae4vjuOqJbUeV5AvX/view?usp=sharing" target="_blank">ejercicios (1), (2), (3), (4), (5) y (12) de las páginas 44, 45 y 46</a> de la Guía de problemas.</p>
+            <iframe class="d">12-vSeBumbB5mBDwae4vjuOqJbUeV5AvX</iframe>
+            <p>No se olviden de plantear sus preguntas en el foro de <a class="con">Consultas</a>. Muchos compañeros y muchas compañeras lo están aprovechando con las preguntas, y también hay muy buenos aportes. No dejen de pasar por allí.</p>
+        </section>
+    
+        <section id="autoevaluacion">
+            <h2>10. Autoevaluación</h2>
+            <p>Como parte de la evaluación continua <a class="Req">(ver las condiciones en Condiciones de trabajo, de evaluación y de acreditación)</a> les proponemos las siguientes autoevaluaciones:</p>
+            <ul>
+                <li><a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366100" target="_blank"><strong>Autoevaluación sobre rectas en \(\mathbb{R}^2\)</strong></a></li>
+                <li><a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366087" target="_blank"><strong>Autoevaluación sobre rectas en \(\mathbb{R}^3\)</strong></a></li>
+            </ul>
+            <p>Ingresen a los cuestionarios para ver la fecha de apertura y la de cierre.</p>
+            <p>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.</p>
+            <p>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
+            
+            <iframe class="d">1g9TGxFr-EZyr61O1U8YFAoq6u3hqiQbQ</iframe>
+            
+            <iframe class="d">1Pz0Y-J31WwYdqzZ5Kn0NQpqjMAry800i</iframe>
+        </section>
+
+        <section id="archivos">
+            <h2>Archivos Completos</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1yNSWO9Q1WITE-cOXc_p3-nDFHwzkkmk9/view?usp=sharing" target="_blank">Unidad 2</a></li>
+                <li><a href="https://drive.google.com/file/d/17zepPS9M4bg58H95jUkR5D6oseK8ENwh/view?usp=sharing" target="_blank">Apunte Rectas en \(\mathbb{R}^2\)</a></li>
+                <li><a href="https://drive.google.com/file/d/1CowwCfAHO166mL-cYpC4LGzM2Xz-Csf7/view?usp=sharing" target="_blank">Apunte Rectas en \(\mathbb{R}^3\)</a></li>
+                <li><a href="https://drive.google.com/file/d/10kXFALYHr3rLFuXZWC17Zgv4PFcq-M30/view?usp=sharing" target="_blank">Actividades de Práctica sobre Rectas en \(\mathbb{R}^2\)</a></li>
+                <li><a href="https://drive.google.com/file/d/1-EqFIDO_57Ze-r8TJ5hMzGBQSEmhkAGp/view?usp=sharing" target="_blank">Actividades de Práctica sobre Rectas en \(\mathbb{R}^3\)</a></li>
+                <li><a href="https://drive.google.com/file/d/1iDHFq74j1fpievEHa8VRvjrrp5Xf_fax/view?usp=sharing" target="_blank">Resolución de un Problema de Intersecciónm de Rectas en \(\mathbb{R}^3\)</a></li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+<footer class="footer">
+    <a href="../assets/libro2.html" class="arrow arrow-left" aria-label="Libro 2">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      
+      </div> 
+    </a>
+  
+    <a href="../assets/libro4.html" class="arrow arrow-right" aria-label="Libro 4">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+  
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+    </a>
+  </footer>
+</html>

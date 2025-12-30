@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro 4 - Segundo Cuatrimestre</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="../../assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="../../assets/site.webmanifest">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube/dist/Youtube.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Libro 4: Transformaciones Lineales</h1>
+    </header>
+
+    <main>
+        <section id="indice">
+            <h2>Tabla de contenidos</h2>
+                <ul>
+                    <li>1. <a href="#introduccion">Introducción</a></li>
+                    <li>2. <a href="#propiedades">Dos propiedades que definen a las transformaciones lineales</a></li>
+                    <li>3. <a href="#imagenes">Hallando imágenes a partir de las propiedades de una TL</a></li>
+                    <li>4. <a href="#matriz">Hallando la matriz de una transformación lineal</a></li>
+                    <li>5. <a href="#transformaciones">Algunas transformaciones geométricas que son TL</a></li>
+                    <li>
+                        6. <a href="#teorema">Núcleo, Imagen y Teorema de la dimensión</a>
+                        <ul>
+                            <li>6.1 <a href="#nucleo">Núcleo de T</a></li>
+                            <li>6.2 <a href="#imagen">Imagen de T</a></li>
+                            <li>6.3 <a href="#espacios">Núcleo e Imagen de una TL son espacios vectoriales</a></li>
+                            <li>6.4 <a href="#determinar">¿Cómo queda determinada una TL?</a></li>
+                            <li>6.5 <a href="#dimension">Teorema de la dimensión y caracterización de la solución de los sitemas homogéneos</a></li>
+                        </ul>
+                    </li>
+                    <li>7. <a href="#autoevaluacion">Ejercitación y Autoevaluación</a></li>
+                    <li>8. <a href="#archivos">Archivos Completos</a></li>
+                </ul>
+        </section>
+
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p>En el libro anterior comenzamos a trabajar con transformaciones de \( \mathbb{R}^n \) en \( \mathbb{R}^m \). Éstas son funciones que asignan a cada vector del primer conjunto un único vector del segundo conjunto.</p>
+            <p>Vimos cómo obtener la imagen de algún vector a partir de la fórmula de la transformación, o a través de su expresión matricial. También trabajamos cómo encontrar la pre-imagen de un vector del segundo conjunto, es decir, dado un vector del segundo conjunto, encontrar un vector cuyo transformado sea aquel vector dado.</p>
+            <p>Además, vimos dos transformaciones geométricas especiales: <strong>la simetría con respecto a una recta</strong> y <strong>la rotación con respecto a un punto</strong>.</p>
+            <p>De todas las transformaciones posibles, existen algunas que tienen dos propiedades especiales. A lo largo de estas tres semanas, les proponemos trabajar con estas transformaciones.</p>
+        </section>
+
+        <section id="propiedades">
+            <h2>2. Dos propiedades que definen a las transformaciones lineales</h2>
+            <p>De todas las transformaciones posibles entre vectores de espacios vectoriales, trabajaremos con unas particulares que se llaman transformaciones lineales (TL). Hay dos propiedades especiales que cumplen las transformaciones lineales. El profesor Gastón explica en qué consisten estas propiedades en el siguiente video:</p>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=4ZizSal2wNY" target="_blank">Video con explicación de las propiedades de las transformaciones lineales</a>
+                </li>
+                <video class="yt">https://www.youtube.com/watch?v=4ZizSal2wNY</video>
+            </ul>
+            <p>Podemos representar la ley de correspondencia de cualquier transformación lineal de \( \mathbb{R}^n \) en \( \mathbb{R}^m \) con una matriz de \( \mathbb{R}^{n\times m} \). En el siguiente video el profesor Gastón nos habla de esto.</p>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=wf0YBCuSJK0" target="_blank">Video con explicación de uso de matrices para definir transformaciones lineales</a>
+                </li>
+                <video class="yt">https://www.youtube.com/watch?v=wf0YBCuSJK0</video>
+            </ul>
+            <img src="../../assets/4_1.gif" alt="Dos propiedades que definen las transformaciones lineales" class="redu">
+        </section>
+
+        <section id="imagenes">
+            <h2>3. Hallando imágenes a partir de las propiedades de una TL</h2>
+            <p>En los videos anteriores pudimos ver cómo conseguir el transformado de un vector conociendo los transformados de otros dos. Para ello usamos que el primer vector es combinación de los otros dos, y además, aprovechamos las dos propiedades que definen a las transformaciones lineales. Por ejemplo, si tenemos una transformación lineal \( T \) de \( \mathbb{R}^3 \) en \( \mathbb{R}^2 \) que le asigna al vector \( \begin{pmatrix} 1\\ 0\\-1 \end{pmatrix} \) el vector \( \begin{pmatrix} 1\\ 1 \end{pmatrix} \) y asigna al vector \( \begin{pmatrix} 1\\ 1\\ 1 \end{pmatrix} \)el vector \( \begin{pmatrix} -1\\ 0 \end{pmatrix} \), entonces, ¿qué vector le asigna al vector \( -2\cdot \begin{pmatrix} 1\\ 0\\-1 \end{pmatrix}+3\begin{pmatrix} 1\\ 1\\1 \end{pmatrix} \)?</p>
+            <p>Bueno, será la misma combinación lineal, pero de los vectores transformados. Es decir, \(-2\cdot \begin{pmatrix} 1\\ 1 \end{pmatrix}+3\begin{pmatrix} -1\\ 0 \end{pmatrix} \), que es el vector \( \begin{pmatrix} -5\\ -2 \end{pmatrix} \). O sea que el transformado del vector \( \begin{pmatrix} 1\\ 3\\5 \end{pmatrix} \) es el vector \( \begin{pmatrix} -5\\ -2 \end{pmatrix} \).</p>
+            <p>En el siguiente video el profesor Marcelo nos muestra un ejemplo como éste.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=Ov4Olu-wX1Y" target="_blank">Video en el que hallamos el transformado de un vector a partir de una combinación lineal</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=Ov4Olu-wX1Y</video>
+            </ul>
+            <p>Entonces, a partir de conocer los transformados de algunos vectores, podemos conocer los transformados de infinitos vectores. ¿Cualquier vector es combinación lineal de otros dados? ¿De cuántos vectores necesitamos conocer sus transformados (por una transformación lineal) para conocer el transformado de todos? En el siguiente video repasamos con el profesor Daniel la noción de combinación lineal, la noción de independencia/dependencia lineal de un conjunto de vectores para ir tras la respuesta de preguntas como las anteriores.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=_1V1Di_AXRc" target="_blank">Video con un repaso de combinación lineal e independencia</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=_1V1Di_AXRc</video>
+            </ul>
+            <p>A partir del video anterior podemos ver que con un conjunto linealmente independiente de \( n \) vectores podemos conseguir todos los vectores de \( \mathbb{R}^n \). Es decir, cualquier vector de \( \mathbb{R}^n \) es una combinación lineal de los vectores de un conjunto linealmente independiente con \( n \) vectores.</p>
+            <p>Por ejemplo, cualquier vecctor de \( \mathbb{R}^3 \) es una combinación lineal de los vectores \( \begin{pmatrix} 1\\0\\0 \end{pmatrix} \), \( \begin{pmatrix} 0\\ 1\\ 0 \end{pmatrix} \) y \( \begin{pmatrix} 0\\ 0\\ 1 \end{pmatrix} \)</p>
+            <img src="../../assets/4_2.jpg" alt="Rango de una transformación lineal" class="bor">
+        </section>
+
+        <section id="matriz">
+            <h2>4. Hallando la matriz de una transformación lineal</h2>
+            <img src="../../assets/4_3.gif" alt="Matriz de una transformación lineal" class="redu">
+            <p>Como vimos en el segundo video, podemos representar una transformación lineal de \( \mathbb{R}^n \) en \( \mathbb{R}^m \) usando matrices. En el siguiente video el profesor Marcelo nos muestra un camino posible para hallar la matriz de una transformación lineal de \( \mathbb{R}^2 \) en \( \mathbb{R}^2 \). Vamos a trabajar con la misma transformación del tercer video.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=ocqL8BE3Cao" target="_blank">Video con ejemplo nro 1 en el que hallamos la matriz de una TL.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=ocqL8BE3Cao</video>
+            </ul>
+            <p>A continuación, el profesor Marcelo trabaja con otro ejemplo en el que hallamos la matriz de una transformación lineal de \( \mathbb{R}^3 \) en \( \mathbb{R}^3 \) a partir de conocer tres vectores (que forman un conjunto linealmente independiente) y sus transformados.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=hyQEPWgVhKs" target="_blank">Video con ejemplo nro 2 en el que hallamos la matriz de una TL.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=hyQEPWgVhKs</video>
+            </ul>
+            <p>En el siguiente video, el profesor Marcelo, busca la matriz de una transformación lineal de \( \mathbb{R}^3 \) en \( \mathbb{R}^2 \) a partir de conocer tres vectores (que forman un conjunto linealmente independiente) y sus transformados.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=886U21VswZU" target="_blank">Video con ejemplo nro 3 en el que hallamos la matriz de una TL.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=886U21VswZU</video>
+            </ul>
+        </section>
+
+        <section id="transformaciones">
+            <h2>5. Algunas transformaciones geométricas que son TL</h2>
+            <p>Hay algunas transformaciones geométricas que son transformaciones lineales. Algunas de ellas son la simetría con respecto a una recta que pasa por el origen de coordenadas en \( \mathbb{R}^{2} \) y en \( \mathbb{R}^{3} \), la rotación de cualquier ángulo con centro el origen de coordenadas en \( \mathbb{R}^{2} \), la simetría con respecto a un plano en \( \mathbb{R}^{3} \), la proyección ortogonal sobre una recta por el origen en \( \mathbb{R}^2 \) y en \( \mathbb{R}^2 \), la proyección ortogonal sobre un plano por el origen en \( \mathbb{R}^3 \), entre otras.</p>
+            <p>A veces es sencillo conocer algunos transformados. Por ejemplo, si queremos conocer la matriz de simetría respecto del plano \( \pi: 2x+y-z=0 \) podemos primero intentar conocer tres vectores y sus transformados. Por ejemplo, cualquier vector que pertenece al plano se transforma en sí mismo, y cualquier vector perpendicular al plano se transforma en su opuesto. Así que tenemos que, por ejemplo:</p>
+            <p>\( T\begin{pmatrix} 2\\1\\-1 \end{pmatrix}=\begin{pmatrix} -2\\-1\\1 \end{pmatrix} \), \( T\begin{pmatrix} 1\\0\\2 \end{pmatrix}=\begin{pmatrix} 1\\0\\2 \end{pmatrix} \) y \( T\begin{pmatrix} 1\\1\\3 \end{pmatrix}=\begin{pmatrix} 1\\1\\3 \end{pmatrix} \).</p>
+            <p>Luego, como tenemos un conjunto de tres vectores de \( \mathbb{R}^{3} \) linealmente independiente y, además, también tenemos sus transformados, podemos proceder como en los videos del apartado anterior para hallar la matriz de la transformación.</p>
+            <p>En el siguiente video, retomamos la simetría con el profesor Martín T. En este caso, buscamos con <a class="Geo">Geogebra</a> el transformado del \( \begin{pmatrix} 1\\0 \end{pmatrix} \) y del \( \begin{pmatrix} 0\\1 \end{pmatrix} \)</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=LMTTfje2mjA" target="_blank">Video en el que trabajamos la simetría como TL.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=LMTTfje2mjA</video>
+            </ul>
+        </section>
+
+        <section id="teorema">
+            <h2>6. Núcleo, Imagen y Teorema de la dimensión</h2>
+            <p>En esta sección abordaremos algunas propiedades de las transformaciones lineales. En particular, veremos que con conocer las imágenes de "algunos" vectores del dominio podremos tener las imágenes de todos los vectores del dominio. Esto quiere decir que con "algunos pocos" datos, podemos conocer a toda la transformación lineal.</p>
+        </section>
+
+        <section id="nucleo">
+            <h2>6.1. Núcleo de \( T \)</h2>
+            <p>En primer lugar, notemos que en cualquier transformación lineal \( T:\mathbb{R}^n\to\mathbb{R}^m \) ocurre que el transformado del vector nulo de \( \mathbb{R}^n \) es el vector nulo de \( \mathbb{R}^m \). Es decir, que \( T(\vec{0})=\vec{0} \). Esto se deduce en un renglón a partir de una de las dos propiedades iniciales que definen a las transformaciones lineales y teniendo en cuenta que el vector nulo es igual al número \( 0 \) multiplicado por cualquier vector.</p>
+            <p>¿Es el vector nulo el único vector del dominio de \( T \) que se transforma en el nulo? La respuesta es... depende de la transformación. En algunos casos sí, en otros no. Hay ejemplos de transformaciones lineales en las que existen otros vectores cuyo transformado es el nulo. Por ejemplo, si pensamos en una proyección ortogonal de \( \mathbb{R}^3 \) en \( \mathbb{R}^3 \) con respecto al plano \( \pi:x-z=0 \). Es decir, cualquier punto del espacio se transforma en un punto sobre el plano \( \pi \) de modo que el segmento que une al vector y su transformado es perpendicular al plano. ¿Quiénes son los vectores que se transforman en el nulo? O sea, ¿cuáles puntos del espacio que se proyectan perpendicularmente al plano van a parar al origen? Piénsenlo... Bueno... lo decimos... Cualquier punto que esté sobre la recta perpendicular al plano por el origen, en definitiva, cualquier vector perpendicular al plano, se proyecta sobre el vector nulo. En este ejemplo, esta transformación puede definirse así (pueden intentar buscarla, para ello tengan en cuenta que cualquier vector del plano se transforma en sí mismo):</p>
+            <p>\[ T:\mathbb{R}^3\to\mathbb{R}^3:T\begin{pmatrix} x\\ y\\ z \end{pmatrix}=\begin{pmatrix} \frac{1}{2} & 0 &\frac{1}{2}\\ 0 & 1 & 0\\ \frac{1}{2} & 0 & \frac{1}{2} \end{pmatrix}\cdot\begin{pmatrix} x\\ y\\ z \end{pmatrix} \]</p>
+            <p>Pueden comprobar que los vectores prependiculares al plano se transforman en el nulo usando la matriz de la transformación.</p>
+            <h3>Definición</h3>
+            <p>Sea \( T:\mathbb{R}^n\to\mathbb{R}^m \) una transformación lineal.</p>
+            <p>Llamaremos Núcleo de \( T \) al conjunto de todos los vectores del dominio ( \( \mathbb{R}^n \) en este caso) que se transforman en el vector nulo. Es decir, el Núcleo está formado por todos los vectores \( \vec{v}\in\mathbb{R}^n \) tales que \( T(\vec{v})=\vec{0} \). Al Núcleo también se lo suele llamar Kernel y lo notamos \( Nu(T) \) o \( Ker(T) \).Este conjunto es análogo al llamado conjunto de raíces o ceros de las funciones sobre los reales.</p>
+            <p>En forma simbólica, puede escribirse esta definición así:</p>
+            <p>Sea \( T:\mathbb{R}^n\to\mathbb{R}^m \) una transformación lineal. \( Nu(T) = \left\{ \vec{v} \in \mathbb{R}^n : T( \vec{v} ) = \vec{0}  \right\} \)</p>
+        </section>
+
+        <section id="imagen">
+                <h2>6.2. Imagen de \( T \)</h2>
+                <p>Por otro lado, notemos que en el ejemplo de la proyección con el que venimos trabajando, no todos los vectores del espacio son obtenidos como imagen de algún vector del dominio. Puede resultar intuitivo que como se trata de una proyección sobre un plano, todos los transformados obtenidos serán vectores del plano, y entonces, no se podrán obtener vectores que no están en él. Pueden comprobar qué sucede si intentamos buscar una preimagen del vector \( (1,2,3) \). En el libro anterior, en el apartado ¿Cómo hallamos una preimagen? pueden revisar cómo hacerlo.</p>
+                <br>
+                <h3>Definición</h3>
+                <p>Sea \( T:\mathbb{R}^n\to\mathbb{R}^m \) una transformación lineal.</p>
+                <p>Llamaremos Imagen de \( T \) al conjunto de todos los vectores del codominio de \( T \) que son imágen de algún vector del dominio de la transformación. Es decir, la Imagen está formada por todos los vectores \( \vec{w} \in\mathbb{R}^m \) para los cuales existe \( \vec{v}\in\mathbb{R}^n \) tal que \( T(\vec{v})=\vec{w} \).</p>
+                <p>A la imagen también se la suele llamar Recorrido de \( T \) y lo notamos \( Im(T) \).</p>
+        </section>
+
+        <section id="espacios">
+                <h2>6.3. Núcleo e Imagen de una TL son espacioes vectoriales</h2>
+                <p>Notemos que buscar el núcleo de una transformación lineal implica resolver un sistema de ecuaciones lineales homogéno. En el apartado <strong>Algunas propiedades de las soluciones de un sistema homogéneo de <a href="https://pibsas.github.io/algebra2025/assets/seg/libro1#propiedades" target="_blank">Libro 1</a></strong> vimos que las soluciones de los sistemas homogéneos cumplen con las propiedades que caracterizan a los espacios vectoriales y que mencionamos en el apartado <strong>Propiedades de un Espacio Vectorial del <a href="https://pibsas.github.io/algebra2025/assets/seg/libro2#propiedades" target="_blank">Libro 2</a></strong>. En definitiva, el Núcleo de cualquier transformación lineal es un espacio vectorial (es un subespacio vectorial de \( \mathbb{R}^n \)).</p>
+                <p>Algo similar ocurre con la imagen. Si queremos hallar la imagen de una transformación lineal, según vimos, planteamos al producto de la matriz por el vector genérico del dominio como combinación lineal. Finalmente, tenemos un sistema de generadores de un espacio vectorial. Y podemos plantear una base.</p>
+                <p>A partir de estas dos cuestiones, podemos plantear el siguiente teorema (para ver una demostración pueden consultar la <a href="https://drive.google.com/file/d/1UOnzxQK7tPxXjOijeHd1hQXaVZWyUdSf/view?usp=sharing" target="_blank">página 256 a 262 del libro Howard, A. (1994). Introducción al Álgebra Lineal.</a>).</p>
+                <iframe class="d">1UOnzxQK7tPxXjOijeHd1hQXaVZWyUdSf</iframe>
+                <h3>Teorema:</h3>
+                <p>Sea \( T:\mathbb{R}^n\to\mathbb{R}^m \) una transformación lineal, entonces..</p>
+                <p>...\( Nu(T) \) es un espacio vectorial.</p>
+                <p>..\( Im(T) \) es un espacio vectorial.</p>
+                <h4>Ejemplos:</h4>
+                <p>El profe Gastón hizo este <a href="https://www.youtube.com/watch?v=3fvgJOdLX9M" target="_blank">Video con ejemplos en los que buscamos el núcleo de una TL</a>. Al verlo, notarán que se necesita resolver un sistema homogéneo. Para repasar sobre esto, pueden volver a revisar los temas del <a href="https://pibsas.github.io/algebra2025/assets/seg/libro1" target="_blank">Libro 1</a> de esta segunda parte y/o del <a href="https://pibsas.github.io/algebra2025/assets/libro5.html#sistema-ecuaciones" target="_blank">Libro 5: <strong>Apartado 4.¿Qué es un sistema de ecuaciones lineales?</strong> de la primera parte</a>.</p>
+                <video class="yt">https://www.youtube.com/watch?v=3fvgJOdLX9M</video>
+                <p>El profe Claudio nos acerca este <a href="https://www.youtube.com/watch?v=oAeET26e3O0" target="_blank">Video con ejemplos en los que buscamos la imagen de una TL</a>. En este caso, habrán advertido que es importante reconocer si un conjunto de vectores es linealmente independiente o no. En el siguiente video, el profe Martín T. nos muestra ejemplos de cómo averguar esto.</p>
+                <video class="yt">https://www.youtube.com/watch?v=oAeET26e3O0</video>
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=AMVa9obaPV8" target="_blank">Video con ejemplos en los que indetificamos si un conjunto de vectores es LI o LD</a>
+                    </li>
+                    <video class="yt">https://www.youtube.com/watch?v=AMVa9obaPV8</video>
+                </ul>
+        </section>
+
+        <section id="determinar">
+            <h2>6.4 ¿Cómo queda determinada una TL?</h2>
+            <p>De acuerdo con lo que venimos diciendo, si tanto el Núcleo como la Imagen son espacios vectoriales, ambos quedan completamente caracterizados a partir de una base.</p>
+            <p>Además, supongamos que \( B=\left\{ \vec{v_1}, \vec{v_2}, \dots, \vec{v_n}\right\} \) es una base del espacio vectorial \( \mathbb{R}^n \) y \( T:\mathbb{R}^n\to\mathbb{R}^m \)  es una transformación lineal. En caso de que conozcamos las imágenes de los vectores de la base por la la transformación lineal \( T \), es decir, si sabemos que \( T(\vec{v_1})=\vec{w_1}, T(\vec{v_2})=\vec{w_2}, \dots, T(\vec{v_n})=\vec{w_n} \) con cada \( \vec{w_i}\in \mathbb{R}^m \) entonces, conoceremos la imagen de cualquier vector del dominio de \( T \).</p>
+            <p>En efecto, para cualquier vector \( \vec{X}\in\mathbb{R}^n \), existen escalares \( \alpha_1, \alpha_2,\dots, \alpha_n\in\mathbb{R} \) tales que \( \vec{X}=\alpha_1\vec{v_1} +\alpha_2\vec{v_2} +\cdots+\alpha_n\vec{v_n} \). Y, aprovechando la propiedad que define a las transformaciones lineales tenemos que:</p>
+            <p>\( T(\vec{X})=T\left(\alpha_1\vec{v_1} +\alpha_2\vec{v_2} +\cdots+\alpha_n\vec{v_n} \right)= \alpha_1T(\vec{v_1}) +\alpha_2T(\vec{v_2}) +\cdots+\alpha_nT(\vec{v_n})=\alpha_1\vec{w_1} +\alpha_2\vec{w_2} +\cdots+\alpha_n\vec{w_n} \)</p>
+            <p><strong>Es decir, una transformación lineal queda completamente determinada si conocemos las imágenes de los vectores de una base del dominio.</strong></p>
+        </section>
+
+        <section id="dimension">
+            <h2>6.5. Teorema de la dimensión y caracterización de la solución de los sitemas homogéneos</h2>
+            <p>Finalmente, presentamos el teorema de la dimensión que relaciona las dimensiones del dominio, Núcleo e Imagen de la transformación lineal.</p>
+            <h3>Teorema de la dimensión</h3>
+            <p>Si \( T:\mathbb{R}^n\to\mathbb{R}^m \), entonces, la suma de la dimensión del Núcleo más la dimensión de la Imagen es igual a la dimensión del Dominio de \( T \). Es decir,</p>
+            <p>\( Dim(Nu(T))+Dim(Im(T))=n \)</p>
+            <p>Una consecuencia inmediata de este teorema nos permite caractarizar a las soluciones de cualquier sistema de ecuaciones lineales homogéno.</p>
+            <h3>Teorema</h3>
+            <p>Si \( A \) es una matriz de \(m \times n \), entonces, la dimensión del espacio vectorial de soluciones del sistema de ecuaciones lineales homogéno asociado a la matriz es \( n - Rg(A) \).</p>
+            <p>En donde \( \) es el rango de  \( A \),es decir, la cantidad de vectores columna (o vectores fila) de la matriz que forman un conjunto linealmente independiente.</p>
+        </section>
+
+        <section id="autoevaluacion">
+            <h2>7. Ejercitación y Autoevaluación</h2>
+            <h3>Ejercitación</h3>
+            <p>Para ejercitación sobre el tema que trabajamos en este libro, tienen el <a href="https://drive.google.com/file/d/1OoYvZoEK8ynWSQSar9ZXud5Qsd0q99tp/view?usp=sharing" target="_blank">Listado de actividades para realizar sobre transformaciones lineales</a>. La idea es que los puedan pensar y hacer (si se juntan para hacerlos, mejor) y plantear sus dudas y resoluciones en el foro <a class="con">Consultas</a> y en el aula. Para uno de los ejercicios de práctica van a necesitar los <a href="https://drive.google.com/drive/folders/1YviTB1Z-JinZ6fvimDYUVc3Q4u7QKfYf?usp=sharing" target="_blank">Archivos GGB</a> para el problema 24 de la página 110 de la Guía de Problemas.</p>
+            <iframe class="d">1OoYvZoEK8ynWSQSar9ZXud5Qsd0q99tp</iframe>
+            <br>
+            <h3>Autoevaluación</h3>
+            <p>Durante la segunda de estas dos semanas tendrán habilitada la <a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366255" target="_blank"><strong>Autoevaluación sobre transformaciones lineales</strong></a> que forma parte de la evaluación continua (ingresen para poder ver la fecha de habilitación).</p>
+            <iframe class="d">1Nqy81L1v2Yequ-JxhKqPcvlih2dNf_8Y</iframe>
+        </section>
+
+        <section id="archivos">
+            <h2>Archivos Completos</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1RoLvE1JLfcD6KGo-X0yvvHEkmaJYtCse/view?usp=sharing" target="_blank">Unidad 5</a></li>
+                <li><a href="https://drive.google.com/file/d/1UOnzxQK7tPxXjOijeHd1hQXaVZWyUdSf/view?usp=sharing" target="_blank">Página 256 a 262 del libro Howard, A. (1994). Introducción al Álgebra Lineal.</a></li>
+                <li><a href="https://drive.google.com/file/d/1OoYvZoEK8ynWSQSar9ZXud5Qsd0q99tp/view?usp=sharing" target="_blank">Listado de actividades para realizar sobre transformaciones lineales.</a></li>
+            </ul>
+        </section>
+        
+    </main>
+    <script src="../../js/script.js"></script>
+</body>
+<footer class="footer">
+    <a href="../../assets/seg/libro3.html" class="arrow arrow-left" aria-label="Libro 3 Segundo Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      
+      </div> 
+    </a>
+  
+    <a href="../../assets/seg/libro5.html" class="arrow arrow-right" aria-label="Libro 5 Segundo Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+  
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+    </a>
+  </footer>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra 2025 </title>
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="index-page">
+    <h1>\[ \mathbb{A} \mathcal{L} \mathbb{G} \, \Sigma \, \mathbb{B} \mathbb{R} \mathbb{A} \quad \gamma \quad \mathcal{G} \varepsilon \sigma m \mathrm{e} \top r \acute{\imath} \, \alpha \quad A \eta a \ell \acute{\imath} t \iota \mathbb{c} \alpha \]</h1>
+    <main>
+        <div class="container">
+            <button id="btn1" class="button" onclick="location.href='assets/libro1'">Libro 1</button>
+            <button id="btn2" class="button" onclick="location.href='assets/libro2'">Libro 2</button>
+            <button id="btn3" class="button" onclick="location.href='assets/libro3'">Libro 3</button>
+            <button id="btn4" class="button" onclick="location.href='assets/libro4'">Libro 4</button>
+            <button id="btn5" class="button" onclick="location.href='assets/libro5'">Libro 5</button>
+            <button id="btn6" class="button" onclick="location.href='assets/libro6'">Libro 6</button>
+            <button id="btn7" class="button" onclick="location.href='assets/libro7'">Libro 7</button>
+            <button id="btn8" class="button" onclick="location.href='assets/seg/libro1'">Libro 1</button>
+            <button id="btn9" class="button" onclick="location.href='assets/seg/libro2'">Libro 2</button>
+            <button id="btn10" class="button" onclick="location.href='assets/seg/libro3'">Libro 3</button>
+            <button id="btn11" class="button" onclick="location.href='assets/seg/libro4'">Libro 4</button>
+            <button id="btn12" class="button" onclick="location.href='assets/seg/libro5'">Libro 5</button>
+            <button id="btn13" class="button" onclick="location.href='assets/seg/libro6'">Libro 6</button>
+            <button id="btn14" class="button" onclick="location.href='assets/libro7#Parciales_1'">Parciales 1</button>
+            <button id="btn15" class="button" onclick="location.href='assets/seg/libro6#Parciales_2'">Parciales 2</button>
+            <button id="btn16" class="button" onclick="location.href='assets/geo/ggb'">GeoGebra</button>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/algebra2025/service-worker.js", { scope: "/algebra2025/" })
+        .then(() => console.log("✅ Service Worker registrado con alcance /algebra2025/"))
+        .catch((err) => console.log("❌ Error registrando SW:", err));
+    }
+    </script>
+</body>
+</html>

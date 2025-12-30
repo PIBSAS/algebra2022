@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro 7</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="../assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="../assets/site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube/dist/Youtube.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Libro 7: Determinantes</h1>
+    </header>
+    
+    <main>
+        <section id="indice">
+        <h2>Tabla de contenidos</h2>
+            <ul>
+                <li>1. <a href="#introduccion">Introducción</a></li>
+                <li>2. <a href="#determinante-2x2">Determinante de matrices de \(3 \times 3\)</a></li>
+                <li>3. <a href="#determinante-3x3">Determinante de matrices de \(3 \times 3\)</a></li>
+                <li>4. <a href="#determinantes-nxn">Determinantes de matrices de \(n \times n\)</a></li>
+                <li>5. <a href="#propiedades-determinantes">Propiedades de los determinantes</a></li>
+                <li>6. <a href="#determinantes-sistemas">Determinantes, sistemas de ecuaciones lineales y matriz inversa</a></li>
+                <li>7. <a href="#ejercicios">Ejercicios y Problemas</a></li>
+                <li>8. <a href="#autoevaluacion">Autoevaluación</a></li>
+                <li>9. <a href="#Parciales_1">Parciales 1</a></li>
+                <li>10. <a href="#archivos">Archivos Completos</a></li>
+            </ul>
+        </section>
+    
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p> En esta tercera unidad comenzamos trabajando con sistemas de ecuaciones lineales. Vimos que el hecho de usar matrices para resolver los sistemas por el método de Gauss simplifica la notación. Luego, comenzamos con el trabajo con matrices. Allí definimos la suma y la multiplicación de matrices, entre otros aspectos. También, notamos que podemos pensar en ecuaciones matriciales, es decir, ecuaciones donde los objetos que intervienen son matrices, y particularmente las incógnitas también lo son. A raíz de esto, pensamos en la noción de matriz inversa.</p>
+            <p>Todo eso nos lleva a pensar si es posible encontrar una forma de anticipar qué matrices son inversibles y cuáles no, qué sistemas de ecuaciones tienen única solución y cuáles no. En este libro trabajaremos con una noción que nos permite hacer esa anticipación. Su nombre es <strong>determinante de una matriz</strong>. Lo que sigue, tiene sentido para matrices cuadradas.</p>
+        </section>
+
+        <section id="determinante-2x2">
+            <h2>2. Determinante de matrices de \(2 \times 2\)</h2>
+            <p>En el siguiente video, comenzamos pensando esta idea mencionada en el párrafo anterior para matrices de \( 2 \times 2 \) a partir del <a href="https://drive.google.com/file/d/1yo0t1bjVNKSQAv2S-OTAYhC2MFs2OwaZ/view?usp=sharing" target="_blank">problema 36 de la página 64 de la Guía de problemas</a>. Les recomendamos que primero intenten pensarlo ustedes.</p>
+            <iframe class="d">1yo0t1bjVNKSQAv2S-OTAYhC2MFs2OwaZ</iframe>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=t_xJvA3g5UA" target="_blank">Video sobre determinantes de matrices de \( 2 \times 2 \)</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=t_xJvA3g5UA</video>
+            </ul>
+            <p>En el video el profesor Marcelo comienza contándonos una idea de por qué tiene sentido pensar en el determinante.</p>
+            <img src="../assets/banner.png" alt="Pensar" class="redu">
+            <p>Pero, ¿qué es el determinante de una matriz de \( 2 \times 2 \)? ¿cómo se calcula? No se queden con estas dudas. Si es así, por favor, vuelvan a ver el video, realicen sus <a class="con">Consultas</a> en el foro y/o en los encuentros presenciales.</p>
+        </section>
+
+        <section id="determinante-3x3">
+            <h2>3. Determinante de matrices de \( 3 \times 3 \)</h2>
+            <p>Si aún te quedaron dudas sobre cómo se calcula el determinante de una matriz de \( 2 \times 2 \), en el siguiente video, el profesor Marcelo comienza recordándolo. ¿Es posible extender esta idea a matrices de \( 3×3 \) ? En el video el profesor nos lo cuenta:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=2iWMwr5iyPc" target="_blank">Video sobre determinantes de matrices de \( 3 \times 3 \)</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=2iWMwr5iyPc</video>
+            </ul>
+            <p> ¿Se puede obtener el determinante de una matriz de \( 3 \times 3 \)? ¿cómo?</p>
+            <img src="../assets/detdet.gif" alt="Determiinantes" class="redu">
+        </section>
+
+        <section id="determinantes-nxn">
+            <h2>4. Determinantes de matrices de \( n \times n \)</h2>
+            <p>¿Es posible extender la idea de determinante a matrices de otros tamaños? El profesor Daniel nos lo cuenta en el siguiente video:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=LPOlr4zJAgk" target="_blank">Video sobre determinantes de matrices de \( n \times n \)</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=LPOlr4zJAgk</video>
+            </ul>
+        </section>
+
+        <section id="propiedades-determinantes">
+            <h2>5. Propiedades de los determinantes</h2>
+            <p>En el siguiente video, el profesor Gastón nos presenta algunas propiedades de los determinantes. La veracidad de estas propiedades puede demostrarse (en varios libros lo hacen).</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=OONhwpYDhCI" target="_blank">Video sobre propiedades de los determinantes</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=OONhwpYDhCI</video>
+            </ul>
+            <p>Les acercamos el <a href="https://drive.google.com/file/d/1dIxFeY_Lap1Cy4p0iHl6mYOuZyJrUi_-/view?usp=sharing" target="_blank">Capítulo sobre Determinantes del libro Grossman y Flores (2012) Álgebra lineal. Cap. 3. Pág 176 a 230</a>. Nos limitaremos a presentar algunas de esas propiedades y mostrar algún ejemplo en el que las aplicamos. Invitamos a que ustedes calculen el determinante de las matrices de los ejemplos del video usando la definición y verifiquen que da lo mismo si aplican la propiedad.</p>
+            <iframe class="d">1dIxFeY_Lap1Cy4p0iHl6mYOuZyJrUi_-</iframe>
+        </section>
+
+        <section id="determinantes-sistemas">
+            <h2>6. Determinantes, sistemas de ecuaciones lineales y matriz inversa</h2>
+            <p>Por último, queremos mencionar dos propiedades importantes en relación con los determinantes, la inversibilidad de una matriz y la cantidad de soluciones de un sistema de ecuaciones lineales:</p>
+            <p>Sea \( A \) una matriz cuadrada de \( n \times n \), entonces, las proposiciones que siguen son equivalentes:</p>
+            <ul>
+                <li>El determinante de la matriz \( A \) es distinto de \( 0 \).</li>
+                <li>La matriz \( A \) es inversible.</li>
+                <li>El sistema \( A \cdot X = b \) tiene única solución.</li>
+            </ul>
+            <p>Que las proposiciones sean equivalentes significa que si se cumple una de ellas, entonces, se cumplen todas las demás. Y si no se cumple alguna de ellas, entonces, tampoco se cumplen las demás.</p>
+            <p> En este caso, lo que sucede es que un sistema de \( n \) ecuaciones con \( n \) incógnitas tiene única solución, si y solo si, el determinante de la matriz asociada es distinto de \( 0 \). Y que un sistema de \( n \) ecuaciones con \( n \) incógnitas tiene única solución, si y solo si, la matriz asociada es inversible. Y que una matriz es inversible, si y solo si, el determinante es distinto de \( 0 \).</p>
+            <p>Por otro lado, si el determinante de la matriz asociada a un sistema de \( n \) ecuaciones lineales con \( n \) incógnitas es \( 0 \), eso significa que el sistema no tiene única solución. Es decir, puede no tener ninguna o tener infinitas.</p>
+        </section>
+
+        <section id="ejercicios">
+            <h2>7. Ejercicios y Problemas</h2>
+            <p>En la <a href="https://drive.google.com/file/d/1Uv7-JBVRw5zR7lrbTi4cPwZZAAnYNZ23/view?usp=sharing" target="_blank">Guía de trabajo con determinantes</a> les proponemos que realicen ejercicios y problemas.</p>
+            <iframe class="d">1Uv7-JBVRw5zR7lrbTi4cPwZZAAnYNZ23</iframe>
+            <p>En el archivo anterior les propusimos <a href="https://drive.google.com/file/d/1yo0t1bjVNKSQAv2S-OTAYhC2MFs2OwaZ/view?usp=sharing" target="_blank">ejercicios y problemas de la Guía de Problemas</a></p>
+            <iframe class="d">1yo0t1bjVNKSQAv2S-OTAYhC2MFs2OwaZ</iframe>
+            <p>Y del Libro de  <a href="https://drive.google.com/file/d/1TnXPXeIcfhovNDpa4KWfBmiVu7qqjFAW/view?usp=sharing" target="_blank">Maestripieri, Pavón y Resmesar (2017). Notas de Álgebra Lineal. Cap. 1. Pág 138 a 141</a>.</p>
+            <iframe class="d">1TnXPXeIcfhovNDpa4KWfBmiVu7qqjFAW</iframe>
+            <img src="../assets/practica.jpg" alt="Práctica" class="redu">
+        </section>
+
+        <section id="autoevaluacion">
+            <h2>8. Autoevaluación</h2>
+            <p>Como parte de la evaluación continua les proponemos la <a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366193" target="_blank"><strong>Autoevaluación sobre determinantes</strong></a>. Ingresen al cuestionario para ver la fecha de apertura y la de cierre. Esta autoevaluación involucra temas de las últimas dos semanas.</p>
+            <p>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.</p>
+            <p>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
+            
+            <iframe class="d">1lqSK9tPdknhSSV14sKAtaFZA_6FLN0mr</iframe>
+        </section>
+
+        <section id="Parciales_1">
+            <h2>9. Parciales 1</h2>
+            <p>En esta <a href="https://drive.google.com/drive/folders/1aVFb_eqWFSONDEwfmmTASUF1l5OAVre3?usp=sharing" target="_blank">Carpeta incluimos parciales viejos.</a> Los parciales 1 hasta el 2019 incluían hasta vectores, rectas y planos. A partir del 2022 tomamos todos esos temas en el primer parcial.</p>
+            <p>Más Parciales y Finales en <a href="https://sites.google.com/view/proyectocampusunm/repoprimero/algebraygeometriaanalitica" target="_blank">Proyecto Campus</a></p>
+        </section>
+
+        <section id="archivos">
+            <h2>Archivos Completos</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1pHr50PY1KpU2wljpU1ZSehAuPJaJ77eR/view?usp=sharing" target="_blank">Unidad 3</a></li>
+                <li><a href="https://drive.google.com/file/d/1dIxFeY_Lap1Cy4p0iHl6mYOuZyJrUi_-/view?usp=sharing" target="_blank">Grossman y Flores (2012) Álgebra lineal. Cap. 3. Pág 176 a 230.</a></li>
+                <li><a href="https://drive.google.com/file/d/1Uv7-JBVRw5zR7lrbTi4cPwZZAAnYNZ23/view?usp=sharing" target="_blank">Guía de trabajo con determinantes.</a></li>
+                <li><a href="https://drive.google.com/file/d/1TnXPXeIcfhovNDpa4KWfBmiVu7qqjFAW/view?usp=sharing" target="_blank">Maestripieri, Pavón y Resmesar (2017). Notas de Álgebra Lineal. Cap. 1. Pág 138 a 141.</a></li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+<footer class="footer">
+    <a href="../assets/libro6.html" class="arrow arrow-left" aria-label="Libro 6">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      
+      </div> 
+    </a>
+  
+    <a href="../assets/seg/libro1.html" class="arrow arrow-right" aria-label="Libro 1 Segundo Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+  
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+    </a>
+  </footer>
+</html>

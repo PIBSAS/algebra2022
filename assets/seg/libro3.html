@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro 3 - Segundo Cuatrimestre</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="../../assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="../../assets/site.webmanifest">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube/dist/Youtube.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Libro 3: Transformaciones Lineales</h1>
+    </header>
+    
+    <main>
+        <section id="indice">
+            <h2>Tabla de contenidos</h2>
+            <ul>
+                <li>1. <a href="#introduccion">Introducción</a></li>
+                <li>2. <a href="#transformaciones">Transformaciones entre vectores</a></li>
+                <li>
+                    3. <a href="#representaciones">Distintas formas de representación</a>
+                    <ul>
+                        <li>3.1 <a href="#coloquial">En forma coloquial</a></li>
+                        <li>3.2 <a href="#formula">Mediante fórmula para evaluar</a></li>
+                        <li>3.3 <a href="#matrices">Usando matrices</a></li>
+                    </ul>
+                </li>
+                <li>4. <a href="#preimagen">¿Cómo hallamos una preimagen?</a></li>
+                <li>5. <a href="#resumen">Resumen hasta aquí</a></li>
+                <li>6. <a href="#transformaciones_especiales">Algunas transformaciones especiales</a></li>
+                <li>7. <a href="#ejercitacion">Ejercitación y autoevaluación</a></li>
+                <li>8. <a href="#archivos">Archivos Completos</a></li>
+            </ul>
+        </section>
+
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p>Comenzamos a trabajar con la unidad 5. En esta unidad veremos un tipo de función especial. En estas funciones relacionaremos vectores de un espacio vectorial con vectores de otro espacio vectorial (que podría ser el mismo). Y dentro de estas funciones entre espacios vectoriales, que llamaremos transformaciones, en el siguiente libro veremos unas transformaciones que tienen unas características muy particulares.</p>
+            <p>En este primer libro, trabajaremos con transformaciones entre vectores en general y algunas transformaciones específicas.</p>
+        </section>
+    
+        <section id="transformaciones">
+            <h2>2. Transformaciones entre vectores</h2>
+            <p>A lo largo de esta unidad trabajaremos con funciones que asignan a cada vector de un espacio vectorial un único vector de otro espacio vectorial.</p>
+            <p>Por ejemplo, supongamos que tenemos todos los vectores de \( \mathbb{R}^2\) y a cada vector \( \begin{pmatrix} x \\ y \end{pmatrix} \) le asignamos el vector que resulta de sumarle el vector \( \begin{pmatrix} 1 \\ 2 \end{pmatrix} \). De esta manera, por ejemplo, al vector \( \begin{pmatrix} -2 \\ 3 \end{pmatrix} \) le corresponde el vector \( \begin{pmatrix} -1 \\ 5 \end{pmatrix} \) y al vector \( \begin{pmatrix} 2 \\ -1 \end{pmatrix} \) le corresponde el vector \( \begin{pmatrix} 3 \\ 1 \end{pmatrix} \).</p>
+            <p>Llamaremos Transformaciones a estas funciones que relacionan vectores. Usaremos la letra \( T \) para referirnos a una transformación concreta (pueden ser otras letras mayúsculas, y/o contener un subíndice).</p>
+            <p>Además, llamaremos <strong>dominio</strong> al conjunto al que pertenecen los vectores “iniciales” y <strong>codominio</strong> al conjunto al que pertenecen los vectores que asignamos a cada vector del dominio. Para simbolizar una transformación, diremos el <strong>nombre</strong>, el <strong>dominio</strong> y el <strong>codominio</strong>.</p>
+            <p>Por ejemplo, si llamamos \( T \) a la transformación del ejemplo anterior, entonces, escribiremos \( T: \mathbb{R}^2 \to \mathbb{R}^2 \). Esto significa que tenemos la transformación \( T \) en la que a cada vector del espacio vectorial \( \mathbb{R}^2 \) (<strong>Dominio</strong> de \( T \)) se le asigna un único vector del espacio vectorial \( \mathbb{R}^2 \) (<strong>Codominio</strong> de \( T \)).</p>
+            <p>En el siguiente esquema mostramos qué es cada parte:</p>
+            <p>\[ \begin{matrix} T&:&\mathbb{R}^2&\to&\mathbb{R}^2 \\ \overbrace{\text{Nombre de la transformación}}& &\overbrace{\text{Dominio}} & &\overbrace{\text{Codominio}} \end{matrix} \]</p>
+            <p>Para que quede bien definida una trasformación, además de lo anterior, debemos indicar de alguna manera cuál vector del <strong>codominio</strong> se le asigna a cada vector del <strong>dominio</strong>. Es decir, algo que permita saber "quién va con quién". Es lo que llamamos ley de correspondencia o regla de asignación.</p>
+            <img src="../../assets/transformaciones-lineales-1.jpg" alt="Transformaciones lineales" class="redu">
+        </section>
+    
+        <section id="representaciones">
+            <h2>3. Distintas formas de representación</h2>
+            <p>La forma que tenemos de acceder a los objetos matemáticos es a través de sus representaciones. Por ejemplo, si ahora estuvieras sentado en una silla, el objeto que está debajo tuyo tiene unas características particulares y una utilidad especial. La foto de tu silla, o el dibujo de tu silla o la palabra silla, o una descripción del objeto, no son el objeto. En este caso podemos tener el objeto y las diferentes formas de representarlo.</p>
+            <p>En el caso de los objetos matemáticos, tenemos su definición, las propiedades que podamos justificar. Y accedemos a través de alguna forma de representarlo.</p>
+            <p>En lo que sigue, les contamos diferentes maneras de representar una transformación.</p>
+            <img src="../../assets/transfo.jpg" alt="Transformaciones lineales ejemplo" class="redu">
+            
+            <section id="coloquial">
+                <h2>3.1. En forma coloquial</h2>
+                <img src="../../assets/megaphone.jpg" alt="Forma coloquial (Hablada)" class="bor">
+                <p>Una forma de definir una transformación entre vectores en forma coloquial es como en el ejemplo anterior.</p>
+                <p>Por ejemplo, definimos la transformación \( T \) que a cada vector \( \begin{pmatrix} x\\ y \end{pmatrix} \) de \( \mathbb{R}^2 \) le asigna el vector que resulta de sumarlo con el vector \( \begin{pmatrix} 1\\ 2 \end{pmatrix} \).</p>
+            </section>
+    
+            <section id="formula">
+                <h2>3.2. Mediante fórmula para evaluar</h2>
+                <img src="../../assets/ecuaciones.jpg" alt="Fórmulas" class="redu">
+                <p>Siguiendo con el mismo ejemplo, una manera de definir la misma transformación puede ser la siguiente:</p>
+                <p>\[ T:\mathbb{R}^2\to\mathbb{R}^2; T\begin{pmatrix} x\\ y \end{pmatrix}=\begin{pmatrix} x+1\\ y+2 \end{pmatrix} \]</p>
+                <p>Llamaremos imagen del vector \( \begin{pmatrix} x\\ y \end{pmatrix} \) al vector que le corresponde al vector \( \begin{pmatrix} x\\ y \end{pmatrix} \). Lo denotaremos con \( T\begin{pmatrix} x\\ y \end{pmatrix} \). Es decir, \( T\begin{pmatrix} x\\ y \end{pmatrix} \) significa la imagen del vector \( \begin{pmatrix} x\\ y \end{pmatrix} \) según la transformación \( T \).</p>
+                <p>Así, la imagen de \( \begin{pmatrix} 3\\ 4 \end{pmatrix} \) según \( T \) es \( \begin{pmatrix} 4\\ 6 \end{pmatrix} \). En símbolos, \( T\begin{pmatrix} 3\\ 4 \end{pmatrix}=\begin{pmatrix} 4\\ 6 \end{pmatrix} \). Estos símbolos se leen como la oración anterior.</p>
+                <p>Para averiguar la imagen de \( \begin{pmatrix} 3\\ 4 \end{pmatrix} \), reemplazamos \( x \) popr \( 3 \) e \( y \) por \( 4 \) en \( T\begin{pmatrix} x\\ y \end{pmatrix}=\begin{pmatrix} x+1\\ y+2 \end{pmatrix} \) y hacemos la cuenta.</p>
+            </section>
+    
+            <section id="matrices">
+                <h2>3.3. Usando matrices</h2>
+                <img src="../../assets/matriz-asociada-a-una-transformacion-lineal-2.png" alt="Matriz asociada a una transformación lineal" class="bor">
+                <p>En algunos casos es posible expresar la relación con matrices y/o vectores.</p>
+                <p>Por ejemplo, en el caso que venimos trabajando, podemos escribir la relación entre los vectores del dominio y lo de la imagen de la siguiente manera:</p>
+                <p>\[ T:\mathbb{R}^2\to\mathbb{R}^2; T\begin{pmatrix} x\\ y \end{pmatrix}=\begin{pmatrix} x\\ y \end{pmatrix}+\begin{pmatrix} 1\\ 2 \end{pmatrix} \]</p>
+                <p>Algunos ejemplos de transformaciones definidas usando matrices son:</p>
+                <ul>
+                    <div>\[ S:\mathbb{R}^3\to\mathbb{R}^3; S\begin{pmatrix} x\\ y\\z \end{pmatrix}=\begin{pmatrix} \frac{7}{9} & \frac{4}{9} & \frac{4}{9}\\ \frac{4}{9} & \frac{1}{9} & -\frac{8}{9} \\ \frac{4}{9} & -\frac{8}{9} & \frac{1}{9} \end{pmatrix} \cdot \begin{pmatrix} x\\ y\\z \end{pmatrix} \]</div>
+                    <div>\[ R:\mathbb{R}^3\to\mathbb{R}^2; R\begin{pmatrix} x\\ y\\z \end{pmatrix}=\begin{pmatrix} 1 & 0 & 1 \\ -1 & 1 & 0  \end{pmatrix} \cdot \begin{pmatrix} x\\ y\\z \end{pmatrix} \]</div>
+                    <div>\[ Q:\mathbb{R}^3\to\mathbb{R}^2; Q\begin{pmatrix} x\\ y\\z \end{pmatrix}=\begin{pmatrix} 1 & 1 & 1 \\ 1 & 0 & -1  \end{pmatrix} \cdot \begin{pmatrix} x\\ y\\z \end{pmatrix}+\begin{pmatrix} 3\\-3 \end{pmatrix} \]</div>
+                </ul>
+                <p>En el caso de que tengamos una transformación definida con matrices y queramos conocer el vector que le corresponde a un cierto vector del dominio, lo que hacemos es reemplazar en la variable por el vector en cuestión y realizar las operaciones entre las matrices.</p>
+            </section>
+        </section>
+    
+        <section id="preimagen">
+            <h2>4. ¿Cómo hallamos una preimagen?</h2>
+            <img src="../../assets/idea.jpg" alt="Pensamos cómo hallar una preimagen" class="redu">
+            <p>Si tenemos una transformación \( P \) de cierto dominio, llamémoslo \( \mathbb{V} \), y cierto codomio \( \mathbb{W} \), y tomamos un vector \( Y \) del codomio \( \mathbb{W} \) y queremos saber si hay algún vector \( X \) del dominio \( \mathbb{V} \) cuyo transformado sea \( Y \), ¿cómo hacemos?.</p>
+            <p>Lo que estamos buscando es una preimagen de \( Y \), si es que existe.</p>
+            <p>Pensémoslo con un ejemplo, tomemos la transformación \( Q \) anterior y veamos si existe alguna preimagen del vector \( \begin{pmatrix} 1\\0 \end{pmatrix} \). Es decir, buscamos, si existe, algún vector \( \begin{pmatrix} x\\ y\\z \end{pmatrix} \) de \( \mathbb{R}^3 \) tal que su transformado sea \( \begin{pmatrix} 1\\0 \end{pmatrix} \), o sea \( Q\begin{pmatrix} x\\ y\\z \end{pmatrix}=\begin{pmatrix} 1\\0 \end{pmatrix} \).</p>
+            <p>Un vector posible es \( \begin{pmatrix} 2\\ -3\\-1 \end{pmatrix} \), pues si resolvemos \( \begin{pmatrix} 1 & 1 & 1 \\ 1 & 0 & -1  \end{pmatrix} \cdot \begin{pmatrix} 2\\ -3\\-1 \end{pmatrix}+\begin{pmatrix} 3\\-3 \end{pmatrix} \) da por resultado \( \begin{pmatrix} 1\\0 \end{pmatrix} \).</p>
+            <p>En el siguiente video el profesor Marcelo busca todas las preimágenes del vector \( \begin{pmatrix} 1\\0 \end{pmatrix} \) por la transformación \( Q \) del apartado <a href="#matrices">3.3 Usando matrices</a>. Les recomendamos que primero intenten pensarlo ustedes antes de ver el video. ¿Qué deben plantear? ¿Cómo puede resolverse eso que plantean?.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=8Kh-VtCccxw" target="_blank">Video con un ejemplo en el que se hallan todas las preimágenes de un vector.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=8Kh-VtCccxw</video>
+            </ul>
+        </section>
+    
+        <section id="resumen">
+            <h2>5. Resumen hasta aquí</h2>
+            <p>Hemos hablado de los siguientes conceptos:</p>
+            <img src="../../assets/Resumen-de-texto.png" alt="Resumen" class="redu">
+            <ul>
+                <li>Transformación</li>
+                <li>Dominio</li>
+                <li>Codominio</li>
+                <li>Ley de correspondencia</li>
+                <li>Imagen de un vector</li>
+                <li>Preimagen de un vector</li>
+                <li>Formas de representar una transformación</li>
+                <li>Espacios vectoriales</li>
+            </ul>
+            <p>En el siguiente archivo PDF resumimos estas ideas:</p>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1g0Ih8QVJtS7m0AQWflktORfCkmW0d6Rz/view?usp=sharing" target="_blank">Texto resumen sobre transformaciones y espacios vectoriales.</a></li>
+            </ul>
+            <iframe class="d">1g0Ih8QVJtS7m0AQWflktORfCkmW0d6Rz</iframe>
+        </section>
+    
+        <section id="transformaciones_especiales">
+            <h2>6. Algunas transformaciones especiales</h2>
+            <p>Las transformaciones nos permiten, en particular, pensar ciertas transformaciones geométricas. Por ejemplo, las simetrías o las rotaciones.</p>
+            <img src="../../assets/simetria.jpg" alt="Simetría axial en el plano" class="redu">
+            <p>En el siguiente video el profesor Martín T. introduce la simetría axial en el plano.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=HjsWkp6GeU0" target="_blank">Video con una explicación sobre la transformación SIMETRÍA.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=HjsWkp6GeU0</video>
+            </ul>
+            <p>Como hemos mencionado, algunas transformaciones pueden ser definidas usando matrices. A continuación, el profesor Daniel nos presenta la rotación en el plano. En este video nos proponemos hallar la matriz genérica de rotación de un ángulo \( \theta \) con respecto al origen de coordenadas en \( \mathbb{R}^2 \).</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=Ipk6m_dVkzI" target="_blank">Video con una deducción de la matriz de ROTACIÓN.</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=Ipk6m_dVkzI</video>
+            </ul>
+            <p>Profundizaremos sobre estas transformaciones en el siguiente libro.</p>
+        </section>
+    
+        <section id="ejercitacion">
+            <h2>7. Ejercitación y autoevaluación</h2>
+            <p>Les proponemos que realicen los siguientes ejercicios y problemas.</p>
+            <ul>
+                <li>
+                    <p><a href="https://drive.google.com/file/d/1XfVMPYb4SOpAQ_cBQU0pVwAE2JwU5bCc/view?usp=sharing" target="_blank">Listado de actividades para realizar sobre transformaciones</a></p>
+                </li>
+                <iframe class="d">1XfVMPYb4SOpAQ_cBQU0pVwAE2JwU5bCc</iframe>
+            </ul>
+            <p>Como parte de la evaluación continua les proponemos la <a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366240" target="_blank"><strong>Autoevaluación sobre transformaciones</strong></a>.Ingresen al cuestionario para ver la fecha de apertura y la de cierre. Esta autoevaluación involucra temas de las últimas dos semanas.</p>
+            <p>El puntaje que se obtiene en la autoevaluación sólo debe tomarse como un porcentaje de resolución correcta.</p>
+            <p>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos</p>
+
+            <iframe class="d">1GlgZfKRMJMiJaMWbLcGzzO6e64rVLal5</iframe>
+        </section>
+
+        <section id="archivos">
+            <h2>Archivos Completos</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1RoLvE1JLfcD6KGo-X0yvvHEkmaJYtCse/view?usp=sharing" target="_blank">Unidad 5</a></li>
+                <li><a href="https://drive.google.com/file/d/1g0Ih8QVJtS7m0AQWflktORfCkmW0d6Rz/view?usp=sharing" target="_blank">Texto resumen sobre transformaciones y espacios vectoriales.</a></li>
+                <li><a href="https://drive.google.com/file/d/1XfVMPYb4SOpAQ_cBQU0pVwAE2JwU5bCc/view?usp=sharing" target="_blank">Listado de actividades para realizar sobre transformaciones</a></li>
+            </ul>
+        </section>
+        
+    </main>
+    <script src="../../js/script.js"></script>
+</body>
+<footer class="footer">
+    <a href="../../assets/seg/libro2.html" class="arrow arrow-left" aria-label="Libro 2 Segundo Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      
+      </div> 
+    </a>
+  
+    <a href="../../assets/seg/libro4.html" class="arrow arrow-right" aria-label="Libro 4 Segundo Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+  
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+    </a>
+  </footer>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro 5 - Segundo Cuatrimestre</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="../../assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="../../assets/site.webmanifest">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube/dist/Youtube.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Libro 5: Autovectores y Autovalores, Diagonalización</h1>
+    </header>
+
+    <main>
+        <section id="indice">
+            <h2>Tabla de contenidos</h2>
+                <ul>
+                    <li>1. <a href="#introduccion">Introducción</a></li>
+                    <li>2. <a href="#autovector">Definición de autovector y autovalor</a></li>
+                    <li>3. <a href="#propiedad">Una primera propiedad de los autovectores</a></li>
+                    <li>4. <a href="#hallar">¿Cómo hallamos los autovalores y autovectores?</a></li>
+                    <li>5. <a href="#diagonalizacion">Diagonalización</a></li>
+                    <li>6. <a href="#propiedades">Propiedades de las matrices diagonalizables</a></li>
+                    <li>7. <a href="#ejercicios">Ejercitación y Autoevaluación</a></li>
+                    <li>8. <a href="#archivos">Archivos Completos</a></li>
+                </ul>
+        </section>
+
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p>Venimos trabajando con transformaciones lineales. Lo último que estuvimos planteando fue hallar la matriz de una transformación lineal de \( \mathbb{R}^n \) en \( \mathbb{R}^m \) conocidos \( n \) vectores y sus transformados. En este tema, trabajaremos únicamente con transformaciones lineales de \( \mathbb{R}^n \) en \( \mathbb{R}^n \). Es decir, transformaciones lineales que relacionan vectores de un espacio vectorial con vectores del mismo espacio vectorial.</p>
+            <p>Para introducir el tema que vamos a estar abordando estas dos semanas, vamos a resolver dos ejemplos como los que mencionamos en el párrafo anterior, pero los datos tienen una particularidad.</p>
+            <p>En el siguiente video el profesor Martín Ch. halla la matriz de una transformación lineal de \( \mathbb{R}^3 \) en \( \mathbb{R}^3 \) a partir de conocer 3 vectores que forman un conjunto linealmente independiente y los transformados de estos 3 vectores. Los vectores dados tienen la particularidad de que se transforman en múltiplos escalares de sí mismos.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=3GQ26Jyj-x0" target="_blank">Video con un ejemplo introductorio 1</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=3GQ26Jyj-x0</video>
+            </ul>
+            <p>En el ejemplo del video anterior, la matriz de la transformación lineal se consigue haciendo la multiplicación:</p>
+            <p>\[ \begin{pmatrix} 1 & -2 & 2 \\ 0 & -1 & 5 \\ 2 & 1 & -1 \end{pmatrix} \cdot \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix} \cdot \begin{pmatrix} 1 & -2 & 2 \\ 0 & -1 & 5 \\ 2 & 1 & -1 \end{pmatrix}^{-1} \]</p>
+            <p>Les dejamos la cuenta para ustedes.</p>
+            <p>En el siguiente video, trabajamos con un ejemplo similar al video anterior, pero en este caso, lo hacemos con una transformación lineal de \( \mathbb{R}^2 \) en \( \mathbb{R}^2 \).</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=BLTMFSCal_o" target="_blank">Video con un ejemplo introductorio 2</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=BLTMFSCal_o</video>
+            </ul>
+        </section>
+    
+        <section id="autovector">
+            <h2>2. Definición de autovector y de autovalor</h2>
+            <p>A partir de los ejemplos anteriores, y de lo particular que resultó la manera en la que quedó la manera de hallar la matriz de una transformación lineal, cobran sentido las definiciones de autovalor y autovector que el profesor Gastón presenta en el siguiente video:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=5NRMLUdsrs0" target="_blank">Video con una definición de autovector y autovalor de una TL</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=5NRMLUdsrs0</video>
+            </ul>
+            <br>
+            <img src="../../assets/5_1_Eigenvectors.gif" alt="Eigen vector" class="bor">
+            <br>
+            <p>En el siguiente video, el profesor Gastón nos muestra algunos ejemplos conceptuales de autovalores y autovectores asociados a distintas transformaciones lineales.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=3kMcxfH6XJQ" target="_blank">Video con ejemplos de autovectores y autovalores</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=3kMcxfH6XJQ</video>
+            </ul>
+        </section>
+    
+        <section id="propiedad">
+            <h2>3. Una primera propiedad de los autovectores</h2>
+            <p><strong>Dada una transformación lineal \( T \) de \( \mathbb{R}^n \) en \( \mathbb{R}^n \), si el vector \( \vec{v} \) es un autovector de la transformación \( T \) de autovalor asociado \( \lambda \), entonces, cada vector de la recta \( X=\alpha \vec{v} \) es también autovector de \( T \) de autovalor \( \lambda \).</strong></p>
+            <p>Por ejemplo, en la transformación lineal del ejemplo del segundo video, resulta que el vector \( \begin{pmatrix} -1 \\ 4 \end{pmatrix} \) es autovector de la transformación lineal que allí se trabaja, asociado al autovalor \( 2 \) pues se transforma en el vector \( \begin{pmatrix} -2 \\ 8 \end{pmatrix} \). Según la propiedad que enunciamos en el párrafo anterior, entonces, sucede que cualquier múltiplo del \( \begin{pmatrix} -1 \\ 4 \end{pmatrix} \) es autovector de la transformación. Por ejemplo, el vector \( \begin{pmatrix} -10 \\ -20 \end{pmatrix} \).</p>
+            <img src="../../assets/5_2_evalevec.gif" alt="Evaluación Eingel Vector" class="redu">
+        </section>
+    
+        <section id="hallar">
+            <h2>4. ¿Cómo hallamos los autovalores y autovectores conocida la matriz de la transformación lineal?</h2>
+            <img src="../../assets/5_3.png" alt="Hallar autovalores y autovectores" class="bor">
+            <p>En el siguiente video, el profesor Marcelo da una explicación teórica que responde a la pregunta del título de esta parte.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=6BXH2f736tU" target="_blank">Video con el desarrollo teórico de cómo hallar autovectores y autovalores</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=6BXH2f736tU</video>
+            </ul>
+            <p>Los siguientes dos videos corresponden a la parte 1 y a la parte 2, respectivamente, de ejemplos en el que el profesor Marcelo halla los autovectores y los autovalores de una matriz.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=Z-nnzBJ1bdw" target="_blank">Parte 1 - Video con un ejemplo de cómo hallar autovalores y autovectores</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=Z-nnzBJ1bdw</video>
+                <li><a href="https://www.youtube.com/watch?v=HttAqM8mTMk" target="_blank">Parte 2 - Video con un ejemplo de cómo hallar autovalores y autovectores</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=HttAqM8mTMk</video>
+            </ul>
+        </section>
+    
+        <section id="diagonalizacion">
+            <h2>5. Diagonalización</h2>
+            <p>Volvemos a los videos del comienzo de este tema. En el video que aparece más abajo, le damos forma a lo que planteamos en los dos videos iniciales.</p>
+            <p>Previamente, queremos revisar un asunto. Nosotros trabajamos con independencia lineal de vectores. Mencionamos en algún libro anterior que un conjunto de vectores es linealmente independiente si cada uno de los vectores no puede expresarse como combinación lineal de los otros. O de otra manera, un conjunto es linealmente independiente, si el vector nulo, únicamente se consigue como combinación lineal de los vectores del conjunto con escalares todos \( 0 \). También habíamos mencionado que con \( n \) vectores de \( \mathbb{R}^n \) que formen un conjunto linealmente independiente logramos conseguirnos todos los vectores de \( \mathbb{R}^n \), en el sentido de que, cualquier vector de \( \mathbb{R}^n \) es combinación lineal de esos \( n \) vectores. Bien, recordemos que a ese conjunto de \( n \) vectores de \( \mathbb{R}^n \) que forman un conjunto linealmente independiente lo llamamos base del espacio vectorial \( \mathbb{R}^n \). Esto es así pues la base genera al espacio vectorial y, además, es el conjunto con la menor cantidad de vectores que lo hace.</p>
+            <p>En el siguiente video, el profesor Daniel trabaja con la noción de diagonalización de matrices. Este concepto retoma lo que planteamos en la resolución de los problemas del comienzo. Además, de todas las aplicaciones que tiene, elegimos ahora contar una relacionada con la potencia de matrices.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=GiFxvn378NI" target="_blank">Video sobre diagonalización</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=GiFxvn378NI</video>
+            </ul>
+            <img src="../../assets/5_4.png" alt="Diagonalización" class="redu">
+        </section>
+    
+        <section id="propiedades">
+            <h2>6. Propiedades de las matrices diagonalizables</h2>
+            <p>Finalmente, mencionamos algunas propiedades de las matrices diagonalizables, los autovectores y los autovalores.</p>
+            <h3>Teorema</h3>
+            <p><strong>Una matriz \( A\in\mathbb{R}^{n\times n} \) es diagonalizable, si y solo si, \( A \) tiene \( n \) autovectores que forman un conjunto linealmente independiente.</strong></p>
+            <h3>Teorema</h3>
+            <p><strong>Si tenemos \( A\in\mathbb{R}^{n\times n} \) tiene asociado \( n \) autovalores reales distintos, entonces, la matriz \( A \) es diagonalizable.</strong></p>
+            <p>La recíproca de este teorema no es cierta. Es decir, hay matrices diagonalizables que no tienen \( n \) autovalores distintos.</p>
+            <p>Un ejemplo es la matriz de la transformación lineal del primer video. Si hicieron la cuenta debió quedarles:</p>
+            <p>\[ \begin{pmatrix} \frac{11}{15} & \frac{2}{3} & \frac{2}{15} \\ \frac{2}{3} & -\frac{2}{3} & -\frac{1}{3} \\ \frac{2}{15} & -\frac{1}{3} & \frac{14}{15} \end{pmatrix} \]</p>
+            <p>Esta matriz es diagonalizable, y tiene como autovalores únicamente al \( -1 \) y al \( -1 \) . No nos crean, corrobórenlo.</p>
+        </section>
+    
+        <section id="ejercicios">
+            <h2>7. Ejercitación y Autoevaluación</h2>
+            <h3>Ejercitación</h3>
+            <p>Para ejercitación sobre el tema que trabajamos en este libro, tienen el <a href="https://drive.google.com/file/d/1Lf085m9hgPs4hdOtgLF0n8OGbH3fzBXq/view?usp=sharing" target="_blank">Listado de ejercicios y problemas para trabajar con autovectores, autovalores y diagonalización</a>, PDF con ejercicios mencionados de la <a href="https://drive.google.com/file/d/10oacAiGzIaoAd3v_nBpvyBgnJCKDMRu_/view?usp=sharing" target="_blank">Guía de Problemas</a>. La idea es que los puedan pensar y hacer (si se juntan para hacerlos, mejor) y plantear sus dudas y resoluciones en el foro <a class="con">Consultas</a> y en los momentos presenciales en el aula.</p>
+            <iframe class="d">10oacAiGzIaoAd3v_nBpvyBgnJCKDMRu_</iframe>
+            <h3>Autoevaluación</h3>
+            <p>Durante la segunda de estas dos semanas tendrán habilitada la <a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366273" target="_blank"><strong>Autoevaluación sobre autovectores, autovalores y diagonalización</strong></a> que forma parte de la evaluación continua.</p>
+        </section>
+
+        <section id="archivos">
+            <h2>Archivos Completos</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1041PfZMDiT-v0KfQXRk-HbnBe1pEkgcG/view?usp=sharing" target="_blank">Unidad 6</a></li>
+                <li><a href="https://drive.google.com/file/d/1Lf085m9hgPs4hdOtgLF0n8OGbH3fzBXq/view?usp=sharing" target="_blank">Listado de ejercicios y problemas para trabajar con autovectores, autovalores y diagonalización.</a></li>
+            </ul>
+        </section>
+        
+    </main>
+    <script src="../../js/script.js"></script>
+</body>
+<footer class="footer">
+    <a href="../../assets/seg/libro4.html" class="arrow arrow-left" aria-label="Libro 4 Segundo Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      
+      </div> 
+    </a>
+  
+    <a href="../../assets/seg/libro6.html" class="arrow arrow-right" aria-label="Libro 6 Segundo Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+  
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+    </a>
+  </footer>
+</html>

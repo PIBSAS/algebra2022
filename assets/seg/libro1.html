@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro 1 - Segundo Cuatrimestre</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="../../assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="../../assets/site.webmanifest">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube/dist/Youtube.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Libro 1: Espacios Vectoriales</h1>
+    </header>
+    
+    <main>
+        <section id="indice">
+            <h2>Tabla de contenidos</h2>
+                <ul>
+                    <li>1. <a href="#introduccion">Introducción</a></li>
+                    <li>2. <a href="#sistemas">Sistemas de ecuaciones lineales homogéneos</a></li>
+                    <li>3. <a href="#propiedades">Algunas propiedades de las soluciones de un sistema homogéneo</a></li>
+                    <li>4. <a href="#combinacion">Combinación lineal de vectores y dependencia lineal</a></li>
+                    <li>5. <a href="#independencia">Independencia lineal de vectores (otra forma de pensarlo)</a></li>
+                    <li>6. <a href="#autoevaluacion">Autoevaluación</a></li>
+                    <li>7. <a href="#archivos">Archivos Completos</a></li>
+                </ul>
+        </section>
+
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p>Comenzaremos trabajando con la unidad 4: Espacios Vectoriales. Antes de meternos de lleno con alguna definición sobre esta noción queremos retomar algo del trabajo que venimos haciendo y que permite introducirnos conceptualmente en este tema.</p>
+            <p>En este libro, retomaremos el trabajo con sistemas de ecuaciones, y en especial, lo haremos con sistemas ecuaciones en los cuales cada ecuación tiene al número \( 0 \) como su término independiente.</p>
+            <p>En el siguiente libro, continuaremos con los temas de la unidad.</p>
+        </section>
+    
+        <section id="sistemas">
+            <h2>2. Sistemas de ecuaciones lineales homogéneos</h2>
+            <p>Resuelvan el <a href="https://drive.google.com/file/d/1ZYK-6kXCHVFj4TSrRDYnxuNbf1YNc14I/view?usp=sharing" target="_blank">problema 6 que comienza en la página 82 y termina en la página 83</a> de la Guía de problemas.</p>
+            <iframe class="d">1ZYK-6kXCHVFj4TSrRDYnxuNbf1YNc14I</iframe>
+            <p>Lean la definición de sistema homogéneo que aparece recuadrada en el <a href="https://drive.google.com/file/d/1FiPE-omJT2F6CZERzGhggkcLjmWJPoRA/view?usp=sharing" target="_blank">problema 7 de la página 83</a> de la Guía de problemas y realicen lo que se pide en ese problema.</p>
+            <iframe class="d">1FiPE-omJT2F6CZERzGhggkcLjmWJPoRA</iframe>
+            <p>Una vez que los pensaron, pueden ver los siguientes videos en el que el profesor Gastón aborda una resolución de estos dos problemas:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=chfB1E5wehg" target="_blank">Video con una resolución del problema 6 de la unidad 4</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=chfB1E5wehg</video>
+                <li><a href="https://www.youtube.com/watch?v=RnOxG7QedF0" target="_blank">Video con una resolución del problema 7 de la unidad 4</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=RnOxG7QedF0</video>
+            </ul>
+            <img src="../../assets/2_selh.png" alt="Sistemas de ecuaciones lineales homogéneas" class="redu">
+            <p>Realicen ahora el <a href="https://drive.google.com/file/d/1RJyDL4W330OQ_4A2QxvVMpu7lOLk5pIt/view?usp=sharing" target="_blank">problema 8 de la Guía de problemas</a>.</p>
+            <iframe class="d">1RJyDL4W330OQ_4A2QxvVMpu7lOLk5pIt</iframe>
+            <p>Luego, pueden ver el siguiente video en el que el profesor Claudio aborda una resolución de ese problema:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=I_x0x3MXccs" target="_blank">Video con una resolución del problema 8 de la unidad 4</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=I_x0x3MXccs</video>
+            </ul>
+        </section>
+    
+        <section id="propiedades">
+            <h2>3. Algunas propiedades de las soluciones de un sistema homogéneo</h2>
+            <p>Vamos a generalizar algunas propiedades que se dan en relación con los sistemas homogéneos y sus soluciones. En el siguiente video el profesor Martín T. nos las muestra:</p>
+            <img src="../../assets/1_SELH.png" alt="Propiedades de las soluciones de un sistema de ecuación lineal homogéneo" class="bor">
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=pZOWG2nwl_w" target="_blank">Video con una explicación de propiedades de las soluciones de un sistema homogéneo</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=pZOWG2nwl_w</video>
+            </ul>
+            <p><strong>¿Cuáles son las propiedades que aparecen en el video?</strong></p>
+        </section>
+    
+        <section id="combinacion">
+            <h2>4. Combinación lineal de vectores y dependencia lineal</h2>
+            <p>Observemos las soluciones de los sistemas que aparecen en los problemas 6 y 7 de la Guía de problemas</a>. Noten que con algunos “pocos” vectores tenemos todas las soluciones siendo éstas infinitas en algunos casos.</p>
+            <p>¿Cuántos vectores son necesarios cómo mínimo para poder tener caracterizadas a todas las soluciones de un sistema de ecuaciones lineales homogéneo? ¿Sirve cualquier vector? ¿Cómo deben ser esos vectores para que efectivamente sirvan para que con ellos podamos “armar” todas las soluciones?</p>
+            <img src="../../assets/Vectores_coplanares.png" alt="Vectores coplanares" class="bor">
+            <p>Pensando en estas preguntas, vamos a ir trabajando con algunos conceptos que nos permitirán ir en búsqueda de alguna respuesta.</p>
+            <p>En el <a href="https://drive.google.com/file/d/10jvn10YzlAOVrRpkjWg_V9HNfcUVP3sO/view?usp=sharing" target="_blank">problema 14 de la página 85</a> de la Guía de problemas hay dos definiciones que corresponden a dos conceptos: <strong>combinación lineal de vectores</strong> y <strong>conjunto de vectores linealmente dependiente (LD)</strong>.</p>
+            <iframe class="d">10jvn10YzlAOVrRpkjWg_V9HNfcUVP3sO</iframe>
+            <p>Lean esas definiciones y realicen los <a href="https://drive.google.com/file/d/10YHS6Av7KYyIi9XlMADqlOY39hi0ij9Y/view?usp=sharing" target="_blank">problemas 15 y 16 de la pagina 85</a> de la Guía de problemas.</p>
+            <iframe class="d">10YHS6Av7KYyIi9XlMADqlOY39hi0ij9Y</iframe>
+            <p>Pueden ver un abordaje de estos problemas en los siguientes dos videos de la profesora Perla:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=kx1nZuzW9Uo" target="_blank">Video con una resolución de los problemas 15 y 16 de la unidad 4 (1ra parte)</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=kx1nZuzW9Uo</video>
+                <li><a href="https://www.youtube.com/watch?v=b-Sqg7hO9hM" target="_blank">Video con una resolución de los problemas 15 y 16 de la unidad 4 (2da parte)</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=b-Sqg7hO9hM</video>
+            </ul>
+            <p>En el <a href="https://drive.google.com/file/d/1iAg3tML7Vmq7jstnbmZ7hweq2dO1aZ2l/view?usp=sharing" target="_blank">problema 21 de la página 86</a> se define <strong>conjunto de vectores linealmente independiente (LI)</strong>. Lean la definición y realicen la actividad que se plantea allí.</p>
+            <iframe class="d">1iAg3tML7Vmq7jstnbmZ7hweq2dO1aZ2l</iframe>
+            <p>También hagan el <a href="https://drive.google.com/file/d/1jd0xo2bMFdV4L2alNUs4x8DdNRbEB19W/view?usp=sharing" target="_blank">problema 22</a>. Además, chequeen si alguno de los conjuntos dados en el problema 16</a> es linealmente independiente. Realicen las <a class="con">Consultas</a> sobre estos problemas en el foro.</p>
+            <iframe class="d">1jd0xo2bMFdV4L2alNUs4x8DdNRbEB19W</iframe>
+        </section>
+    
+        <section id="independencia">
+            <h2>5. Independencia lineal de vectores (otra forma de pensarlo)</h2>
+            <p>Si tenemos un conjunto de vectores con un solo vector como elemento ¿será un conjunto linealmente independiente o dependiente? ¿Nos permiten tomar esta decisión las definiciones dadas anteriormente? En el <a href="https://drive.google.com/file/d/1PIcn3vllA6iytif6zS_7w9tBu_IxQBQ_/view?usp=sharing" target="_blank">problema 25 de las páginas 86 y 87 de la Guía de problemas</a> se presentan otras definiciones de conjunto de vectores linealmente independiente y conjunto de vectores linealmente dependiente. Además de permitirnos responder estas preguntas, estas definiciones nos permiten saber si un conjunto es linealmente independiente o linealmente dependiente de una manera más económica en el peor de los casos. En el siguiente video, el profesor Daniel nos presenta una comparación de estas definiciones y nos muestra una justificación de que (con algún ajuste) ambas definiciones son equivalentes\( \dagger \). Además, nos muestra un ejemplo de cómo hacemos para saber si unn conjunto es LI o LD usando esta segunda definición.</p>
+            <iframe class="d">1PIcn3vllA6iytif6zS_7w9tBu_IxQBQ_</iframe>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=5ze6gdKJ47U" target="_blank">Video con explicaciones sobre independencia lineal de vectores</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=5ze6gdKJ47U</video>
+            </ul>
+            <p><strong>¿Y qué pasa con las preguntas que hicimos al comienzo de la sección anterior?</strong> Estas: ¿Cuántos vectores son necesarios cómo mínimo para poder tener caracterizadas a todas las soluciones de un sistema de ecuaciones lineales homogéneo? ¿Sirve cualquier vector? ¿Cómo deben ser esos vectores para que efectivamente sirvan para que con ellos podamos “armar” todas las soluciones?</p>
+            <p>Pueden ir pensando posibles respuestas. En el próximo libro las retomamos.</p>
+            <p>\( \dagger \)Que dos definiciones sean equivalentes significa que ambas definen el mismo objeto. Es decir, si ocurre cualquier objeto que cumpla con la primera definición también cumple con la segunda y, viceversa, cualquiera que cumple con la segunda, también cumple con la primera, entonces, ambas definiciones son equivalentes</p>
+        </section>
+    
+        <section id="autoevaluacion">
+            <h2>6. Autoevaluación</h2>
+            <p>Como parte de la evaluación continua les proponemos la <a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366208" target="_blank"><strong>Autoevaluación sobre sistemas homogéneos y dependencia lineal</strong></a>. Ingresen al cuestionario para ver la fecha de apertura y la de cierre. Esta autoevaluación involucra temas de las últimas dos semanas.</p>
+            <p>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.</p>
+            <p>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
+            
+            <iframe class="d">1os_vRdR60nJWdkfOpoVSRrUWJ4uAnfT7</iframe>
+        </section>
+
+        <section id="archivos">
+            <h2>Archivos Completos</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1Td7F8LA7h66jzuSANvVcwxxGSHSRahcn/view?usp=sharing" target="_blank">Unidad 4</a></li>
+            </ul>
+        </section>
+        
+    </main>
+    <script src="../../js/script.js"></script>
+</body>
+<footer class="footer">
+    <a href="../../assets/libro7.html" class="arrow arrow-left" aria-label="Libro 7 Primer Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      
+      </div> 
+    </a>
+  
+    <a href="../../assets/seg/libro2.html" class="arrow arrow-right" aria-label="Libro 2 Segundo Cuatrimestre">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+  
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+    </a>
+  </footer>
+</html>

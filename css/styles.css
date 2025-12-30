@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+p {
+    text-align: left;
+}
+
+ul {
+
+    padding-block: 6px;
+}
+
+li {
+    text-align: left;
+}
+
+h2 {
+    border: 3px solid black;
+    border-radius: 25px;
+    outline: #4CAF50 solid 5px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    width: fit-content;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: clamp(18px, 3vw, 28px);
+  }
+
+iframe.d {
+  width: 60%;
+  height: 133vh;
+  margin-top: 1.5em !important;
+  margin-bottom: 2em !important;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px #000000;
+}
+
+@media (max-width: 720px) {
+  iframe.d {
+    width: 100%;
+    height: 47vh;
+  }
+}
+
+.index-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f0f0f0;
+    background: url('../assets/progreso.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.index-page main {
+  padding: 0;
+}
+
+.index-page body{
+  background-color: transparent;
+}
+
+.index-page header {
+    background: none; /* Sin fondo */
+    color: black;     /* Texto en negro */
+}
+
+.index-page h1 {
+    position: absolute;
+    top: -3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: black;
+    font-size: 2.5vw;
+    text-align: center;
+    z-index: 10;
+}
+
+@media (max-width: 720px) {
+    .index-page h1 {
+        top: 0vh;
+        font-size: 4vw;
+        padding: 0.5em;
+    }
+}
+
+.index-page .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.index-page .button {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 0.5vw 1.0vw;
+    font-size: 1.5vw;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.55vw;
+    cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .index-page .button {
+      font-size: clamp(10px, 4vw, 16px);
+      padding: 0.6vw 1.2vw;
+  }
+}
+
+.index-page .button:hover {
+    background-color: #0056b3;
+}
+
+/* Primera montaña (7 semanas) */
+.index-page #btn1 { left: calc(125 / 1920 * 100vw); top: calc(612 / 1080 * 100vh); }
+.index-page #btn2 { left: calc(305 / 1920 * 100vw); top: calc(500 / 1080 * 100vh); }
+.index-page #btn3 { left: calc(562 / 1920 * 100vw); top: calc(465 / 1080 * 100vh); }
+.index-page #btn4 { left: calc(600 / 1920 * 100vw); top: calc(364 / 1080 * 100vh); }
+.index-page #btn5 { left: calc(650 / 1920 * 100vw); top: calc(260 / 1080 * 100vh); }
+.index-page #btn6 { left: calc(683 / 1920 * 100vw); top: calc(170 / 1080 * 100vh); }
+.index-page #btn7 { left: calc(887 / 1920 * 100vw); top: calc(157 / 1080 * 100vh); }
+
+/* Segunda montaña (6 semanas) */
+.index-page #btn8  { left: calc(961 / 1920 * 100vw); top: calc(330 / 1080 * 100vh); }
+.index-page #btn9  { left: calc(1054 / 1920 * 100vw); top: calc(460 / 1080 * 100vh); }
+.index-page #btn10 { left: calc(1158 / 1920 * 100vw); top: calc(517 / 1080 * 100vh); }
+.index-page #btn11 { left: calc(1159 / 1920 * 100vw); top: calc(640 / 1080 * 100vh); }
+.index-page #btn12 { left: calc(1374 / 1920 * 100vw); top: calc(621 / 1080 * 100vh); }
+.index-page #btn13 { left: calc(1432 / 1920 * 100vw); top: calc(712 / 1080 * 100vh); }
+.index-page #btn14 { left: calc(954 / 1920 * 100vw); top: calc(263 / 1080 * 100vh); }
+.index-page #btn15 { left: calc(1695 / 1920 * 100vw); top: calc(740 / 1080 * 100vh); }
+.index-page #btn16 { left: calc(800 / 1920 * 100vw); top: calc(600 / 1080 * 100vh); }
+
+.redu {
+  border-radius: 15px;
+  width: 50%;
+  height: auto;
+}
+
+.bor {
+  border-radius: 15px;
+}
+
+.footer {
+  position: relative;
+  margin-top: 40px;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.arrow {
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.arrow-left .line {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.arrow-right .line {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.arrow-right:hover {
+  animation: move-right 2s infinite ease;
+}
+
+.arrow-left:hover {
+  animation: move-left 2s infinite ease;
+}
+
+@keyframes move-right {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes move-left {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-20px); }
+  100% { transform: translateX(0); }
+}
+
+.round {
+  width: 6px;
+  height: 6px;
+  background: #3da9fc;
+  border-radius: 50%;
+}
+
+.arrow-right .two { transform: translateX(10px); }
+.arrow-right .three { transform: translateX(20px); }
+.arrow-right .four { transform: translateX(30px); }
+.arrow-right .five { transform: translateX(20px); }
+.arrow-right .six { transform: translateX(10px); }
+
+.arrow-left .two { transform: translateX(-10px); }
+.arrow-left .three { transform: translateX(-20px); }
+.arrow-left .four { transform: translateX(-30px); }
+.arrow-left .five { transform: translateX(-20px); }
+.arrow-left .six { transform: translateX(-10px); }
+
+.video-js {
+  margin-top: 2em !important;
+  margin-bottom: 3em !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.video-js iframe {
+  border-radius: 15px !important;
+}
+
+.video-js.vjs-fluid {
+  width: 100% !important;
+  max-width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* 16:9 */
+  position: relative;
+}
+
+.video-js.vjs-fluid > .vjs-tech {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+@supports (font-size-adjust: none) {
+  mjx-math {
+    font-size-adjust: none;
+  }
+}
