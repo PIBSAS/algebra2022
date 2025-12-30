@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro 5</title>
+    <title>Libro 10</title>
     <link rel="icon" type="image/png" sizes="192x192" href="../assets/android-chrome-192x192.png">
     <link rel="apple-touch-icon" href="../assets/android-chrome-192x192.png">
     <meta name="theme-color" content="#ffffff">
@@ -16,7 +16,7 @@
 <body>
 
     <header>
-        <h1>Libro 5: Sistemas de ecuaciones lineales</h1>
+        <h1>Libro 10: Sistemas de ecuaciones</h1>
     </header>
 
     <main>
@@ -24,59 +24,25 @@
             <h2>Tabla de contenidos</h2>
                 <ul>
                     <li>1. <a href="#introduccion">Introducción</a></li>
-                    <li>2. <a href="#intersecciones">Intersecciones entre...</a></li>
-                    <li>3. <a href="#distancias">Distancias</a></li>
-                    <li>4. <a href="#sistema-ecuaciones">¿Qué es un sistema de ecuaciones lineales?</a></li>
-                    <li>5. <a href="#conjunto-solucion">¿Qué es el conjunto solución de un sistema de ecuaciones lineales?</a></li>
-                    <li>6. <a href="#hallar-solucion">¿Cómo hallar el conjunto solución de un sistema de ecuaciones lineales?</a></li>
-                    <li>7. <a href="#guia-actividades">Texto teórico y guía de actividades</a></li>
-                    <li>8. <a href="#autoevaluacion">Autoevaluación</a></li>
-                    <li>9. <a href="#archivos">Archivos Completos</a></li>
+                    <li>2. <a href="#sistema-ecuaciones">¿Qué es un sistema de ecuaciones lineales?</a></li>
+                    <li>3. <a href="#conjunto-solucion">¿Qué es el conjunto solución de un sistema de ecuaciones lineales?</a></li>
+                    <li>4. <a href="#hallar-solucion">¿Cómo hallar el conjunto solución de un sistema de ecuaciones lineales?</a></li>
+                    <li>5. <a href="#guia-actividades">Texto teórico y guía de actividades</a></li>
+                    <li>6. <a href="#autoevaluacion">Autoevaluación</a></li>
+                    <li>7. <a href="#archivos">Archivos Completos</a></li>
                 </ul>
         </section>
     
         <section id="introduccion">
             <h2>1. Introducción</h2>
-            <p>En este libro vamos a combinar el final de la unidad 2 (intersección entre rectas y planos) y el comienzo de la unidad 3 (sistema de ecuaciones).</p>
-            <p>Además, en este libro, estaremos pensando en distancias entre puntos y rectas, entre puntos y planos, entre rectas y entre planos.</p>
-        </section>
-
-        <section id="intersecciones">
-            <h2>2. Intersecciones entre...</h2>
-            <p>Traten de pensar (y resolver) el <a href="https://drive.google.com/file/d/1ka8BxvnLtSu8tyOTRK5qgen-KSYgKdJu/view?usp=sharing" target="_blank">problema 31 de la página 40</a> de la Guía de problemas.</p>
-            <iframe class="d">1ka8BxvnLtSu8tyOTRK5qgen-KSYgKdJu</iframe>
-            <p>Si no sale, pueden plantear sus preguntas en el foro <a class="con">Consultas</a>. Intenten ajustar la pregunta lo que más puedan. Intenten que la pregunta no sea cómo empiezo. Traten de ver si están entendiendo el enunciado. Si hay algo del enunciado que no se entiende, pregunten sobre eso, copiando la parte que no se entiende.</p>
-            <p>Una vez que consideran que ya trabajaron un buen tiempo con el problema, miren una posible resolución que la profesora Perla nos muestra en el siguiente <a href="https://www.youtube.com/watch?v=RJ8UiTrXxx4" target="_blank">Video con una resolución del problema 31 de la pág 40 de la Guía</a>.</p>
-            <video class="yt">https://www.youtube.com/watch?v=RJ8UiTrXxx4</video>
-            <p><strong>En el video hay un error en el minuto 4:30</strong> al escribir la ecuación implícita del plano \( \pi_2 \) , se debió haber escrito \( 3x-y+z=1 \) . De todas maneras, les pasamos una <a href="https://drive.google.com/file/d/1ioEtvzzQWjqMoNGkvOZGfqxRMSGTpVyZ/view?usp=sharing" target="_blank">Resolución escrita del problema 31 de la página 40</a>.</p>
-            <iframe class="d">1ioEtvzzQWjqMoNGkvOZGfqxRMSGTpVyZ</iframe>
-            <p>Luego, vean el <a href="https://www.youtube.com/watch?v=UNi40IoU8Wk" target="_blank">Video sobre intersección entre planos</a>, aquí el profesor Martín T nos presenta un ejemplo de intersección entre una recta (escrita en forma vectorial) y un plano (en forma implícita)</p>
-            <video class="yt">https://www.youtube.com/watch?v=UNi40IoU8Wk</video>
-            <p>Finalmente, en el <a href="https://www.youtube.com/watch?v=zTuqYOUzqVw" target="_blank">Video sobre intersección de tres planos</a> el profesor Claudio nos presenta una visualización de la posición relativa entre tres planos y busca analíticamente la intersección entre tres planos en dos ejemplos.</p>
-            <video class="yt">https://www.youtube.com/watch?v=zTuqYOUzqVw</video>
-            <p>Para practicar sobre estos temas, pueden resolver los <a href="https://drive.google.com/file/d/17C3dkqy-RAAfDrvbbK2H7YFCzPbNznbr/view?usp=sharing" target="_blank">ejercicios 1 y 2 de la Guía de ejercitación sobre intersecciones y distancias</a>.</p>
-            <iframe class="d">17C3dkqy-RAAfDrvbbK2H7YFCzPbNznbr</iframe>
-        </section>
-
-        <section id="distancias">
-            <h2>3. Distancias</h2>
-            <p>Podemos definir la distancia entre dos puntos \( A \) y \( B \) como la norma del vector \( \vec{AB} \)</p>
-            <p>¿Cómo podemos pensar la distancia entre un punto y una recta? y ¿entre un punto y un plano? y ¿entre rectas? y ¿entre planos?</p>
-            <img src="../assets/dis2.gif" alt="Distancias" class="redu">
-            <p>En los siguientes videos el profesor Martín T nos cuenta alguna repuesta a alguna de estas preguntas:</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=3Diba2Vmj7E" target="_blank">Video sobre distancias en el plano \( \mathbb{R}^2 \)</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=3Diba2Vmj7E</video>
-                <li><a href="https://www.youtube.com/watch?v=1xJMtZZHPPM" target="_blank">Video sobre distancias en el espacio \( \mathbb{R}^3 \)</a></li>
-                <video class="yt">https://www.youtube.com/watch?v=1xJMtZZHPPM</video>
-            </ul>
-            <p>¿Cómo definiríamos la distancia de dos objetos que se cortan, es decir, que tienen al menos un punto en común?</p>
-            <p> Para practicar sobre distancias pueden realizar el resto de la ejercitación de la <a href="https://drive.google.com/file/d/17C3dkqy-RAAfDrvbbK2H7YFCzPbNznbr/view?usp=sharing" target="_blank">Guía de ejercitación sobre intersecciones y distancias</a>.</p>
-            <iframe class="d">17C3dkqy-RAAfDrvbbK2H7YFCzPbNznbr</iframe>
+            <p>Durante la unidad anterior hemos trabajado con intersecciones entre distintos objetos. Por ejemplo, entre rectas de \( \mathbb{R}^2\), entre rectas de \( \mathbb{R}^3\), entre planos en \( \mathbb{R}^3\).</p>
+            <p>Vimos que hallar los puntos que tienen en común estos objetos implica plantear una o varias ecuaciones, y hallar todos los valores de las incógnitas o variables que satisfacen las igualdades.</p>
+            <p>En esta semana, comenzamos a trabajar con la unidad 3. Uno de los objetos centrales de estudio de esta unidad es el que llamaremos sistema de ecuaciones lineales.</p>
+            <p>Intentaremos saber qué es un sistema de ecuaciones lineales, qué es una solución del sistema, qué es el conjunto solución del sistema, conocer algunas técnicas para hallar el conjunto solución, entre otros asuntos que trabajaremos las próximas semanas.</p>
         </section>
 
         <section id="sistema-ecuaciones">
-            <h2>4. ¿Qué es un sistema de ecuaciones lineales?</h2>
+            <h2>2. ¿Qué es un sistema de ecuaciones lineales?</h2>
             <p>En los capítulos anteriores, y en el libro anterior también, hemos trabajado con intersecciones entre distintos objetos. Por ejemplo, entre rectas de \( \mathbb{R}^2 \), entre rectas de \( \mathbb{R}^3 \),  entre planos en \( \mathbb{R}^3 \).</p>
             <p>Vimos que hallar los puntos que tienen en común estos objetos implica plantear una o varias ecuaciones, y hallar todos los valores de las incógnitas o variables que satisfacen las igualdades.</p>
             <p>En lo que sigue intentaremos saber qué es un sistema de ecuaciones lineales, qué es una solución del sistema, qué es el conjunto solución del sistema, conocer algunas técnicas para hallar el conjunto solución, entre otros asuntos que trabajaremos las próximas semanas.</p>
@@ -101,9 +67,9 @@
         </section>
 
         <section id="conjunto-solucion">
-            <h2>5. ¿Qué es el conjunto solución de un sistema de ecuaciones lineales?</h2>
+            <h2>3. ¿Cuál es el conjunto de solución de un sistema de ecuaciones lineales?</h2>
             <p> Dado un sistema de \( m \times n \) , es decir de \( m \) ecuaciones con \( n \) incógnitas o variables, diremos que:</p>
-            <p>Una solución del sistema es un vector de \( n \) componentes tal que cada una de sus componentes reemplazadas en las variables (en orden) satisfacen todas las igualdades del sistema.</p>
+            <p><strong>Una solución del sistema es un vector de \( n \) componentes tal que cada una de sus componentes reemplazadas en las variables (en orden) satisfacen todas las igualdades del sistema.</strong></p>
             <p> Por ejemplo, el vector \( (1, 2, 3) \)  es una solución del sistema:</p>
             <ul>
                 \[
@@ -123,7 +89,7 @@
                 </li>
                 <video class="yt">https://www.youtube.com/watch?v=3SSWcOYeAns</video>
             </ul>
-            <p>Llamaremos conjunto solución de un sistema de ecuaciones lineales al conjunto de todos los vectores que son solución.</p>
+            <p><strong>Llamaremos conjunto solución de un sistema de ecuaciones lineales al conjunto de todos los vectores que son solución.</strong></p>
             <p>¿Cuál es el conjunto solución del siguiente sistema?</p>
             <p>
                 \[
@@ -137,7 +103,7 @@
         </section>
 
         <section id="hallar-solucion">
-            <h2>6. ¿Cómo hallar el conjunto solución de un sistema de ecuaciones lineales?</h2>
+            <h2>4. ¿Cómo hallar el conjunto solución de un sistema de ecuaciones lineales?</h2>
             <img src="../assets/matematicas.jpg" alt="Conjunto solución" class="redu">
             <p> El sistema del final del apartado anterior es muy particular, porque está triangulado</p>
             <p>
@@ -152,7 +118,7 @@
             <p>Puede verse a partir de la tercera ecuación que la única posibilidad para \( z \) es que valga \( 3 \) para que se verifique la tercera igualdad. Con este valor de \( z = 3 \), podemos ver en la segunda ecuación que la única posibilidad para \( y \) es \( 4 \). Nótenlo despejando \( y \) en esa ecuación y reemplazando el valor de \( z \) por \( 3 \). Con estos valores, \( y = 4 \) y \( z = 3 \), reemplazándolos en la primera ecuación, podemos hallar que \( x \) debe si o sí ser \( 1 \). De esta manera, el conjunto solución del sistema está formado por un único vector que podemos responder así: \( (x, y, z) = (1, 4, 3) \).</p>
             <p>Lo que tuvo de bueno este sistema para que sea más o menos fácilmente resoluble es que en una de las ecuaciones solo aparece una de las variables, en la otra, solo dos, y en la primera las tres variables</p>
             <p>Un método para resolver sistemas de ecuaciones lineales consiste en transformarlo en otro que tenga la misma solución pero que esté triangulado.</p>
-            <p>Diremos que dos sistemas de ecuaciones lineales que tienen el mismo conjunto solución son sistemas equivalentes.</p>
+            <p><strong>Diremos que dos sistemas de ecuaciones lineales que tienen el mismo conjunto solución son sistemas equivalentes.</strong></p>
             <p>En el siguiente video, el profesor Daniel nos cuenta qué operaciones pueden hacerse para transformar un sistema en otro equivalente y nos presenta alguna justificación.</p>
             <ul>
                 <li><a href="https://www.youtube.com/watch?v=hIbV_douxJM" target="_blank">Video sobre sistemas equivalentes y operaciones que conservan el conjunto solución.</a></li>
@@ -166,7 +132,7 @@
         </section>
 
         <section id="guia-actividades">
-            <h2>7. Texto teórico y guía de actividades</h2>
+            <h2>5. Texto teórico y guía de actividades</h2>
             <p>En el texto <a href="https://drive.google.com/file/d/1K_5pBSerDEhcUkGrMtTEGTCPlCZJgP0J/view?usp=sharing" target="_blank">Maestripieri, Pavón y Resmesar (2017) Notas de Álgebra Lineal</a>, encontrarán las definiciones y métodos explicados en los apartados anteriores.</p>
             <iframe class="d">1K_5pBSerDEhcUkGrMtTEGTCPlCZJgP0J</iframe>
             <p>Entre otros conceptos, en el texto anterior se indican cuántas soluciones puede tener un sistema de ecuaciones lineales, y se presenta una clasificación de los sistemas de acuerdo a la cantidad de soluciones. ¿Pudieron encontrarla?</p>
@@ -181,16 +147,18 @@
         </section>
 
         <section id="autoevaluacion">
-            <h2>8. Autoevaluación</h2>
-            <p>Como parte de la evaluación continua (<a class="Req">ver las condiciones en Condiciones de trabajo, de evaluación y de acreditación</a>) les proponemos las siguientes autoevaluaciones:</p>
+            <h2>6. Autoevaluación</h2>
+            <p>Como parte de la evaluación continua (<a class="Req">ver las condiciones en Condiciones de trabajo, de evaluación y de acreditación</a>) les proponemos la:</p>
             <ul>
-                <li><a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366140" target="_blank"><strong>Autoevaluación sobre distancia e intersección</strong></a></li>
-                <li><a href="https://campusvirtual.unm.edu.ar/moodle/mod/quiz/view.php?id=366132" target="_blank"><strong>Autoevaluación sobre sistemas de ecuaciones lineales</strong></a></li>
+                <li><a href="https://drive.google.com/file/d/1wvzN_NRurXWA7yrQe1jvLySqksKSFsua/view?usp%3Ddrive_link&sa=D&source=editors&ust=1730918828344147&usg=AOvVaw3ef3_A6MNvjGJaHe5vomBj" target="_blank"><strong>Autoevaluación sobre sistemas de ecuaciones lineales</strong></a></li>
             </ul>
             
-            <iframe class="d">1OM0AE2GUbnLb9sVQOX9EDC7Z5iUg9BUl</iframe>
+            <iframe class="d">1wvzN_NRurXWA7yrQe1jvLySqksKSFsua</iframe>
             
-            <iframe class="d">1ph2SSdu5LxLuVPW4DyW9UR7sVVAPu0z2</iframe>
+            <p>Ingresen a los cuestionarios para ver la fecha de apertura y la de cierre.<br>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.<br>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos</p>
+            <p>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.</p>
+            <p>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
+            
         </section>
 
         <section id="archivos">
@@ -209,7 +177,7 @@
     <script src="../js/script.js"></script>
 </body>
 <footer class="footer">
-    <a href="../assets/libro4.html" class="arrow arrow-left" aria-label="Libro 4">
+    <a href="../assets/libro9.html" class="arrow arrow-left" aria-label="Libro 4">
       <div class="line one">
           <div class="round"></div>
           <div class="round"></div>
@@ -261,7 +229,7 @@
       </div> 
     </a>
   
-    <a href="../assets/libro6.html" class="arrow arrow-right" aria-label="Libro 6">
+    <a href="../assets/libro11.html" class="arrow arrow-right" aria-label="Libro 6">
       <div class="line one">
           <div class="round"></div>
           <div class="round"></div>

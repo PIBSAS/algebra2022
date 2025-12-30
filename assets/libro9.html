@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro 9</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="../assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="../assets/site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube/dist/Youtube.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Libro 9: Intersecciones y Distancia</h1>
+    </header>
+
+    <main>
+        <section id="indice">
+            <h2>Tabla de contenidos</h2>
+                <ul>
+                    <li>1. <a href="#introduccion">Introducción</a></li>
+                    <li>2. <a href="#intersecciones">Intersecciones entre...</a></li>
+                    <li>3. <a href="#distancias">Distancias</a></li>
+                    <li>4. <a href="#autoevaluacion">Autoevaluación</a></li>
+                    <li>5. <a href="#archivos">Archivos Completos</a></li>
+                </ul>
+        </section>
+    
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p>Ya vamos llegando al final de esta unidad. Es un buen momento para retomar todo lo que estuvimos trabajando a lo largo de esta unidad y que encuentran en los Libro 5, Libro 6, Libro 7, y Libro 8. Dense una vuelta por allí, revisen resoluciones, autoevaluaciones, y consulten.</p>
+            <p>Además, en este libro, retomaremos algunas cuestiones sobre intersecciones entre planos. También, estaremos pensando en distancias entre puntos y rectas, entre puntos y planos, entre rectas y entre planos.</p>
+            <p>Finalmente, durante esta semana tocará realizar la entrega que verán en la sección Autoevaluación y entrega.</p>
+        </section>
+
+        <section id="intersecciones">
+            <h2>2. Intersecciones entre...</h2>
+            <p>Traten de pensar (y resolver) el <a href="https://drive.google.com/file/d/1ka8BxvnLtSu8tyOTRK5qgen-KSYgKdJu/view?usp=sharing" target="_blank">problema 31 de la página 40</a> de la Guía de problemas.</p>
+            <iframe class="d">1ka8BxvnLtSu8tyOTRK5qgen-KSYgKdJu</iframe>
+            <p>Si no sale, pueden plantear sus preguntas en el foro <a class="con">Consultas</a>. Intenten ajustar la pregunta lo que más puedan. Intenten que la pregunta no sea cómo empiezo. Traten de ver si están entendiendo el enunciado. Si hay algo del enunciado que no se entiende, pregunten sobre eso, copiando la parte que no se entiende.</p>
+            <p>Una vez que consideran que ya trabajaron un buen tiempo con el problema, miren una posible resolución que la profesora Perla nos muestra en el siguiente <a href="https://www.youtube.com/watch?v=RJ8UiTrXxx4" target="_blank">Video con una resolución del problema 31 de la pág 40 de la Guía</a>.</p>
+            <video class="yt">https://www.youtube.com/watch?v=RJ8UiTrXxx4</video>
+            <p><strong>En el video hay un error en el minuto 4:30</strong> al escribir la ecuación implícita del plano \( \pi_2 \) , se debió haber escrito \( 3x-y+z=1 \) . De todas maneras, les pasamos una <a href="https://drive.google.com/file/d/1ioEtvzzQWjqMoNGkvOZGfqxRMSGTpVyZ/view?usp=sharing" target="_blank">Resolución escrita del problema 31 de la página 40</a>.</p>
+            <iframe class="d">1ioEtvzzQWjqMoNGkvOZGfqxRMSGTpVyZ</iframe>
+            <p>Luego, vean el <a href="https://www.youtube.com/watch?v=UNi40IoU8Wk" target="_blank">Video sobre intersección entre planos</a>, aquí el profesor Martín T nos presenta un ejemplo de intersección entre una recta (escrita en forma vectorial) y un plano (en forma implícita)</p>
+            <video class="yt">https://www.youtube.com/watch?v=UNi40IoU8Wk</video>
+            <p>Finalmente, en el <a href="https://www.youtube.com/watch?v=zTuqYOUzqVw" target="_blank">Video sobre intersección de tres planos</a> el profesor Claudio nos presenta una visualización de la posición relativa entre tres planos y busca analíticamente la intersección entre tres planos en dos ejemplos.</p>
+            <video class="yt">https://www.youtube.com/watch?v=zTuqYOUzqVw</video>
+            <p>Para practicar sobre estos temas, pueden resolver los <a href="https://drive.google.com/file/d/17C3dkqy-RAAfDrvbbK2H7YFCzPbNznbr/view?usp=sharing" target="_blank">ejercicios 1 y 2 de la Guía de ejercitación sobre intersecciones y distancias</a>.</p>
+            <iframe class="d">17C3dkqy-RAAfDrvbbK2H7YFCzPbNznbr</iframe>
+        </section>
+
+        <section id="distancias">
+            <h2>3. Distancias</h2>
+            <p>Podemos definir la distancia entre dos puntos \( A \) y \( B \) como la norma del vector \( \vec{AB} \)</p>
+            <p>¿Cómo podemos pensar la distancia entre un punto y una recta? y ¿entre un punto y un plano? y ¿entre rectas? y ¿entre planos?</p>
+            <img src="../assets/dis2.gif" alt="Distancias" class="redu">
+            <p>En los siguientes videos el profesor Martín T nos cuenta alguna repuesta a alguna de estas preguntas:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=3Diba2Vmj7E" target="_blank">Video sobre distancias en el plano \( \mathbb{R}^2 \)</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=3Diba2Vmj7E</video>
+                <li><a href="https://www.youtube.com/watch?v=1xJMtZZHPPM" target="_blank">Video sobre distancias en el espacio \( \mathbb{R}^3 \)</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=1xJMtZZHPPM</video>
+            </ul>
+            <p>¿Cómo definiríamos la distancia de dos objetos que se cortan, es decir, que tienen al menos un punto en común?</p>
+            <p> Para practicar sobre distancias pueden realizar el resto de la ejercitación de la <a href="https://drive.google.com/file/d/17C3dkqy-RAAfDrvbbK2H7YFCzPbNznbr/view?usp=sharing" target="_blank">Guía de ejercitación sobre intersecciones y distancias</a>.</p>
+            <iframe class="d">17C3dkqy-RAAfDrvbbK2H7YFCzPbNznbr</iframe>
+        </section>
+
+        <section id="autoevaluacion">
+            <h2>4. Autoevaluación</h2>
+            <p>Como parte de la evaluación continua (<a class="Req">ver las condiciones en Condiciones de trabajo, de evaluación y de acreditación</a>) les proponemos la:</p>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1olQIsRgSPLitsQKFm0q4dBHJW-HDnKaT/view?usp%3Ddrive_link&sa=D&source=editors&ust=1730918828327734&usg=AOvVaw2UMW-aNM63c6BRTG9IFBXn" target="_blank"><strong>Autoevaluación sobre distancia e intersección</strong></a></li>
+            </ul>
+            
+            <iframe class="d">1olQIsRgSPLitsQKFm0q4dBHJW-HDnKaT</iframe>
+            
+            <p>Ingresen a los cuestionarios para ver la fecha de apertura y la de cierre.<br>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.<br>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos</p>
+            <p>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.</p>
+            <p>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
+            <p>Y además, en cada comisión les vamos a proponer realizar una entrega por escrito en forma presencial en la que desarrollan la resolución con sus explicaciones, justificaciones y procedimientos.</p>
+            <p>Tendrán acceso a las consignas en la clase presencial, o bien en el foro Novedades. También indicaremos por el foro cuál será la fecha de entrega.</p>
+        </section>
+
+        <section id="archivos">
+            <h2>Archivos Completos</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1pHr50PY1KpU2wljpU1ZSehAuPJaJ77eR/view?usp=sharing" target="_blank">Unidad 3</a></li>
+                <li><a href="https://drive.google.com/file/d/1ioEtvzzQWjqMoNGkvOZGfqxRMSGTpVyZ/view?usp=sharing" target="_blank">Resolución escrita del problema 31 de la página 40.</a></li>
+                <li><a href="https://drive.google.com/file/d/1PYrIx78s7nfHu_serETL_CuuLl1I7RfY/view?usp=sharing" target="_blank">Guía de ejercitación sobre intersecciones y distancias.</a></li>
+                <li><a href="https://drive.google.com/file/d/1K_5pBSerDEhcUkGrMtTEGTCPlCZJgP0J/view?usp=sharing" target="_blank">Maestripieri, Pavón y Resmesar (2017) Notas de Álgebra Lineal Cap 2.</a></li>
+                <li><a href="https://drive.google.com/file/d/1PV-_cNvgn4l6R5sBIlFCaPbg917WpuyU/view?usp=sharing" target="_blank">Listado de ejercicios y problemas sobre sistemas de ecuaciones lineales.</a></li>
+                <li><a href="https://drive.google.com/file/d/1YL19suQuWXaKaQdj8JaDFRRFRH2pUzWL/view?usp=sharing" target="_blank">Maestripieri, Pavón y Resmesar (2017) Notas de Álgebra Lineal. Cap. 2. Pág 78 a 81 - Ejercicios.</a></li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+<footer class="footer">
+    <a href="../assets/libro8.html" class="arrow arrow-left" aria-label="Libro 4">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      
+      </div> 
+    </a>
+  
+    <a href="../assets/libro10.html" class="arrow arrow-right" aria-label="Libro 6">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+  
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+    </a>
+  </footer>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro 8</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="../assets/android-chrome-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="../assets/site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube/dist/Youtube.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Libro 8: Ecuación general del Plano</h1>
+    </header>
+    
+    <main>
+        <section id="indice">
+            <h2>Tabla de contenidos</h2>
+                <ul>
+                    <li>1. <a href="#introduccion">Introducción</a></li>
+                    <li>2. <a href="#ecuacion-general-origen">Ecuación general del plano por el origen</a></li>
+                    <li>3. <a href="#ecuacion-general-cualquier-punto">Ecuación general del plano por un punto cualquiera</a></li>
+                    <li>4. <a href="#tres-puntos">Tres puntos y planos... y una operación "nueva" entre vectores de \( \mathbb{R}^3 \)</a></li>
+                    <li>5. <a href="#posicion-relativa">Posición relativa entre planos, entre recta y plano e intersecciones</a></li>
+                    <li>6. <a href="#practica">Práctica</a></li>
+                    <li>7. <a href="#autoevaluacion">Autoevaluación</a></li>
+                    <li>8. <a href="#archivos">Archivos Completos</a></li>
+                </ul>
+        </section>
+
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p>Durante esta semana continuaremos trabajando con planos y rectas en el espacio \( \mathbb{R}^3 \).</p>
+            <p>La semana anterior presentamos la ecuación vectorial o paramétrica del plano, vimos cómo usarla para indicar puntos del plano y puntos que no pertenecen a él. Vimos cómo encontrar la intersección entre un plano y una recta a partir de la ecuación vectorial de ambos, entre otras cosas.</p>
+            <p>Esta semana veremos otra forma algebraica de representar a los planos en \( \mathbb{R}^3 \). También veremos qué posiciones relativas pueden tomar una recta y un plano y entre planos, particularmente pensaremos en el paralelismo y la perpendicularidad. Y también, abordaremos la intersección entre una recta y un plano a partir de la ecuación del plano que estaremos trabajando.</p>
+        </section>
+
+        <section id="ecuacion-general-origen">
+            <h2>2. Ecuación general del plano por el origen</h2>
+            <p>Antes de meternos con la definición, es importante que primero ustedes piensen un poco sobre lo que queremos trabajar. Por eso, les pedimos que realicen el <a href="https://drive.google.com/file/d/12vIHy2nvoHpcpW_x8TKIa1cD42xegJJc/view?usp=sharing" target="_blank">problema 15 de la página 37</a> de la Guía de problemas. Intenten pensarlo y si tienen algún bloqueo, por favor, indíquenlo en el foro <a class="con">Consultas</a>. Lo ideal sería que cuenten alguna idea que están teniendo y dónde se estancan. Esperamos que primero compañeros y compañeras respondan las preguntas que surjan.</p>
+            <iframe class="d">12vIHy2nvoHpcpW_x8TKIa1cD42xegJJc</iframe>
+            <p>Pueden ver una resolución de este problema por el profesor Marcelo en el Video con una resolución del problema 15 de la página 37 de la Guía:</p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=mFBkowM8wKE" target="_blank">Video con una resolución del problema 15 de la página 37 de la Guía</a></li>
+                    <video class="yt">https://www.youtube.com/watch?v=mFBkowM8wKE</video>
+                </ul>
+            <p>En la resolución anterior terminamos escribiendo en forma genérica a la ecuación normal del plano. Esta ecuación es también llamada ecuación implícita del plano o ecuación general del plano. Volvamos a pensar en este tipo de ecuación en el siguiente video del profesor Martín Ch. Encontrarán una visualización de la idea en <a class="Geo">GeoGebra</a> y la definición:</p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=3Pmm2Xb4qig" target="_blank">Video sobre ecuación general, implícita o normal del plano en \( \mathbb{R}^3 \)</a>.</li>
+                    <video class="yt">https://www.youtube.com/watch?v=3Pmm2Xb4qig</video>
+                </ul>
+            <p>En el siguiente video el profesor Marcelo muestra cómo encuentra la ecuación implícita del plano que pasa por el origen de coordenadas conocido un vector normal. Aprovechen, y ni bien se digan los datos del problema, pongan el video en pausa e intenten resolverlo ustedes. Luego, pueden seguir con el video para comparar.</p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=bk232Zab0vE" target="_blank">Video en el que hallamos una ecuación implícita de un plano por el origen conocido un vector normal.</a></li>
+                    <video class="yt">https://www.youtube.com/watch?v=bk232Zab0vE</video>
+                </ul>
+            <p>Les dejamos unas preguntas: Dado un plano por el origen, ¿existe una única ecuación implícita que lo representa? ¿Cuántas hay? ¿Cómo pueden justificarlo? Si les parece, pueden abrir un hilo en el foro <a class="con">Consultas</a> y debatirlo.</p>
+            <img src="../assets/plano_the_beginning.gif" alt="Ecuación implícita del plano" class="redu">
+        </section>
+
+        <section id="ecuacion-general-cualquier-punto">
+            <h2>3. Ecuación general del plano por un punto cualquiera</h2>
+            <p>En el apartado anterior vimos cómo expresar la ecuación general de cualquier plano por el origen de coordenadas. Solo necesitamos un vector normal a él y listo. La ecuación general nos muestra una relación entre las tres coordenadas de cada punto del espacio que forman parte del plano en cuestión. Más allá de lo mecánico, nos interesa que comprendan por qué la cosa funciona. Es importante para esto comprender qué sucede con el producto escalar del vector normal y cada vector que termina en el plano y tiene origen en el origen de coordenadas</p>
+            <p>Veamos ahora cómo podemos pensar la ecuación general de cualquier plano que pasa por cualquier punto (no solo por el origen). En el siguiente video, el profesor Martín Ch. nos lo cuenta:</p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=RwKSD2ttKb0" target="_blank">Video sobre la ecuación implícita del plano por cualquier punto</a>.</li>
+                    <video class="yt">https://www.youtube.com/watch?v=RwKSD2ttKb0</video>
+                </ul>
+            <img src="../assets/plano1.gif" alt="Ecuación implícita del plano por cualquier punto" class="redu">
+            <p>En el siguiente video, el profesor Marcelo, nos cuenta una resolución posible para dar la ecuación general de un plano dado su vector normal y un punto por el que pasa:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=VouJSxyKaPE" target="_blank">Video con ejemplo de ecuación implícita de un plano dado su vector normal y un punto de paso</a>.</li>
+                <video class="yt">https://www.youtube.com/watch?v=VouJSxyKaPE</video>
+            </ul>
+            <p>¿Hay alguna particularidad entre las ecuaciones de los planos que pasan por el origen de coordenadas? ¿cuál? ¿cómo lo pueden justificar?. Si les parece, debatan sobre esto en el foro <a class="con">Consultas</a></p>
+        </section>
+
+        <section id="tres-puntos">
+            <h2>4. Tres puntos y planos... y una operación "nueva" entre vectores de \( \mathbb{R}^3 \)</h2>
+            <p>Si tenemos tres puntos en el espacio \( \mathbb{R}^3 \), ¿hay un plano que los contenga? ¿cuántos hay? ¿depende de algo? ¿bajo qué condiciones ocurre? ¿cómo lo explican? ¿qué sucede en el caso de que fueran cuatro puntos? ¿y si fueran dos? ¿y si fuera uno solo?</p>
+            <p>En el Video sobre la ecuación general de un plano por tres puntos el profesor Martín Ch nos cuenta un camino para encontrar justamente, una ecuación implícita de un plano que pasa por tres puntos.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=NYl7cf1f_qg" target="_blank">Video sobre la ecuación general de un plano por tres puntos</a>.</li>
+                <video class="yt">https://www.youtube.com/watch?v=NYl7cf1f_qg</video>
+            </ul>
+            <p>En el video, se planteó hallar un vector normal (perpendicular) a otros dos. ¿Cómo se hizo? Revisen el video y adviertan que se hallaron infinitos vectores perpendiculares, todos ellos de igual dirección, es decir, paralelos, es decir, múltiplos escalar entre sí. ¿Cómo tienen que ser dos vectores \( \vec{u} \) y \( \vec{v} \) para poder hallar infinitos vectores perpendiculares a ellos todos de igual dirección? ¿Es posible que dados dos vectores \( \vec{u} \) y \( \vec{v} \) existan infinitos vectores perpendiculares a ambos y que no todos tengan igual dirección? ¿Cómo explican la respuesta?</p>
+            <p>Hablando de vectores perpendiculares a dos vectores dados, en el siguiente video, el profesor Martín T nos cuenta por qué no le gusta tanto el producto vectorial para hallar un vector perpendicular a otros dos. No le gusta, pero igual nos cuenta en qué consiste el producto vectorial de dos vectores de \( \mathbb{R}^3 \)  Las físicas e ingenieras le encuentran mucha utilidad, dicen que los físicos e ingenieros también. Justo por la propiedad de las normas que cuenta también el profesor:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=NkbmRj0rZJU" target="_blank">Video sobre producto vectorial de vectores de \( \mathbb{R}^3 \) y vectores perpendiculares a otros dos</a>.</li>
+                <video class="yt">https://www.youtube.com/watch?v=NkbmRj0rZJU</video>
+            </ul>
+            <p>Y ¿por qué no gusta a unos y unas? y ¿por qué sí gusta a otras y otros? No estaría de más opinar sobre esto en un hilo del foro <a class="con">Consultas</a>.</p>
+        </section>
+
+        <section id="posicion-relativa">
+            <h2>5. Posición relativa entre planos, entre recta y plano e intersecciones</h2>
+            <p> Dados dos planos en el espacio \( \mathbb{R}^3 \), ¿cómo pueden estar posicionados uno en relación con el otro? ¿Cuáles son las diferentes opciones? Y si tenemos una recta y un plano, ¿qué sucede?.</p>
+            <p>Dos de las posibilidades, entre otras, son que haya paralelismo o que haya perpendicularidad. Sobre esto trata el Video sobre paralelismo y perpendicularidad entre planos y entre rectas y planos de la profesora Perla.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=hL_qeOvJ36k" target="_blank">Video sobre paralelismo y perpendicularidad entre planos y entre rectas y planos</a></li>
+                <video class="yt">https://www.youtube.com/watch?v=hL_qeOvJ36k</video>
+            </ul>
+            <img src="../assets/planosparalelos_y_perpendig.gif" alt="Posición relativa Plano y Recta: Paralelismo y perpendicularidad" class="redu">
+            <p>¿Es posible proponer una recta y un plano que no tengan puntos en común? ¿y uno solo? ¿y dos? ¿y más? ¿infinitos? En el siguiente video, el profesor Martín Ch nos muestra algunos ejemplos de intersección entre una recta y un plano, dada una ecuación vectorial de la recta y una ecuación implícita del plano.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=zX-jdVQiRfM" target="_blank">Video sobre intersección entre recta (ec. vectorial) y plano (ec. implícita)</a>.</li>
+                <video class="yt">https://www.youtube.com/watch?v=zX-jdVQiRfM</video>
+            </ul>
+            <p> ¿Y qué sucede con la intersección de dos o más planos dadas sus ecuaciones implícitas? Ahondaremos sobre esta cuestión durante la próxima semana de trabajo.</p>
+        </section>
+
+        <section id="practica">
+            <h2>6. Práctica</h2>
+            <img src="../assets/practica.jpg" alt="practica" class="redu">
+            <p> En el siguiente archivo, les proponemos algunos ejercicios y les indicamos qué problemas de la <a href="https://drive.google.com/file/d/1k51WjXlCzNcLu8P5Q7Jv4bEhxKwBZEKP/view?usp=sharing" target="_blank">Guía de problemas(PDF con dichos Ejercicios)</a> hacer.</p>
+            <iframe class="d">1k51WjXlCzNcLu8P5Q7Jv4bEhxKwBZEKP</iframe>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/19FbIalffve8j4crT4uHtxRlqbH-Hx5q7/view?usp=sharing" target="_blank">Guía de ejercitación sobre ecuación implícita del plano y algo más</a>.</li>
+            </ul>
+            <iframe class="d">19FbIalffve8j4crT4uHtxRlqbH-Hx5q7</iframe>
+            <p> También les acercamos los siguientes videos de Perla y de Marcelo con problemas resueltos. Aprovechen, y piénsenlos primero ustedes.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=xPxb4r2n1yk" target="_blank">Video con una resolución del problema 30 de la pág 40 de la Guía</a>.</li>
+                <video class="yt">https://www.youtube.com/watch?v=xPxb4r2n1yk</video>
+                <li><a href="https://www.youtube.com/watch?v=XwWn1GPczio" target="_blank">Video con una resolución del problema 32 de la pág 41 de la Guía</a>.</li>
+                <video class="yt">https://www.youtube.com/watch?v=XwWn1GPczio</video>
+            </ul>
+        </section>
+    
+        <section id="autoevaluacion">
+            <h2>7. Autoevaluación</h2>
+            <p>Como parte de la evaluación continua les proponemos la:</p>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1qltdVwf3MNHrrZoAiLuGWE2TcYwVa4uR/view?usp%3Ddrive_link&sa=D&source=editors&ust=1730918828319647&usg=AOvVaw25Ao8OwrNcAQVPZeIdpN3B" target="_blank"><strong>Autoevaluación sobre ecuación implícita del plano y algo más</a>.</strong></li>
+            </ul>
+            <p>Ingresen a los cuestionarios para ver la fecha de apertura y la de cierre.<br>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.<br>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos</p>
+            <p>El puntaje que se obtiene en la autoevaluación solo debe tomarse como un porcentaje de resolución correcta.</p>
+            <p>Esperamos que para cuando sea el momento de realizar la autoevaluación hayan podido realizar las actividades de práctica, realizado las <a class="con">Consultas</a>, leído los textos y vistos los videos.</p>
+            
+            <iframe class="d">1qltdVwf3MNHrrZoAiLuGWE2TcYwVa4uR</iframe>
+        </section>
+
+        <section id="archivos">
+            <h2>Archivos Completos</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1yNSWO9Q1WITE-cOXc_p3-nDFHwzkkmk9/view?usp=sharing" target="_blank">Unidad 2</a></li>
+                <li><a href="https://drive.google.com/file/d/10dLC6ZfrO3SpFlrmVBo4lE7CLnkY8puN/view?usp=sharing" target="_blank">Maestripieri, Pavón y Resmesar (2017) Notas de Álgebra Lineal. Cap. 1. Pág 32 a 34.</a></li>
+                <li><a href="https://drive.google.com/file/d/1EKdiMA_9tsuPZKy4UFftopIgqmY5uOIV/view?usp=sharing" target="_blank">Guía de ejercitación sobre planos 1.</a></li>
+                <li><a href="https://drive.google.com/file/d/19FbIalffve8j4crT4uHtxRlqbH-Hx5q7/view?usp=sharing" target="_blank">Guía de ejercitación sobre ecuación implícita del plano y algo más.</a></li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+<footer class="footer">
+    <a href="../assets/libro7.html" class="arrow arrow-left" aria-label="Libro 3">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      
+      </div> 
+    </a>
+  
+    <a href="../assets/libro9.html" class="arrow arrow-right" aria-label="Libro 5">
+      <div class="line one">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+  
+      <div class="line two">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+        
+      <div class="line three">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line four">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line five">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line six">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+      
+      <div class="line seven">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+      </div>
+    </a>
+  </footer>
+</html>
