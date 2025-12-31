@@ -41,32 +41,32 @@ document.addEventListener("DOMContentLoaded", function() {
         const botones = document.querySelectorAll(".index-page .button");
         const coordsMovil = [
             // 0–12 → btn1 a btn13
-            { left: 60,  top: 257 },   // btn1
-            { left: 102, top: 248 },   // btn2
+            { left: 60,  top: 267 },   // btn1
+            { left: 102, top: 238 },   // btn2
             { left: 202, top: 248 },   // btn3
             { left: 232, top: 300 },   // btn4
             { left: 242, top: 360 },   // btn5
             { left: 273, top: 410 },   // btn6
             { left: 310, top: 455 },   // btn7
             { left: 337, top: 520 },   // btn8
-            { left: 400, top: 552 },   // btn9
-            { left: 433, top: 606 },   // btn10
-            { left: 476, top: 652 },   // btn11
-            { left: 501, top: 708 },   // btn12
-            { left: 575, top: 755 },   // btn13
+            { left: 360, top: 552 },   // btn9
+            { left: 365, top: 606 },   // btn10
+            { left: 376, top: 652 },   // btn11
+            { left: 490, top: 708 },   // btn12
+            { left: 515, top: 755 },   // btn13
             
             // 13–18 → btn17 a btn22
-            { left: 400, top: 1130 },  // btn17
-            { left: 450, top: 1150 },  // btn18
-            { left: 500, top: 1180 },  // btn19
-            { left: 560, top: 1210 },  // btn20
-            { left: 620, top: 1230 },  // btn21
-            { left: 680, top: 1250 },  // btn22
+            { left: 250, top: 1000 },  // btn17
+            { left: 300, top: 1050 },  // btn18
+            { left: 350, top: 1100 },  // btn19
+            { left: 400, top: 1150 },  // btn20
+            { left: 450, top: 1200 },  // btn21
+            { left: 500, top: 1250 },  // btn22
 
             // 19–21 → btn14, btn15, btn16 (al final del DOM)
-            { left: 384, top: 808 },   // btn14
+            { left: 525, top: 800 },   // btn14
             { left: 512, top: 887 },   // btn15
-            { left: 341, top: 999 },  // btn16
+            { left: 240, top: 899 },  // btn16
         ];
 
 
