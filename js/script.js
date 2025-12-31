@@ -56,16 +56,16 @@ document.addEventListener("DOMContentLoaded", function() {
             { left: 575, top: 755 },   // btn13
             { left: 384, top: 808 },   // btn14
             // 13–18 → btn17 a btn22
-            { left: 400, top: 1380 },  // btn17
-            { left: 450, top: 1450 },  // btn18
-            { left: 500, top: 1500 },  // btn19
-            { left: 560, top: 1560 },  // btn20
-            { left: 620, top: 1620 },  // btn21
-            { left: 680, top: 1680 },  // btn22
+            { left: 400, top: 1080 },  // btn17
+            { left: 450, top: 1150 },  // btn18
+            { left: 500, top: 1200 },  // btn19
+            { left: 560, top: 1360 },  // btn20
+            { left: 620, top: 1420 },  // btn21
+            { left: 680, top: 1580 },  // btn22
 
             // 19–21 → btn14, btn15, btn16 (al final del DOM)
             
-            { left: 612, top: 787 },   // btn15
+            { left: 512, top: 887 },   // btn15
             { left: 341, top: 999 },  // btn16
         ];
 
