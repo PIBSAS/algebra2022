@@ -49,12 +49,12 @@ document.addEventListener("DOMContentLoaded", function() {
             { left: 273, top: 410 },   // btn6
             { left: 310, top: 455 },   // btn7
             { left: 337, top: 520 },   // btn8
-            { left: 400, top: 612 },   // btn9
-            { left: 433, top: 656 },   // btn10
-            { left: 476, top: 702 },   // btn11
-            { left: 501, top: 778 },   // btn12
-            { left: 575, top: 845 },   // btn13
-            { left: 384, top: 868 },   // btn14
+            { left: 400, top: 552 },   // btn9
+            { left: 433, top: 606 },   // btn10
+            { left: 476, top: 652 },   // btn11
+            { left: 501, top: 708 },   // btn12
+            { left: 575, top: 755 },   // btn13
+            { left: 384, top: 808 },   // btn14
             // 13–18 → btn17 a btn22
             { left: 400, top: 1380 },  // btn17
             { left: 450, top: 1450 },  // btn18
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // 19–21 → btn14, btn15, btn16 (al final del DOM)
             
             { left: 612, top: 787 },   // btn15
-            { left: 341, top: 1299 },  // btn16
+            { left: 341, top: 999 },  // btn16
         ];
 
 
