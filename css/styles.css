@@ -151,16 +151,16 @@ iframe.d {
 .index-page #btn1 { left: calc(125 / 1920 * 100vw); top: calc(612 / 1080 * 100vh); }
 .index-page #btn2 { left: calc(255 / 1920 * 100vw); top: calc(580 / 1080 * 100vh); }
 .index-page #btn3 { left: calc(305 / 1920 * 100vw); top: calc(500 / 1080 * 100vh); }
-.index-page #btn4 { left: calc(485 / 1920 * 100vw); top: calc(550 / 1080 * 100vh); }
-.index-page #btn5 { left: calc(542 / 1920 * 100vw); top: calc(490 / 1080 * 100vh); }
-.index-page #btn6 { left: calc(570 / 1920 * 100vw); top: calc(435 / 1080 * 100vh); }
-.index-page #btn7 { left: calc(600 / 1920 * 100vw); top: calc(375 / 1080 * 100vh); }
-.index-page #btn8 { left: calc(630 / 1920 * 100vw); top: calc(320 / 1080 * 100vh); }
-.index-page #btn9 { left: calc(648 / 1920 * 100vw); top: calc(265 / 1080 * 100vh); }
-.index-page #btn10 { left: calc(655 / 1920 * 100vw); top: calc(205 / 1080 * 100vh); }
-.index-page #btn11 { left: calc(683 / 1920 * 100vw); top: calc(170 / 1080 * 100vh); }
-.index-page #btn12 { left: calc(683 / 1920 * 100vw); top: calc(170 / 1080 * 100vh); }
-.index-page #btn13 { left: calc(887 / 1920 * 100vw); top: calc(157 / 1080 * 100vh); }
+.index-page #btn4 { left: calc(475 / 1920 * 100vw); top: calc(680 / 1080 * 100vh); }
+.index-page #btn5 { left: calc(492 / 1920 * 100vw); top: calc(590 / 1080 * 100vh); }
+.index-page #btn6 { left: calc(520 / 1920 * 100vw); top: calc(535 / 1080 * 100vh); }
+.index-page #btn7 { left: calc(570 / 1920 * 100vw); top: calc(475 / 1080 * 100vh); }
+.index-page #btn8 { left: calc(670 / 1920 * 100vw); top: calc(410 / 1080 * 100vh); }
+.index-page #btn9 { left: calc(610 / 1920 * 100vw); top: calc(350 / 1080 * 100vh); }
+.index-page #btn10 { left: calc(695 / 1920 * 100vw); top: calc(295 / 1080 * 100vh); }
+.index-page #btn11 { left: calc(650 / 1920 * 100vw); top: calc(215 / 1080 * 100vh); }
+.index-page #btn12 { left: calc(688 / 1920 * 100vw); top: calc(160 / 1080 * 100vh); }
+.index-page #btn13 { left: calc(887 / 1920 * 100vw); top: calc(140 / 1080 * 100vh); }
 
 /* Segunda montaña (6 semanas) */
 .index-page #btn17  { left: calc(961 / 1920 * 100vw); top: calc(330 / 1080 * 100vh); }
