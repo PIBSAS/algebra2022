@@ -41,12 +41,17 @@ document.addEventListener("DOMContentLoaded", function() {
         const botones = document.querySelectorAll(".index-page .button");
         const coordsMovil = [
             { left: 60, top: 257 },
+            { left: 102, top: 248 },
             { left: 202, top: 248 },
             { left: 232, top: 300 },
+            { left: 232, top: 300 },
+            { left: 242, top: 360},
             { left: 242, top: 360},
             { left: 273, top: 410 },
+            { left: 273, top: 410 },
             { left: 310, top: 455 },
-            { left: 337, top: 520 },
+            { left: 310, top: 455 },
+            { left: 337, top: 520 }, //libro 7 tiene que ser 13
             { left: 400, top: 612 },
             { left: 433, top: 656 },
             { left: 476, top: 702 },
@@ -55,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { left: 612, top: 787 },
             { left: 384, top: 568 },
             { left: 341, top: 1299 },
-            { left: 400, top: 1380 }
+            { left: 400, top: 1380 },
         ];
 
         botones.forEach((btn, i) => {
