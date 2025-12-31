@@ -56,12 +56,12 @@ document.addEventListener("DOMContentLoaded", function() {
             { left: 575, top: 755 },   // btn13
             { left: 384, top: 808 },   // btn14
             // 13–18 → btn17 a btn22
-            { left: 400, top: 1080 },  // btn17
+            { left: 400, top: 1130 },  // btn17
             { left: 450, top: 1150 },  // btn18
-            { left: 500, top: 1200 },  // btn19
-            { left: 560, top: 1360 },  // btn20
-            { left: 620, top: 1420 },  // btn21
-            { left: 680, top: 1580 },  // btn22
+            { left: 500, top: 1180 },  // btn19
+            { left: 560, top: 1210 },  // btn20
+            { left: 620, top: 1230 },  // btn21
+            { left: 680, top: 1250 },  // btn22
 
             // 19–21 → btn14, btn15, btn16 (al final del DOM)
             
