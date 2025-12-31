@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // 19–21 → btn14, btn15, btn16 (al final del DOM)
             { left: 525, top: 800 },   // btn14
-            { left: 512, top: 887 },   // btn15
+            { left: 540, top: 1300 },   // btn15
             { left: 240, top: 899 },  // btn16
         ];
 
