@@ -41,29 +41,29 @@ document.addEventListener("DOMContentLoaded", function() {
         const botones = document.querySelectorAll(".index-page .button");
         const coordsMovil = [
             { left: 60,  top: 257 },   // btn1
-        { left: 102, top: 248 },   // btn2
-        { left: 202, top: 248 },   // btn3
-        { left: 232, top: 300 },   // btn4
-        { left: 242, top: 360 },   // btn5
-        { left: 273, top: 410 },   // btn6
-        { left: 310, top: 455 },   // btn7
-        { left: 337, top: 520 },   // btn8
-        { left: 400, top: 612 },   // btn9
-        { left: 433, top: 656 },   // btn10
-        { left: 476, top: 702 },   // btn11
-        { left: 501, top: 778 },   // btn12
-        { left: 575, top: 845 },   // btn13
+            { left: 102, top: 248 },   // btn2
+            { left: 202, top: 248 },   // btn3
+            { left: 232, top: 300 },   // btn4
+            { left: 242, top: 360 },   // btn5
+            { left: 273, top: 410 },   // btn6
+            { left: 310, top: 455 },   // btn7
+            { left: 337, top: 520 },   // btn8
+            { left: 400, top: 612 },   // btn9
+            { left: 433, top: 656 },   // btn10
+            { left: 476, top: 702 },   // btn11
+            { left: 501, top: 778 },   // btn12
+            { left: 575, top: 845 },   // btn13
 
-        { left: 384, top: 568 },   // btn14
-        { left: 612, top: 787 },   // btn15
-        { left: 341, top: 1299 },  // btn16
+            { left: 384, top: 568 },   // btn14
+            { left: 612, top: 787 },   // btn15
+            { left: 341, top: 1299 },  // btn16
 
-        { left: 400, top: 1380 },  // btn17
-        { left: 450, top: 1450 },  // btn18
-        { left: 500, top: 1500 },  // btn19
-        { left: 560, top: 1560 },  // btn20
-        { left: 620, top: 1620 },  // btn21
-        { left: 680, top: 1680 },  // btn22
+            { left: 400, top: 1380 },  // btn17
+            { left: 450, top: 1450 },  // btn18
+            { left: 500, top: 1500 },  // btn19
+            { left: 560, top: 1560 },  // btn20
+            { left: 620, top: 1620 },  // btn21
+            { left: 680, top: 1680 },  // btn22
         ];
 
         botones.forEach((btn, i) => {
