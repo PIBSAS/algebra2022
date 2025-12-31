@@ -1,19 +1,19 @@
 const CACHE_NAME = "algebra-2025-cache-v1";
 const urlsToCache = [
-  "/algebra2025/",
-  "/algebra2025/index.html",
-  "/algebra2025/css/styles.css",
-  "/algebra2025/js/script.js",
-  "/algebra2025/assets/android-chrome-192x192.png",
-  "/algebra2025/assets/android-chrome-512x512.png"
+  "/algebra2022/",
+  "/algebra2022/index.html",
+  "/algebra2022/css/styles.css",
+  "/algebra2022/js/script.js",
+  "/algebra2022/assets/android-chrome-192x192.png",
+  "/algebra2022/assets/android-chrome-512x512.png"
 ];
 
-for (let i = 1; i <= 7; i++) {
-  urlsToCache.push(`/algebra2025/assets/libro${i}`);
+for (let i = 1; i <= 13; i++) {
+  urlsToCache.push(`/algebra2022/assets/libro${i}`);
 }
 
 for (let i = 1; i <= 6; i++) {
-  urlsToCache.push(`/algebra2025/assets/seg/libro${i}`);
+  urlsToCache.push(`/algebra2022/assets/seg/libro${i}`);
 }
 
 self.addEventListener("install", (event) => {
