@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (isMobile) {
         const botones = document.querySelectorAll(".index-page .button");
         const coordsMovil = [
+            // 0–12 → btn1 a btn13
             { left: 60,  top: 257 },   // btn1
             { left: 102, top: 248 },   // btn2
             { left: 202, top: 248 },   // btn3
@@ -54,17 +55,20 @@ document.addEventListener("DOMContentLoaded", function() {
             { left: 501, top: 778 },   // btn12
             { left: 575, top: 845 },   // btn13
 
-            { left: 384, top: 568 },   // btn14
-            { left: 612, top: 787 },   // btn15
-            { left: 341, top: 1299 },  // btn16
-
+            // 13–18 → btn17 a btn22
             { left: 400, top: 1380 },  // btn17
             { left: 450, top: 1450 },  // btn18
             { left: 500, top: 1500 },  // btn19
             { left: 560, top: 1560 },  // btn20
             { left: 620, top: 1620 },  // btn21
             { left: 680, top: 1680 },  // btn22
+
+            // 19–21 → btn14, btn15, btn16 (al final del DOM)
+            { left: 384, top: 568 },   // btn14
+            { left: 612, top: 787 },   // btn15
+            { left: 341, top: 1299 },  // btn16
         ];
+
 
         botones.forEach((btn, i) => {
             const coord = coordsMovil[i];
